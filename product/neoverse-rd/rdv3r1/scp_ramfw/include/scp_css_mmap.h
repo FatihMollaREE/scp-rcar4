@@ -14,6 +14,14 @@
 
 // clang-format off
 
+/* Base address and size of SCP's ITCM */
+#define SCP_ITC_RAM_BASE (0x00000000)
+#define SCP_ITC_RAM_SIZE (256 * 1024)
+
+/* Base address and size of SCP's DTCM */
+#define SCP_DTC_RAM_BASE (0x20000000)
+#define SCP_DTC_RAM_SIZE (256 * 1024)
+
 /* SCP sub-system peripherals */
 #define SCP_SID_BASE (0x1A4A0000)
 #define SCP_UART_BASE (0x44002000)
