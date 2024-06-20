@@ -16,6 +16,7 @@
 
 /* SCP sub-system peripherals */
 #define SCP_SID_BASE (0x1A4A0000)
+#define SCP_UART_BASE (0x44002000)
 
 // clang-format on
 
