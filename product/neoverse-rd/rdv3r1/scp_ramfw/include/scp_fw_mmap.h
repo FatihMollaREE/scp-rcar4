@@ -39,4 +39,13 @@
     (SCP_ATW0_AP_PERIPHERAL_SRAM_BASE)
 #define SCP_AP_PERIPHERAL_SRAM_NONTRUSTED_SIZE (4 * FWK_KIB)
 
+/*
+ * AP Context Memory Region inside Secure AP Peripheral SRAM that is shared
+ * between AP and SCP.
+ */
+#define SCP_AP_CONTEXT_SIZE (64)
+#define SCP_AP_CONTEXT_BASE \
+    (SCP_AP_PERIPHERAL_SRAM_TRUSTED_BASE + \
+     SCP_AP_PERIPHERAL_SRAM_TRUSTED_SIZE - SCP_AP_CONTEXT_SIZE)
+
 #endif /* SCP_FW_MMAP_H */
