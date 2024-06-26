@@ -13,6 +13,9 @@
 
 /* Sub-element indexes (alarms) for SCP timer device */
 enum scp_cfgd_mod_timer_alarm_idx {
+#ifdef BUILD_HAS_SCMI_NOTIFICATIONS
+    SCP_CFGD_SCMI_NOTIFICATION_ALARM_IDX,
+#endif
     SCP_CFGD_MOD_TIMER_SEIDX_ALARM_COUNT,
 };
 
