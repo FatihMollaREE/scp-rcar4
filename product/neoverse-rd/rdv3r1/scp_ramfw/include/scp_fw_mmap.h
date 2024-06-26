@@ -40,6 +40,13 @@
 #define SCP_AP_PERIPHERAL_SRAM_NONTRUSTED_SIZE (4 * FWK_KIB)
 
 /*
+ * SDS Memory Region inside Secure AP Peripheral SRAM that is shared between
+ * AP and SCP.
+ */
+#define SCP_SDS_SECURE_BASE (SCP_AP_PERIPHERAL_SRAM_TRUSTED_BASE)
+#define SCP_SDS_SECURE_SIZE (3520)
+
+/*
  * AP Context Memory Region inside Secure AP Peripheral SRAM that is shared
  * between AP and SCP.
  */
