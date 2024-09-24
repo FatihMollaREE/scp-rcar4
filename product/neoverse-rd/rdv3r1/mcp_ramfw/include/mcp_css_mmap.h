@@ -23,6 +23,8 @@
 #define MCP_DTC_RAM_SIZE (256 * 1024)
 
 /* SCP sub-system peripherals */
+#define MCP_REFCLK_CNTCTL_BASE (0x4C000000)
+#define MCP_REFCLK_CNTBASE0_BASE (0x4C001000)
 #define MCP_UART_BASE (0x4C002000)
 
 // clang-format on
