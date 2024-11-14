@@ -11,6 +11,7 @@
 #include "scp_cfgd_sds.h"
 #include "scp_fw_mmap.h"
 
+#include <mod_scp_platform.h>
 #include <mod_sds.h>
 
 #include <fwk_assert.h>
@@ -40,6 +41,10 @@ const struct mod_sds_config sds_module_config = {
     .regions = sds_regions,
     .region_count = SCP_CFGD_MOD_SDS_REGION_IDX_COUNT,
     .clock_id = FWK_ID_NONE_INIT,
+    .platform_notification = {
+        .notification_id = mod_scp_platform_notification_subsys_init,
+        .source_id = FWK_ID_MODULE_INIT(FWK_MODULE_IDX_SCP_PLATFORM),
+    },
 };
 
 static struct fwk_element sds_element_table[] = {

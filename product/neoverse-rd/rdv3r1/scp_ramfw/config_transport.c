@@ -13,6 +13,7 @@
 #include "scp_fw_mmap.h"
 
 #include <mod_mhu3.h>
+#include <mod_scp_platform.h>
 #include <mod_transport.h>
 
 #include <fwk_element.h>
@@ -25,12 +26,6 @@
 /* Secure transport channel with mailbox initialization policy */
 #define TRANSPORT_CH_SEC_MBX_INIT \
     (MOD_TRANSPORT_POLICY_INIT_MAILBOX | MOD_TRANSPORT_POLICY_SECURE)
-
-/* Subsystem initialized notification id (platform notification) */
-#define PLATFORM_SCP_NOTIFICATION_ID \
-    FWK_ID_NOTIFICATION_INIT( \
-        FWK_MODULE_IDX_SCP_PLATFORM, \
-        MOD_SCP_PLATFORM_NOTIFICATION_IDX_SUBSYS_INITIALIZED)
 
 /* Module 'transport' element configuration table */
 static const struct fwk_element element_table[]  = {
@@ -57,6 +52,11 @@ static const struct fwk_element element_table[]  = {
                     FWK_ID_API_INIT(
                         FWK_MODULE_IDX_MHU3,
                         MOD_MHU3_API_IDX_TRANSPORT_DRIVER),
+                .platform_notification = {
+                    .notification_id = mod_scp_platform_notification_subsys_init,
+                    .source_id = FWK_ID_MODULE_INIT(
+                        FWK_MODULE_IDX_SCP_PLATFORM),
+                },
         }),
     },
     /*
