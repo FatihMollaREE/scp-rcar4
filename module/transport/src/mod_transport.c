@@ -207,7 +207,7 @@ static int transport_write_payload(
         MOD_TRANSPORT_CHANNEL_TRANSPORT_TYPE_NONE);
 
     if ((payload == NULL) ||
-        ((offset + size) > channel_ctx->max_payload_size)) {
+        !fwk_str_is_in_boundry(channel_ctx->max_payload_size, offset, size)) {
         fwk_unexpected();
         return FWK_E_PARAM;
     }

@@ -94,6 +94,24 @@ void fwk_str_strncpy_CMockIgnoreArg_dest(UNITY_LINE_TYPE cmock_line);
 void fwk_str_strncpy_CMockIgnoreArg_src(UNITY_LINE_TYPE cmock_line);
 #define fwk_str_strncpy_IgnoreArg_count() fwk_str_strncpy_CMockIgnoreArg_count(__LINE__)
 void fwk_str_strncpy_CMockIgnoreArg_count(UNITY_LINE_TYPE cmock_line);
+#define fwk_str_is_in_boundry_IgnoreAndReturn(cmock_retval) fwk_str_is_in_boundry_CMockIgnoreAndReturn(__LINE__, cmock_retval)
+void fwk_str_is_in_boundry_CMockIgnoreAndReturn(UNITY_LINE_TYPE cmock_line, bool cmock_to_return);
+#define fwk_str_is_in_boundry_StopIgnore() fwk_str_is_in_boundry_CMockStopIgnore()
+void fwk_str_is_in_boundry_CMockStopIgnore(void);
+#define fwk_str_is_in_boundry_ExpectAnyArgsAndReturn(cmock_retval) fwk_str_is_in_boundry_CMockExpectAnyArgsAndReturn(__LINE__, cmock_retval)
+void fwk_str_is_in_boundry_CMockExpectAnyArgsAndReturn(UNITY_LINE_TYPE cmock_line, bool cmock_to_return);
+#define fwk_str_is_in_boundry_ExpectAndReturn(buffer_size, offset, data_size, cmock_retval) fwk_str_is_in_boundry_CMockExpectAndReturn(__LINE__, buffer_size, offset, data_size, cmock_retval)
+void fwk_str_is_in_boundry_CMockExpectAndReturn(UNITY_LINE_TYPE cmock_line, size_t buffer_size, size_t offset, size_t data_size, bool cmock_to_return);
+typedef bool (* CMOCK_fwk_str_is_in_boundry_CALLBACK)(size_t buffer_size, size_t offset, size_t data_size, int cmock_num_calls);
+void fwk_str_is_in_boundry_AddCallback(CMOCK_fwk_str_is_in_boundry_CALLBACK Callback);
+void fwk_str_is_in_boundry_Stub(CMOCK_fwk_str_is_in_boundry_CALLBACK Callback);
+#define fwk_str_is_in_boundry_StubWithCallback fwk_str_is_in_boundry_Stub
+#define fwk_str_is_in_boundry_IgnoreArg_buffer_size() fwk_str_is_in_boundry_CMockIgnoreArg_buffer_size(__LINE__)
+void fwk_str_is_in_boundry_CMockIgnoreArg_buffer_size(UNITY_LINE_TYPE cmock_line);
+#define fwk_str_is_in_boundry_IgnoreArg_offset() fwk_str_is_in_boundry_CMockIgnoreArg_offset(__LINE__)
+void fwk_str_is_in_boundry_CMockIgnoreArg_offset(UNITY_LINE_TYPE cmock_line);
+#define fwk_str_is_in_boundry_IgnoreArg_data_size() fwk_str_is_in_boundry_CMockIgnoreArg_data_size(__LINE__)
+void fwk_str_is_in_boundry_CMockIgnoreArg_data_size(UNITY_LINE_TYPE cmock_line);
 
 #if defined(__GNUC__) && !defined(__ICC) && !defined(__TMS470__)
 #if __GNUC__ > 4 || (__GNUC__ == 4 && (__GNUC_MINOR__ > 6 || (__GNUC_MINOR__ == 6 && __GNUC_PATCHLEVEL__ > 0)))

@@ -5,12 +5,16 @@
 #include "cmock.h"
 #include "Mockfwk_string.h"
 
+static const char* CMockString_buffer_size = "buffer_size";
 static const char* CMockString_ch = "ch";
 static const char* CMockString_count = "count";
+static const char* CMockString_data_size = "data_size";
 static const char* CMockString_dest = "dest";
+static const char* CMockString_fwk_str_is_in_boundry = "fwk_str_is_in_boundry";
 static const char* CMockString_fwk_str_memcpy = "fwk_str_memcpy";
 static const char* CMockString_fwk_str_memset = "fwk_str_memset";
 static const char* CMockString_fwk_str_strncpy = "fwk_str_strncpy";
+static const char* CMockString_offset = "offset";
 static const char* CMockString_src = "src";
 
 typedef struct _CMOCK_fwk_str_memset_CALL_INSTANCE
@@ -64,6 +68,20 @@ typedef struct _CMOCK_fwk_str_strncpy_CALL_INSTANCE
 
 } CMOCK_fwk_str_strncpy_CALL_INSTANCE;
 
+typedef struct _CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE
+{
+  UNITY_LINE_TYPE LineNumber;
+  char ExpectAnyArgsBool;
+  bool ReturnVal;
+  size_t Expected_buffer_size;
+  size_t Expected_offset;
+  size_t Expected_data_size;
+  char IgnoreArg_buffer_size;
+  char IgnoreArg_offset;
+  char IgnoreArg_data_size;
+
+} CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE;
+
 static struct Mockfwk_stringInstance
 {
   char fwk_str_memset_IgnoreBool;
@@ -81,6 +99,12 @@ static struct Mockfwk_stringInstance
   CMOCK_fwk_str_strncpy_CALLBACK fwk_str_strncpy_CallbackFunctionPointer;
   int fwk_str_strncpy_CallbackCalls;
   CMOCK_MEM_INDEX_TYPE fwk_str_strncpy_CallInstance;
+  char fwk_str_is_in_boundry_IgnoreBool;
+  bool fwk_str_is_in_boundry_FinalReturn;
+  char fwk_str_is_in_boundry_CallbackBool;
+  CMOCK_fwk_str_is_in_boundry_CALLBACK fwk_str_is_in_boundry_CallbackFunctionPointer;
+  int fwk_str_is_in_boundry_CallbackCalls;
+  CMOCK_MEM_INDEX_TYPE fwk_str_is_in_boundry_CallInstance;
 } Mock;
 
 extern jmp_buf AbortFrame;
@@ -124,6 +148,19 @@ void Mockfwk_string_Verify(void)
     UNITY_TEST_FAIL(cmock_line, CMockStringCalledLess);
   }
   if (Mock.fwk_str_strncpy_CallbackFunctionPointer != NULL)
+  {
+    call_instance = CMOCK_GUTS_NONE;
+    (void)call_instance;
+  }
+  call_instance = Mock.fwk_str_is_in_boundry_CallInstance;
+  if (Mock.fwk_str_is_in_boundry_IgnoreBool)
+    call_instance = CMOCK_GUTS_NONE;
+  if (CMOCK_GUTS_NONE != call_instance)
+  {
+    UNITY_SET_DETAIL(CMockString_fwk_str_is_in_boundry);
+    UNITY_TEST_FAIL(cmock_line, CMockStringCalledLess);
+  }
+  if (Mock.fwk_str_is_in_boundry_CallbackFunctionPointer != NULL)
   {
     call_instance = CMOCK_GUTS_NONE;
     (void)call_instance;
@@ -612,5 +649,153 @@ void fwk_str_strncpy_CMockIgnoreArg_count(UNITY_LINE_TYPE cmock_line)
   CMOCK_fwk_str_strncpy_CALL_INSTANCE* cmock_call_instance = (CMOCK_fwk_str_strncpy_CALL_INSTANCE*)CMock_Guts_GetAddressFor(CMock_Guts_MemEndOfChain(Mock.fwk_str_strncpy_CallInstance));
   UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringIgnPreExp);
   cmock_call_instance->IgnoreArg_count = 1;
+}
+
+bool fwk_str_is_in_boundry(size_t buffer_size, size_t offset, size_t data_size)
+{
+  UNITY_LINE_TYPE cmock_line = TEST_LINE_NUM;
+  CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE* cmock_call_instance;
+  UNITY_SET_DETAIL(CMockString_fwk_str_is_in_boundry);
+  cmock_call_instance = (CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE*)CMock_Guts_GetAddressFor(Mock.fwk_str_is_in_boundry_CallInstance);
+  Mock.fwk_str_is_in_boundry_CallInstance = CMock_Guts_MemNext(Mock.fwk_str_is_in_boundry_CallInstance);
+  if (Mock.fwk_str_is_in_boundry_IgnoreBool)
+  {
+    UNITY_CLR_DETAILS();
+    if (cmock_call_instance == NULL)
+      return Mock.fwk_str_is_in_boundry_FinalReturn;
+    Mock.fwk_str_is_in_boundry_FinalReturn = cmock_call_instance->ReturnVal;
+    return cmock_call_instance->ReturnVal;
+  }
+  if (!Mock.fwk_str_is_in_boundry_CallbackBool &&
+      Mock.fwk_str_is_in_boundry_CallbackFunctionPointer != NULL)
+  {
+    bool cmock_cb_ret = Mock.fwk_str_is_in_boundry_CallbackFunctionPointer(buffer_size, offset, data_size, Mock.fwk_str_is_in_boundry_CallbackCalls++);
+    UNITY_CLR_DETAILS();
+    return cmock_cb_ret;
+  }
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringCalledMore);
+  cmock_line = cmock_call_instance->LineNumber;
+  if (!cmock_call_instance->ExpectAnyArgsBool)
+  {
+  if (!cmock_call_instance->IgnoreArg_buffer_size)
+  {
+    UNITY_SET_DETAILS(CMockString_fwk_str_is_in_boundry,CMockString_buffer_size);
+    UNITY_TEST_ASSERT_EQUAL_MEMORY((void*)(&cmock_call_instance->Expected_buffer_size), (void*)(&buffer_size), sizeof(size_t), cmock_line, CMockStringMismatch);
+  }
+  if (!cmock_call_instance->IgnoreArg_offset)
+  {
+    UNITY_SET_DETAILS(CMockString_fwk_str_is_in_boundry,CMockString_offset);
+    UNITY_TEST_ASSERT_EQUAL_MEMORY((void*)(&cmock_call_instance->Expected_offset), (void*)(&offset), sizeof(size_t), cmock_line, CMockStringMismatch);
+  }
+  if (!cmock_call_instance->IgnoreArg_data_size)
+  {
+    UNITY_SET_DETAILS(CMockString_fwk_str_is_in_boundry,CMockString_data_size);
+    UNITY_TEST_ASSERT_EQUAL_MEMORY((void*)(&cmock_call_instance->Expected_data_size), (void*)(&data_size), sizeof(size_t), cmock_line, CMockStringMismatch);
+  }
+  }
+  if (Mock.fwk_str_is_in_boundry_CallbackFunctionPointer != NULL)
+  {
+    cmock_call_instance->ReturnVal = Mock.fwk_str_is_in_boundry_CallbackFunctionPointer(buffer_size, offset, data_size, Mock.fwk_str_is_in_boundry_CallbackCalls++);
+  }
+  UNITY_CLR_DETAILS();
+  return cmock_call_instance->ReturnVal;
+}
+
+void CMockExpectParameters_fwk_str_is_in_boundry(CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE* cmock_call_instance, size_t buffer_size, size_t offset, size_t data_size);
+void CMockExpectParameters_fwk_str_is_in_boundry(CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE* cmock_call_instance, size_t buffer_size, size_t offset, size_t data_size)
+{
+  memcpy((void*)(&cmock_call_instance->Expected_buffer_size), (void*)(&buffer_size),
+         sizeof(size_t[sizeof(buffer_size) == sizeof(size_t) ? 1 : -1])); /* add size_t to :treat_as_array if this causes an error */
+  cmock_call_instance->IgnoreArg_buffer_size = 0;
+  memcpy((void*)(&cmock_call_instance->Expected_offset), (void*)(&offset),
+         sizeof(size_t[sizeof(offset) == sizeof(size_t) ? 1 : -1])); /* add size_t to :treat_as_array if this causes an error */
+  cmock_call_instance->IgnoreArg_offset = 0;
+  memcpy((void*)(&cmock_call_instance->Expected_data_size), (void*)(&data_size),
+         sizeof(size_t[sizeof(data_size) == sizeof(size_t) ? 1 : -1])); /* add size_t to :treat_as_array if this causes an error */
+  cmock_call_instance->IgnoreArg_data_size = 0;
+}
+
+void fwk_str_is_in_boundry_CMockIgnoreAndReturn(UNITY_LINE_TYPE cmock_line, bool cmock_to_return)
+{
+  CMOCK_MEM_INDEX_TYPE cmock_guts_index = CMock_Guts_MemNew(sizeof(CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE));
+  CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE* cmock_call_instance = (CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE*)CMock_Guts_GetAddressFor(cmock_guts_index);
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringOutOfMemory);
+  memset(cmock_call_instance, 0, sizeof(*cmock_call_instance));
+  Mock.fwk_str_is_in_boundry_CallInstance = CMock_Guts_MemChain(Mock.fwk_str_is_in_boundry_CallInstance, cmock_guts_index);
+  Mock.fwk_str_is_in_boundry_IgnoreBool = (char)0;
+  cmock_call_instance->LineNumber = cmock_line;
+  cmock_call_instance->ExpectAnyArgsBool = (char)0;
+  cmock_call_instance->ReturnVal = cmock_to_return;
+  Mock.fwk_str_is_in_boundry_IgnoreBool = (char)1;
+}
+
+void fwk_str_is_in_boundry_CMockStopIgnore(void)
+{
+  if(Mock.fwk_str_is_in_boundry_IgnoreBool)
+    Mock.fwk_str_is_in_boundry_CallInstance = CMock_Guts_MemNext(Mock.fwk_str_is_in_boundry_CallInstance);
+  Mock.fwk_str_is_in_boundry_IgnoreBool = (char)0;
+}
+
+void fwk_str_is_in_boundry_CMockExpectAnyArgsAndReturn(UNITY_LINE_TYPE cmock_line, bool cmock_to_return)
+{
+  CMOCK_MEM_INDEX_TYPE cmock_guts_index = CMock_Guts_MemNew(sizeof(CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE));
+  CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE* cmock_call_instance = (CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE*)CMock_Guts_GetAddressFor(cmock_guts_index);
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringOutOfMemory);
+  memset(cmock_call_instance, 0, sizeof(*cmock_call_instance));
+  Mock.fwk_str_is_in_boundry_CallInstance = CMock_Guts_MemChain(Mock.fwk_str_is_in_boundry_CallInstance, cmock_guts_index);
+  Mock.fwk_str_is_in_boundry_IgnoreBool = (char)0;
+  cmock_call_instance->LineNumber = cmock_line;
+  cmock_call_instance->ExpectAnyArgsBool = (char)0;
+  cmock_call_instance->ReturnVal = cmock_to_return;
+  cmock_call_instance->ExpectAnyArgsBool = (char)1;
+}
+
+void fwk_str_is_in_boundry_CMockExpectAndReturn(UNITY_LINE_TYPE cmock_line, size_t buffer_size, size_t offset, size_t data_size, bool cmock_to_return)
+{
+  CMOCK_MEM_INDEX_TYPE cmock_guts_index = CMock_Guts_MemNew(sizeof(CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE));
+  CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE* cmock_call_instance = (CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE*)CMock_Guts_GetAddressFor(cmock_guts_index);
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringOutOfMemory);
+  memset(cmock_call_instance, 0, sizeof(*cmock_call_instance));
+  Mock.fwk_str_is_in_boundry_CallInstance = CMock_Guts_MemChain(Mock.fwk_str_is_in_boundry_CallInstance, cmock_guts_index);
+  Mock.fwk_str_is_in_boundry_IgnoreBool = (char)0;
+  cmock_call_instance->LineNumber = cmock_line;
+  cmock_call_instance->ExpectAnyArgsBool = (char)0;
+  CMockExpectParameters_fwk_str_is_in_boundry(cmock_call_instance, buffer_size, offset, data_size);
+  cmock_call_instance->ReturnVal = cmock_to_return;
+}
+
+void fwk_str_is_in_boundry_AddCallback(CMOCK_fwk_str_is_in_boundry_CALLBACK Callback)
+{
+  Mock.fwk_str_is_in_boundry_IgnoreBool = (char)0;
+  Mock.fwk_str_is_in_boundry_CallbackBool = (char)1;
+  Mock.fwk_str_is_in_boundry_CallbackFunctionPointer = Callback;
+}
+
+void fwk_str_is_in_boundry_Stub(CMOCK_fwk_str_is_in_boundry_CALLBACK Callback)
+{
+  Mock.fwk_str_is_in_boundry_IgnoreBool = (char)0;
+  Mock.fwk_str_is_in_boundry_CallbackBool = (char)0;
+  Mock.fwk_str_is_in_boundry_CallbackFunctionPointer = Callback;
+}
+
+void fwk_str_is_in_boundry_CMockIgnoreArg_buffer_size(UNITY_LINE_TYPE cmock_line)
+{
+  CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE* cmock_call_instance = (CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE*)CMock_Guts_GetAddressFor(CMock_Guts_MemEndOfChain(Mock.fwk_str_is_in_boundry_CallInstance));
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringIgnPreExp);
+  cmock_call_instance->IgnoreArg_buffer_size = 1;
+}
+
+void fwk_str_is_in_boundry_CMockIgnoreArg_offset(UNITY_LINE_TYPE cmock_line)
+{
+  CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE* cmock_call_instance = (CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE*)CMock_Guts_GetAddressFor(CMock_Guts_MemEndOfChain(Mock.fwk_str_is_in_boundry_CallInstance));
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringIgnPreExp);
+  cmock_call_instance->IgnoreArg_offset = 1;
+}
+
+void fwk_str_is_in_boundry_CMockIgnoreArg_data_size(UNITY_LINE_TYPE cmock_line)
+{
+  CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE* cmock_call_instance = (CMOCK_fwk_str_is_in_boundry_CALL_INSTANCE*)CMock_Guts_GetAddressFor(CMock_Guts_MemEndOfChain(Mock.fwk_str_is_in_boundry_CallInstance));
+  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringIgnPreExp);
+  cmock_call_instance->IgnoreArg_data_size = 1;
 }
 
