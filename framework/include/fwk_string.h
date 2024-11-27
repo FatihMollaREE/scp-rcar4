@@ -1,6 +1,6 @@
 /*
  * Arm SCP/MCP Software
- * Copyright (c) 2021, Arm Limited and Contributors. All rights reserved.
+ * Copyright (c) 2021-2024, Arm Limited and Contributors. All rights reserved.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -10,6 +10,7 @@
 
 #include <fwk_attributes.h>
 
+#include <stdbool.h>
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
@@ -91,6 +92,21 @@ FWK_LEAF FWK_NOTHROW void fwk_str_strncpy(
     char *dest,
     const char *src,
     size_t count);
+
+/*!
+ * \brief Checks that a copy will be within the bounds of the destination buffer
+ *
+ * \details This is a simple maths function, returns true if the copy will be in
+ *      bounds otherwise returns false.
+ *
+ * \param[in] buffer_size Size of a buffer to copy to
+ * \param[in] offset Offset of copy within destination buffer
+ * \param[in] data_size number of bytes to copy
+ */
+FWK_LEAF FWK_NOTHROW bool fwk_str_is_in_boundry(
+    size_t buffer_size,
+    size_t offset,
+    size_t data_size);
 
 /*!
  * \}

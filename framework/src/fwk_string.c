@@ -55,3 +55,12 @@ void fwk_str_strncpy(char *dest, const char *src, size_t count)
         fwk_trap();
     }
 }
+
+bool fwk_str_is_in_boundry(size_t buffer_size, size_t offset, size_t data_size)
+{
+    if ((offset > buffer_size) || (data_size > (buffer_size - offset))) {
+        return false;
+    }
+
+    return true;
+}

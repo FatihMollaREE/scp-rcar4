@@ -1,6 +1,6 @@
 /*
  * Arm SCP/MCP Software
- * Copyright (c) 2021, Arm Limited and Contributors. All rights reserved.
+ * Copyright (c) 2021-2024, Arm Limited and Contributors. All rights reserved.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -52,10 +52,55 @@ static void test_fwk_str_strncpy(void)
     }
 }
 
+static void test_fwk_str_is_in_boundry_invalid_param_large_size(void)
+{
+    size_t offset = 50;
+    size_t buffer_size = 100;
+
+    bool result =
+        fwk_str_is_in_boundry(buffer_size, offset, SIZE_MAX - (offset / 2));
+
+    assert(result == false);
+}
+
+static void test_fwk_str_is_in_boundry_invalid_param_large_offset(void)
+{
+    size_t buffer_size = 100;
+    size_t size = 5;
+
+    bool result = fwk_str_is_in_boundry(buffer_size, SIZE_MAX - 2, size);
+
+    assert(result == false);
+}
+
+static void test_fwk_str_is_in_boundry_invalid_param_beyond_end(void)
+{
+    size_t buffer_size = 100;
+    size_t size = 1;
+
+    bool result = fwk_str_is_in_boundry(buffer_size, buffer_size, size);
+
+    assert(result == false);
+}
+
+static void test_fwk_str_is_in_boundry_valid_param_before_end(void)
+{
+    size_t buffer_size = 100;
+    size_t size = 1;
+
+    bool result = fwk_str_is_in_boundry(buffer_size, buffer_size - 1, size);
+
+    assert(result == true);
+}
+
 static const struct fwk_test_case_desc test_case_table[] = {
     FWK_TEST_CASE(test_fwk_str_memset),
     FWK_TEST_CASE(test_fwk_str_memcpy),
     FWK_TEST_CASE(test_fwk_str_strncpy),
+    FWK_TEST_CASE(test_fwk_str_is_in_boundry_invalid_param_large_size),
+    FWK_TEST_CASE(test_fwk_str_is_in_boundry_invalid_param_large_offset),
+    FWK_TEST_CASE(test_fwk_str_is_in_boundry_invalid_param_beyond_end),
+    FWK_TEST_CASE(test_fwk_str_is_in_boundry_valid_param_before_end),
 };
 
 struct fwk_test_suite_desc test_suite = {
