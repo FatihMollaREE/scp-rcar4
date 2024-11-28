@@ -213,12 +213,11 @@ static int gtimer_device_init(fwk_id_t element_id, unsigned int unused,
     ctx = mod_gtimer_ctx.table + fwk_id_get_element_idx(element_id);
 
     ctx->config = data;
-    if (ctx->config->hw_timer == 0   ||
-        ctx->config->hw_counter == 0 ||
-        ctx->config->control == 0    ||
-        ctx->config->frequency < GTIMER_FREQUENCY_MIN_HZ ||
-        ctx->config->frequency > GTIMER_FREQUENCY_MAX_HZ) {
-
+    if ((ctx->config->hw_timer == 0 || ctx->config->hw_counter == 0 ||
+         ctx->config->frequency < GTIMER_FREQUENCY_MIN_HZ ||
+         ctx->config->frequency > GTIMER_FREQUENCY_MAX_HZ) ||
+        ((ctx->config->skip_cntcontrol_init == 0) &&
+         (ctx->config->control == 0))) {
         return FWK_E_DEVICE;
     }
 
