@@ -30,8 +30,7 @@
             .is_group_member = false, \
             .control_reg = \
                 &SCP_CU_AP_PERIPH_CORE_MANAGER_PTR(n)->CORECLK_CTRL, \
-            .divext_reg = \
-                &SCP_CU_AP_PERIPH_CORE_MANAGER_PTR(n)->CORECLK_DIV1, \
+            .divext_reg = &SCP_CU_AP_PERIPH_CORE_MANAGER_PTR(n)->CORECLK_DIV1, \
             .rate_table = rate_table_cpu_clk, \
             .rate_count = FWK_ARRAY_SIZE(rate_table_cpu_clk), \
             .initial_rate = 0, \
