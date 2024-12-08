@@ -40,11 +40,11 @@ static int rcar4_auto_domain(fwk_id_t dev_id, uint32_t state)
 
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(dev_id);
 
-    mmio_write_32((1,1)); // tbd addresse von inem reset register   --> reset wird gesetzt?
+    mmio_write_32( SRCR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // tbd config dementsprechend machen
 
     udelay(10 * 35); // tbd genaue cyle anzahl für 1us rausfiunden, ich muss RCLK warten manual s.531
 
-    mmio_write_32((1,1)); // tbd addresse von inem reset register   --> reset wird gelöst?
+    mmio_write_32( SRSTCLR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // tbd addresse von inem reset register   --> reset wird gelöst?
 
     return FWK_SUCCESS;
 
