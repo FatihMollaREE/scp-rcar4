@@ -22,7 +22,7 @@
 static struct rcar4_reset_ctx module_ctx;
 
 
-static void udelay(uint32_t cycles)
+static void udelay(uint32_t cycles) 
 {
   volatile uint32_t i;
 
@@ -40,11 +40,12 @@ static int rcar4_auto_domain(fwk_id_t dev_id, uint32_t state)
 
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(dev_id);
 
-    mmio_write_32( SRCR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // tbd config dementsprechend machen
+    mmio_write_32( SRCR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // set reset
 
-    udelay(10 * 35); // tbd genaue cyle anzahl für 1us rausfiunden, ich muss RCLK warten manual s.531
+    // RLCK @ 32,8kHz  ~= 30,49us
+    udelay(SCSR_DELAY_US); // wait for RLCK as per user manual
 
-    mmio_write_32( SRSTCLR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // tbd addresse von inem reset register   --> reset wird gelöst?
+    mmio_write_32( SRSTCLR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // release reset
 
     return FWK_SUCCESS;
 
@@ -56,7 +57,7 @@ static int rcar4_assert_domain(fwk_id_t dev_id)
 
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(dev_id);
 
-    mmio_write_32((1,1)); // tbd addresse von inem reset register
+    mmio_write_32( SRCR(ctx->config->control_reg) , BIT(ctx->config->bit) );
 
     return FWK_SUCCESS;
 }
@@ -68,7 +69,7 @@ static int rcar4_deassert_domain(fwk_id_t dev_id)
 
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(dev_id);
 
-    mmio_write_32((1,1)); // tbd addresse von inem reset lösen register
+    mmio_write_32( SRSTCLR(ctx->config->control_reg) , BIT(ctx->config->bit) );
 
     return FWK_SUCCESS;
 }
@@ -129,7 +130,7 @@ static int rcar4_reset_process_bind_request(fwk_id_t source_id, fwk_id_t target_
 
 const struct fwk_module mod_rcar4_reset = {
     .type = FWK_MODULE_TYPE_DRIVER,
-    .api_count = MOD_RCAR4_RESET_API_COUNT,     // passt das?
+    .api_count = MOD_RCAR4_RESET_API_COUNT,     // passt das?, kann ich einfach .* = 1 schreiben?
     .event_count = 0,
     .init = rcar4_reset_init,
     .element_init = rcar4_reset_element_init,

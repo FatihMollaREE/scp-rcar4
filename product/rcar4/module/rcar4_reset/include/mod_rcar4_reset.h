@@ -66,9 +66,14 @@ struct rcar4_reset_ctx {
 #define CPG_SMSTPCR29   29
 
 
+#define DELAY_CNT_1US       (10UL)
+#define SCSR_DELAY_US       (DELAY_CNT_1US * 35)
+
+
+/* APIs provided by the driver */
 enum mod_rcar4_reset_api_type {
     
-    MOD_RCAR_RESET_APIY_TYPE_CLOCK,
+    MOD_RCAR_RESET_API_TYPE_CLOCK,
     MOD_RCAR4_RESET_API_COUNT, // tbu  
 };
 
