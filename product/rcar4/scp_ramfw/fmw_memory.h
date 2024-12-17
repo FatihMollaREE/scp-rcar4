@@ -12,10 +12,10 @@
 /*
 * RAM memory
 */
-#define FWM_MEM0_SIZE SCP_RAM_SIZE
-#define FWM_MEM0_BASE SCP_RAM_BASE
+#define FMW_MEM0_SIZE SCP_RAM_SIZE
+#define FMW_MEM0_BASE SCP_RAM_BASE
 
-#define FWM_STACK_SIZE (2 * 1024)  // einfach von rcar übernommen
+#define FMW_STACK_SIZE (2 * 1024)  // einfach von rcar übernommen
 
 #endif /* FMW_MEMORY_H */
 

@@ -1,0 +1,462 @@
+
+dummy_rtos.elf:     file format elf32-littlearm
+dummy_rtos.elf
+architecture: armv8-r, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0xe2100000
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0xe2100000 paddr 0xe2100000 align 2**12
+         filesz 0x0000c000 memsz 0x0000c000 flags r-x
+    LOAD off    0x00000000 vaddr 0xe210c000 paddr 0xe210c000 align 2**12
+         filesz 0x00000000 memsz 0x00001004 flags rw-
+private flags = 0x5000200: [Version5 EABI] [soft-float ABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 ro            0000c000  e2100000  e2100000  00001000  2**5
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 stacks        00001000  e210c000  e210c000  0000d000  2**6
+                  ALLOC
+  2 .bss          00000004  e210d000  e210d000  0000d000  2**4
+                  ALLOC
+  3 .debug_info   0000061d  00000000  00000000  0000d000  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  4 .debug_abbrev 0000037e  00000000  00000000  0000d61d  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_loclists 000001e8  00000000  00000000  0000d99b  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_aranges 000000b0  00000000  00000000  0000db88  2**3
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_rnglists 0000006a  00000000  00000000  0000dc38  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_line   000004d3  00000000  00000000  0000dca2  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .debug_str    0000029e  00000000  00000000  0000e175  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 10 .comment      00000045  00000000  00000000  0000e413  2**0
+                  CONTENTS, READONLY
+ 11 .ARM.attributes 00000031  00000000  00000000  0000e458  2**0
+                  CONTENTS, READONLY
+ 12 .debug_frame  000000ec  00000000  00000000  0000e48c  2**2
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+SYMBOL TABLE:
+e2100000 l    d  ro	00000000 ro
+e210c000 l    d  stacks	00000000 stacks
+e210d000 l    d  .bss	00000000 .bss
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_loclists	00000000 .debug_loclists
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_rnglists	00000000 .debug_rnglists
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 rtos.o
+e210c000 l       stacks	00000000 rtos_stacks
+e21001c4 l       ro	00000000 Undef
+e21001d0 l       ro	00000000 SWI
+e21001dc l       ro	00000000 PAbort
+e21001e8 l       ro	00000000 DAbort
+e21001f4 l       ro	00000000 IRQ
+e2100200 l       ro	00000000 FIQ
+e21001b0 l       ro	00000000 STACK_INIT
+e21001bc l       ro	00000000 NO_BOOT
+00000000 l    df *ABS*	00000000 rtos_main.c
+00000000 l    df *ABS*	00000000 scif.c
+e2108000 l     F ro	0000002c scif0_PutChar
+e210802c l     F ro	0000002c scif3_PutChar
+e2108058 l     F ro	0000002c hscif_PutChar
+e210d000 l     O .bss	00000004 putc
+00000000 l    df *ABS*	00000000 generic_timer.c
+e210c000 g       ro	00000000 __DATA_START__
+e2108184 g     F ro	00000070 micro_wait
+e2108174 g     F ro	00000010 generic_timer_init
+e210d000 g       stacks	00000000 __STACKS_END__
+00000004 g       *ABS*	00000000 __BSS_SIZE__
+e2108265 g       ro	00000000 __RO_END_UNALIGNED__
+e2108138 g     F ro	0000003c PutStr
+e210c000 g       ro	00000000 __DATA_END__
+e2100000 g       ro	00000000 Vector
+e210d004 g       .bss	00000000 __BSS_END__
+e2100258 g     F ro	00000054 rtos_main
+e2108084 g     F ro	000000a4 scif_init
+e2108128 g     F ro	00000010 PutChar
+e210c000 g       ro	00000000 __RO_END__
+e210d000 g       .bss	00000000 __BSS_START__
+e2100000 g       ro	00000000 __RO_START__
+e210c000 g       stacks	00000000 __STACKS_START__
+e2100020 g       ro	00000000 Start
+
+
+
+Disassembly of section ro:
+
+e2100000 <Vector>:
+e2100000:	ea000006 	b	e2100020 <Start>
+e2100004:	ea00006e 	b	e21001c4 <Undef>
+e2100008:	ea000070 	b	e21001d0 <SWI>
+e210000c:	ea000072 	b	e21001dc <PAbort>
+e2100010:	ea000074 	b	e21001e8 <DAbort>
+e2100014:	e320f000 	nop	{0}
+e2100018:	ea000075 	b	e21001f4 <IRQ>
+e210001c:	ea000077 	b	e2100200 <FIQ>
+
+e2100020 <Start>:
+e2100020:	e3a00000 	mov	r0, #0
+e2100024:	e3a01000 	mov	r1, #0
+e2100028:	e3a02000 	mov	r2, #0
+e210002c:	e3a03000 	mov	r3, #0
+e2100030:	e3a04000 	mov	r4, #0
+e2100034:	e3a05000 	mov	r5, #0
+e2100038:	e3a06000 	mov	r6, #0
+e210003c:	e3a07000 	mov	r7, #0
+e2100040:	e3a08000 	mov	r8, #0
+e2100044:	e3a09000 	mov	r9, #0
+e2100048:	e3a0a000 	mov	sl, #0
+e210004c:	e3a0b000 	mov	fp, #0
+e2100050:	e3a0c000 	mov	ip, #0
+e2100054:	e3a0e000 	mov	lr, #0
+e2100058:	e3a00cff 	mov	r0, #65280	@ 0xff00
+e210005c:	ee0a0f12 	mcr	15, 0, r0, cr10, cr2, {0}
+e2100060:	ee8a0f12 	mcr	15, 4, r0, cr10, cr2, {0}
+e2100064:	e3a00002 	mov	r0, #2
+e2100068:	ee060f18 	mcr	15, 0, r0, cr6, cr8, {0}
+e210006c:	ee860f18 	mcr	15, 4, r0, cr6, cr8, {0}
+e2100070:	e3e001f3 	mvn	r0, #-1073741764	@ 0xc000003c
+e2100074:	ee060f38 	mcr	15, 0, r0, cr6, cr8, {1}
+e2100078:	ee860f38 	mcr	15, 4, r0, cr6, cr8, {1}
+e210007c:	e3a00109 	mov	r0, #1073741826	@ 0x40000002
+e2100080:	ee060f98 	mcr	15, 0, r0, cr6, cr8, {4}
+e2100084:	ee860f98 	mcr	15, 4, r0, cr6, cr8, {4}
+e2100088:	e3e001f1 	mvn	r0, #1073741884	@ 0x4000003c
+e210008c:	ee060fb8 	mcr	15, 0, r0, cr6, cr8, {5}
+e2100090:	ee860fb8 	mcr	15, 4, r0, cr6, cr8, {5}
+e2100094:	e3a0010f 	mov	r0, #-1073741821	@ 0xc0000003
+e2100098:	ee060f19 	mcr	15, 0, r0, cr6, cr9, {0}
+e210009c:	ee860f19 	mcr	15, 4, r0, cr6, cr9, {0}
+e21000a0:	e59f0164 	ldr	r0, [pc, #356]	@ e210020c <FIQ+0xc>
+e21000a4:	ee060f39 	mcr	15, 0, r0, cr6, cr9, {1}
+e21000a8:	ee860f39 	mcr	15, 4, r0, cr6, cr9, {1}
+e21000ac:	e3a0022e 	mov	r0, #-536870910	@ 0xe0000002
+e21000b0:	ee060f99 	mcr	15, 0, r0, cr6, cr9, {4}
+e21000b4:	ee860f99 	mcr	15, 4, r0, cr6, cr9, {4}
+e21000b8:	e59f0150 	ldr	r0, [pc, #336]	@ e2100210 <FIQ+0x10>
+e21000bc:	ee060fb9 	mcr	15, 0, r0, cr6, cr9, {5}
+e21000c0:	ee860fb9 	mcr	15, 4, r0, cr6, cr9, {5}
+e21000c4:	e59f0148 	ldr	r0, [pc, #328]	@ e2100214 <FIQ+0x14>
+e21000c8:	ee060f1a 	mcr	15, 0, r0, cr6, cr10, {0}
+e21000cc:	ee860f1a 	mcr	15, 4, r0, cr6, cr10, {0}
+e21000d0:	e59f0140 	ldr	r0, [pc, #320]	@ e2100218 <FIQ+0x18>
+e21000d4:	ee060f3a 	mcr	15, 0, r0, cr6, cr10, {1}
+e21000d8:	ee860f3a 	mcr	15, 4, r0, cr6, cr10, {1}
+e21000dc:	e59f0138 	ldr	r0, [pc, #312]	@ e210021c <FIQ+0x1c>
+e21000e0:	ee060f9a 	mcr	15, 0, r0, cr6, cr10, {4}
+e21000e4:	ee860f9a 	mcr	15, 4, r0, cr6, cr10, {4}
+e21000e8:	e59f0130 	ldr	r0, [pc, #304]	@ e2100220 <FIQ+0x20>
+e21000ec:	ee060fba 	mcr	15, 0, r0, cr6, cr10, {5}
+e21000f0:	ee860fba 	mcr	15, 4, r0, cr6, cr10, {5}
+e21000f4:	e59f0128 	ldr	r0, [pc, #296]	@ e2100224 <FIQ+0x24>
+e21000f8:	ee060f1b 	mcr	15, 0, r0, cr6, cr11, {0}
+e21000fc:	ee860f1b 	mcr	15, 4, r0, cr6, cr11, {0}
+e2100100:	e59f0120 	ldr	r0, [pc, #288]	@ e2100228 <FIQ+0x28>
+e2100104:	ee060f3b 	mcr	15, 0, r0, cr6, cr11, {1}
+e2100108:	ee860f3b 	mcr	15, 4, r0, cr6, cr11, {1}
+e210010c:	e59f0118 	ldr	r0, [pc, #280]	@ e210022c <FIQ+0x2c>
+e2100110:	ee060f9b 	mcr	15, 0, r0, cr6, cr11, {4}
+e2100114:	ee860f9b 	mcr	15, 4, r0, cr6, cr11, {4}
+e2100118:	e59f0110 	ldr	r0, [pc, #272]	@ e2100230 <FIQ+0x30>
+e210011c:	ee060fbb 	mcr	15, 0, r0, cr6, cr11, {5}
+e2100120:	ee860fbb 	mcr	15, 4, r0, cr6, cr11, {5}
+e2100124:	e59f0108 	ldr	r0, [pc, #264]	@ e2100234 <FIQ+0x34>
+e2100128:	ee060f1c 	mcr	15, 0, r0, cr6, cr12, {0}
+e210012c:	ee860f1c 	mcr	15, 4, r0, cr6, cr12, {0}
+e2100130:	e59f0100 	ldr	r0, [pc, #256]	@ e2100238 <FIQ+0x38>
+e2100134:	ee060f3c 	mcr	15, 0, r0, cr6, cr12, {1}
+e2100138:	ee860f3c 	mcr	15, 4, r0, cr6, cr12, {1}
+e210013c:	e59f00f8 	ldr	r0, [pc, #248]	@ e210023c <FIQ+0x3c>
+e2100140:	ee060f9c 	mcr	15, 0, r0, cr6, cr12, {4}
+e2100144:	ee860f9c 	mcr	15, 4, r0, cr6, cr12, {4}
+e2100148:	e59f00f0 	ldr	r0, [pc, #240]	@ e2100240 <FIQ+0x40>
+e210014c:	ee060fbc 	mcr	15, 0, r0, cr6, cr12, {5}
+e2100150:	ee860fbc 	mcr	15, 4, r0, cr6, cr12, {5}
+e2100154:	e59f00e8 	ldr	r0, [pc, #232]	@ e2100244 <FIQ+0x44>
+e2100158:	ee060f1d 	mcr	15, 0, r0, cr6, cr13, {0}
+e210015c:	ee860f1d 	mcr	15, 4, r0, cr6, cr13, {0}
+e2100160:	e59f00e0 	ldr	r0, [pc, #224]	@ e2100248 <FIQ+0x48>
+e2100164:	ee060f3d 	mcr	15, 0, r0, cr6, cr13, {1}
+e2100168:	ee860f3d 	mcr	15, 4, r0, cr6, cr13, {1}
+e210016c:	e59f00d8 	ldr	r0, [pc, #216]	@ e210024c <FIQ+0x4c>
+e2100170:	ee060f9d 	mcr	15, 0, r0, cr6, cr13, {4}
+e2100174:	ee860f9d 	mcr	15, 4, r0, cr6, cr13, {4}
+e2100178:	e3e0003e 	mvn	r0, #62	@ 0x3e
+e210017c:	ee060fbd 	mcr	15, 0, r0, cr6, cr13, {5}
+e2100180:	ee860fbd 	mcr	15, 4, r0, cr6, cr13, {5}
+e2100184:	ee910f10 	mrc	15, 4, r0, cr1, cr0, {0}
+e2100188:	e3800001 	orr	r0, r0, #1
+e210018c:	f57ff04f 	dsb	sy
+e2100190:	ee810f10 	mcr	15, 4, r0, cr1, cr0, {0}
+e2100194:	f57ff06f 	isb	sy
+e2100198:	ee110f10 	mrc	15, 0, r0, cr1, cr0, {0}
+e210019c:	e3800001 	orr	r0, r0, #1
+e21001a0:	f57ff04f 	dsb	sy
+e21001a4:	ee010f10 	mcr	15, 0, r0, cr1, cr0, {0}
+e21001a8:	f57ff06f 	isb	sy
+e21001ac:	e59ff09c 	ldr	pc, [pc, #156]	@ e2100250 <FIQ+0x50>
+
+e21001b0 <STACK_INIT>:
+e21001b0:	e59f009c 	ldr	r0, [pc, #156]	@ e2100254 <FIQ+0x54>
+e21001b4:	e1a0d000 	mov	sp, r0
+e21001b8:	eb000026 	bl	e2100258 <rtos_main>
+
+e21001bc <NO_BOOT>:
+e21001bc:	e320f000 	nop	{0}
+e21001c0:	eafffffe 	b	e21001c0 <NO_BOOT+0x4>
+
+e21001c4 <Undef>:
+e21001c4:	e320f000 	nop	{0}
+e21001c8:	e320f002 	wfe
+e21001cc:	eafffffd 	b	e21001c8 <Undef+0x4>
+
+e21001d0 <SWI>:
+e21001d0:	e320f000 	nop	{0}
+e21001d4:	e320f002 	wfe
+e21001d8:	eafffffd 	b	e21001d4 <SWI+0x4>
+
+e21001dc <PAbort>:
+e21001dc:	e320f000 	nop	{0}
+e21001e0:	e320f002 	wfe
+e21001e4:	eafffffd 	b	e21001e0 <PAbort+0x4>
+
+e21001e8 <DAbort>:
+e21001e8:	e320f000 	nop	{0}
+e21001ec:	e320f002 	wfe
+e21001f0:	eafffffd 	b	e21001ec <DAbort+0x4>
+
+e21001f4 <IRQ>:
+e21001f4:	e320f000 	nop	{0}
+e21001f8:	e320f002 	wfe
+e21001fc:	eafffffd 	b	e21001f8 <IRQ+0x4>
+
+e2100200 <FIQ>:
+e2100200:	e320f000 	nop	{0}
+e2100204:	e320f002 	wfe
+e2100208:	eafffffd 	b	e2100204 <FIQ+0x4>
+e210020c:	dfffffc1 	.word	0xdfffffc1
+e2100210:	e1ffffc1 	.word	0xe1ffffc1
+e2100214:	e2000002 	.word	0xe2000002
+e2100218:	e42fffc3 	.word	0xe42fffc3
+e210021c:	e4300003 	.word	0xe4300003
+e2100220:	e62fffc1 	.word	0xe62fffc1
+e2100224:	e6300002 	.word	0xe6300002
+e2100228:	e63fffc3 	.word	0xe63fffc3
+e210022c:	e6400003 	.word	0xe6400003
+e2100230:	eb0fffc1 	.word	0xeb0fffc1
+e2100234:	eb100006 	.word	0xeb100006
+e2100238:	eb127fc3 	.word	0xeb127fc3
+e210023c:	eb128003 	.word	0xeb128003
+e2100240:	eb1fffc1 	.word	0xeb1fffc1
+e2100244:	eb200002 	.word	0xeb200002
+e2100248:	eb3fffc3 	.word	0xeb3fffc3
+e210024c:	eb400003 	.word	0xeb400003
+e2100250:	e21001b0 	.word	0xe21001b0
+e2100254:	e210d000 	.word	0xe210d000
+
+e2100258 <rtos_main>:
+e2100258:	e92d4010 	push	{r4, lr}
+e210025c:	eb001f88 	bl	e2108084 <scif_init>
+e2100260:	eb001fc3 	bl	e2108174 <generic_timer_init>
+e2100264:	e3a01000 	mov	r1, #0
+e2100268:	e59f002c 	ldr	r0, [pc, #44]	@ e210029c <rtos_main+0x44>
+e210026c:	eb001fc4 	bl	e2108184 <micro_wait>
+e2100270:	e3a01001 	mov	r1, #1
+e2100274:	e59f0024 	ldr	r0, [pc, #36]	@ e21002a0 <rtos_main+0x48>
+e2100278:	eb001fae 	bl	e2108138 <PutStr>
+e210027c:	e3a01001 	mov	r1, #1
+e2100280:	e59f001c 	ldr	r0, [pc, #28]	@ e21002a4 <rtos_main+0x4c>
+e2100284:	eb001fab 	bl	e2108138 <PutStr>
+e2100288:	e3a01001 	mov	r1, #1
+e210028c:	e59f0014 	ldr	r0, [pc, #20]	@ e21002a8 <rtos_main+0x50>
+e2100290:	eb001fa8 	bl	e2108138 <PutStr>
+e2100294:	e3a00000 	mov	r0, #0
+e2100298:	e8bd8010 	pop	{r4, pc}
+e210029c:	001e8480 	.word	0x001e8480
+e21002a0:	e2108215 	.word	0xe2108215
+e21002a4:	e2108218 	.word	0xe2108218
+e21002a8:	e2108238 	.word	0xe2108238
+	...
+
+e2108000 <scif0_PutChar>:
+e2108000:	e59f3020 	ldr	r3, [pc, #32]	@ e2108028 <scif0_PutChar+0x28>
+e2108004:	e1d321b0 	ldrh	r2, [r3, #16]
+e2108008:	e3120060 	tst	r2, #96	@ 0x60
+e210800c:	0afffffc 	beq	e2108004 <scif0_PutChar+0x4>
+e2108010:	e30f2f9f 	movw	r2, #65439	@ 0xff9f
+e2108014:	e5c3000c 	strb	r0, [r3, #12]
+e2108018:	e1d311b0 	ldrh	r1, [r3, #16]
+e210801c:	e0022001 	and	r2, r2, r1
+e2108020:	e1c321b0 	strh	r2, [r3, #16]
+e2108024:	e12fff1e 	bx	lr
+e2108028:	e6e60000 	.word	0xe6e60000
+
+e210802c <scif3_PutChar>:
+e210802c:	e59f3020 	ldr	r3, [pc, #32]	@ e2108054 <scif3_PutChar+0x28>
+e2108030:	e1d321b0 	ldrh	r2, [r3, #16]
+e2108034:	e3120060 	tst	r2, #96	@ 0x60
+e2108038:	0afffffc 	beq	e2108030 <scif3_PutChar+0x4>
+e210803c:	e30f2f9f 	movw	r2, #65439	@ 0xff9f
+e2108040:	e5c3000c 	strb	r0, [r3, #12]
+e2108044:	e1d311b0 	ldrh	r1, [r3, #16]
+e2108048:	e0022001 	and	r2, r2, r1
+e210804c:	e1c321b0 	strh	r2, [r3, #16]
+e2108050:	e12fff1e 	bx	lr
+e2108054:	e6c50000 	.word	0xe6c50000
+
+e2108058 <hscif_PutChar>:
+e2108058:	e59f3020 	ldr	r3, [pc, #32]	@ e2108080 <hscif_PutChar+0x28>
+e210805c:	e1d321b0 	ldrh	r2, [r3, #16]
+e2108060:	e3120060 	tst	r2, #96	@ 0x60
+e2108064:	0afffffc 	beq	e210805c <hscif_PutChar+0x4>
+e2108068:	e30f2f9f 	movw	r2, #65439	@ 0xff9f
+e210806c:	e5c3000c 	strb	r0, [r3, #12]
+e2108070:	e1d311b0 	ldrh	r1, [r3, #16]
+e2108074:	e0022001 	and	r2, r2, r1
+e2108078:	e1c321b0 	strh	r2, [r3, #16]
+e210807c:	e12fff1e 	bx	lr
+e2108080:	e6540000 	.word	0xe6540000
+
+e2108084 <scif_init>:
+e2108084:	e3e03aff 	mvn	r3, #1044480	@ 0xff000
+e2108088:	e5133fbb 	ldr	r3, [r3, #-4027]	@ 0xfffff045
+e210808c:	e2032c7e 	and	r2, r3, #32256	@ 0x7e00
+e2108090:	e3520b17 	cmp	r2, #23552	@ 0x5c00
+e2108094:	0a000012 	beq	e21080e4 <scif_init+0x60>
+e2108098:	e2033c7f 	and	r3, r3, #32512	@ 0x7f00
+e210809c:	e3530c5a 	cmp	r3, #23040	@ 0x5a00
+e21080a0:	112fff1e 	bxne	lr
+e21080a4:	e59f2068 	ldr	r2, [pc, #104]	@ e2108114 <scif_init+0x90>
+e21080a8:	e5923000 	ldr	r3, [r2]
+e21080ac:	e5922004 	ldr	r2, [r2, #4]
+e21080b0:	e2033102 	and	r3, r3, #-2147483648	@ 0x80000000
+e21080b4:	e2022001 	and	r2, r2, #1
+e21080b8:	e1833002 	orr	r3, r3, r2
+e21080bc:	e3530001 	cmp	r3, #1
+e21080c0:	0a000004 	beq	e21080d8 <scif_init+0x54>
+e21080c4:	8a000003 	bhi	e21080d8 <scif_init+0x54>
+e21080c8:	e59f3048 	ldr	r3, [pc, #72]	@ e2108118 <scif_init+0x94>
+e21080cc:	e59f2048 	ldr	r2, [pc, #72]	@ e210811c <scif_init+0x98>
+e21080d0:	e5832000 	str	r2, [r3]
+e21080d4:	e12fff1e 	bx	lr
+e21080d8:	e59f3038 	ldr	r3, [pc, #56]	@ e2108118 <scif_init+0x94>
+e21080dc:	e59f203c 	ldr	r2, [pc, #60]	@ e2108120 <scif_init+0x9c>
+e21080e0:	eafffffa 	b	e21080d0 <scif_init+0x4c>
+e21080e4:	e59f2028 	ldr	r2, [pc, #40]	@ e2108114 <scif_init+0x90>
+e21080e8:	e5923000 	ldr	r3, [r2]
+e21080ec:	e5922004 	ldr	r2, [r2, #4]
+e21080f0:	e2033102 	and	r3, r3, #-2147483648	@ 0x80000000
+e21080f4:	e2022001 	and	r2, r2, #1
+e21080f8:	e1833002 	orr	r3, r3, r2
+e21080fc:	e3530001 	cmp	r3, #1
+e2108100:	0afffff4 	beq	e21080d8 <scif_init+0x54>
+e2108104:	8afffff3 	bhi	e21080d8 <scif_init+0x54>
+e2108108:	e59f3008 	ldr	r3, [pc, #8]	@ e2108118 <scif_init+0x94>
+e210810c:	e59f2010 	ldr	r2, [pc, #16]	@ e2108124 <scif_init+0xa0>
+e2108110:	eaffffee 	b	e21080d0 <scif_init+0x4c>
+e2108114:	e6160000 	.word	0xe6160000
+e2108118:	e210d000 	.word	0xe210d000
+e210811c:	e210802c 	.word	0xe210802c
+e2108120:	e2108058 	.word	0xe2108058
+e2108124:	e2108000 	.word	0xe2108000
+
+e2108128 <PutChar>:
+e2108128:	e59f3004 	ldr	r3, [pc, #4]	@ e2108134 <PutChar+0xc>
+e210812c:	e5933000 	ldr	r3, [r3]
+e2108130:	e12fff13 	bx	r3
+e2108134:	e210d000 	.word	0xe210d000
+
+e2108138 <PutStr>:
+e2108138:	e92d4070 	push	{r4, r5, r6, lr}
+e210813c:	e1a05001 	mov	r5, r1
+e2108140:	e2404001 	sub	r4, r0, #1
+e2108144:	e5f40001 	ldrb	r0, [r4, #1]!
+e2108148:	e3500000 	cmp	r0, #0
+e210814c:	1a000006 	bne	e210816c <PutStr+0x34>
+e2108150:	e3550001 	cmp	r5, #1
+e2108154:	18bd8070 	popne	{r4, r5, r6, pc}
+e2108158:	e3a0000d 	mov	r0, #13
+e210815c:	ebfffff1 	bl	e2108128 <PutChar>
+e2108160:	e8bd4070 	pop	{r4, r5, r6, lr}
+e2108164:	e3a0000a 	mov	r0, #10
+e2108168:	eaffffee 	b	e2108128 <PutChar>
+e210816c:	ebffffed 	bl	e2108128 <PutChar>
+e2108170:	eafffff3 	b	e2108144 <PutStr+0xc>
+
+e2108174 <generic_timer_init>:
+e2108174:	e59f3004 	ldr	r3, [pc, #4]	@ e2108180 <generic_timer_init+0xc>
+e2108178:	ee0e3f10 	mcr	15, 0, r3, cr14, cr0, {0}
+e210817c:	e12fff1e 	bx	lr
+e2108180:	00fe4fe8 	.word	0x00fe4fe8
+
+e2108184 <micro_wait>:
+e2108184:	e92d4070 	push	{r4, r5, r6, lr}
+e2108188:	ee1e3f10 	mrc	15, 0, r3, cr14, cr0, {0}
+e210818c:	ec554f0e 	mrrc	15, 0, r4, r5, cr14
+e2108190:	e1a0c004 	mov	ip, r4
+e2108194:	e1a04005 	mov	r4, r5
+e2108198:	e0825093 	umull	r5, r2, r3, r0
+e210819c:	e0222193 	mla	r2, r3, r1, r2
+e21081a0:	e3a03000 	mov	r3, #0
+e21081a4:	e1a01003 	mov	r1, r3
+e21081a8:	e59fe03c 	ldr	lr, [pc, #60]	@ e21081ec <micro_wait+0x68>
+e21081ac:	e1530005 	cmp	r3, r5
+e21081b0:	e0d11002 	sbcs	r1, r1, r2
+e21081b4:	28bd8070 	popcs	{r4, r5, r6, pc}
+e21081b8:	ec510f0e 	mrrc	15, 0, r0, r1, cr14
+e21081bc:	e150000c 	cmp	r0, ip
+e21081c0:	e0d16004 	sbcs	r6, r1, r4
+e21081c4:	2a000003 	bcs	e21081d8 <micro_wait+0x54>
+e21081c8:	e3a01001 	mov	r1, #1
+e21081cc:	e59f001c 	ldr	r0, [pc, #28]	@ e21081f0 <micro_wait+0x6c>
+e21081d0:	ebffffd8 	bl	e2108138 <PutStr>
+e21081d4:	eafffffe 	b	e21081d4 <micro_wait+0x50>
+e21081d8:	e050300c 	subs	r3, r0, ip
+e21081dc:	e0c10004 	sbc	r0, r1, r4
+e21081e0:	e0813e93 	umull	r3, r1, r3, lr
+e21081e4:	e021109e 	mla	r1, lr, r0, r1
+e21081e8:	eaffffef 	b	e21081ac <micro_wait+0x28>
+e21081ec:	000f4240 	.word	0x000f4240
+e21081f0:	e21081f4 	.word	0xe21081f4
+e21081f4:	7263696d 	.word	0x7263696d
+e21081f8:	61775f6f 	.word	0x61775f6f
+e21081fc:	54287469 	.word	0x54287469
+e2108200:	72656d69 	.word	0x72656d69
+e2108204:	6c617620 	.word	0x6c617620
+e2108208:	65206575 	.word	0x65206575
+e210820c:	726f7272 	.word	0x726f7272
+e2108210:	2e292121 	.word	0x2e292121
+e2108214:	00202000 	.word	0x00202000
+e2108218:	6d6d7544 	.word	0x6d6d7544
+e210821c:	54522079 	.word	0x54522079
+e2108220:	5020534f 	.word	0x5020534f
+e2108224:	72676f72 	.word	0x72676f72
+e2108228:	20206d61 	.word	0x20206d61
+e210822c:	69746146 	.word	0x69746146
+e2108230:	74207368 	.word	0x74207368
+e2108234:	00747365 	.word	0x00747365
+e2108238:	6d6d7544 	.word	0x6d6d7544
+e210823c:	54522079 	.word	0x54522079
+e2108240:	5020534f 	.word	0x5020534f
+e2108244:	72676f72 	.word	0x72676f72
+e2108248:	62206d61 	.word	0x62206d61
+e210824c:	20746f6f 	.word	0x20746f6f
+e2108250:	20646e65 	.word	0x20646e65
+e2108254:	74614620 	.word	0x74614620
+e2108258:	20736869 	.word	0x20736869
+e210825c:	74736574 	.word	0x74736574
+e2108260:	646e4520 	.word	0x646e4520
+	...
+
+e2108265 <__RO_END_UNALIGNED__>:
+	...

@@ -1,0 +1,203 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 common/scif.o
+ .data          0x00000000        0x0 common/scif.o
+ .bss           0x00000000        0x0 common/scif.o
+ .text          0x00000000       0x3c common/div.o
+ .data          0x00000000        0x0 common/div.o
+ .bss           0x00000000        0x0 common/div.o
+ .debug_line    0x00000000       0x47 common/div.o
+ .debug_info    0x00000000       0x26 common/div.o
+ .debug_abbrev  0x00000000       0x14 common/div.o
+ .debug_aranges
+                0x00000000       0x20 common/div.o
+ .debug_str     0x00000000       0x7e common/div.o
+ .ARM.attributes
+                0x00000000       0x21 common/div.o
+ .text          0x00000000        0x0 common/generic_timer.o
+ .data          0x00000000        0x0 common/generic_timer.o
+ .bss           0x00000000        0x0 common/generic_timer.o
+ .data          0x00000000        0x0 rtos/rtos.o
+ .bss           0x00000000        0x0 rtos/rtos.o
+ .text          0x00000000        0x0 rtos/rtos_main.o
+ .data          0x00000000        0x0 rtos/rtos_main.o
+ .bss           0x00000000        0x0 rtos/rtos_main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0xe2100000         0x00400000         axrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD common/scif.o
+LOAD common/div.o
+LOAD common/generic_timer.o
+LOAD rtos/rtos.o
+LOAD rtos/rtos_main.o
+                0xe2100000                        . = 0xe2100000
+                0x00000001                        ASSERT ((. == ALIGN (0x1000)), CR7 dummy rtos address is not aligned on a page boundary.)
+
+ro              0xe2100000     0xc000
+                0xe2100000                        __RO_START__ = .
+ *rtos.o(.text*)
+ .text          0xe2100000      0x258 rtos/rtos.o
+                0xe2100000                Vector
+                0xe2100020                Start
+ *rtos_main.o(.text*)
+ .text.rtos_main
+                0xe2100258       0x54 rtos/rtos_main.o
+                0xe2100258                rtos_main
+                0xe2108000                        . = NEXT (0x8000)
+ *fill*         0xe21002ac     0x7d54 
+ *(.text*)
+ .text.scif0_PutChar
+                0xe2108000       0x2c common/scif.o
+ .text.scif3_PutChar
+                0xe210802c       0x2c common/scif.o
+ .text.hscif_PutChar
+                0xe2108058       0x2c common/scif.o
+ .text.scif_init
+                0xe2108084       0xa4 common/scif.o
+                0xe2108084                scif_init
+ .text.PutChar  0xe2108128       0x10 common/scif.o
+                0xe2108128                PutChar
+ .text.PutStr   0xe2108138       0x3c common/scif.o
+                0xe2108138                PutStr
+ .text.generic_timer_init
+                0xe2108174       0x10 common/generic_timer.o
+                0xe2108174                generic_timer_init
+ .text.micro_wait
+                0xe2108184       0x70 common/generic_timer.o
+                0xe2108184                micro_wait
+ *(.rodata*)
+ .rodata.micro_wait.str1.1
+                0xe21081f4       0x71 common/generic_timer.o
+                                 0x21 (size before relaxing)
+ .rodata.rtos_main.str1.1
+                0xe2108265       0x50 rtos/rtos_main.o
+                0xe2108265                        __RO_END_UNALIGNED__ = .
+                0xe2109000                        . = NEXT (0x1000)
+ *fill*         0xe2108265      0xd9b 
+                0xe210c000                        . = NEXT (0x4000)
+ *fill*         0xe2109000     0x3000 
+                0xe210c000                        __RO_END__ = .
+
+.glue_7         0xe210c000        0x0
+ .glue_7        0xe210c000        0x0 linker stubs
+
+.glue_7t        0xe210c000        0x0
+ .glue_7t       0xe210c000        0x0 linker stubs
+
+.vfp11_veneer   0xe210c000        0x0
+ .vfp11_veneer  0xe210c000        0x0 linker stubs
+
+.v4_bx          0xe210c000        0x0
+ .v4_bx         0xe210c000        0x0 linker stubs
+
+.iplt           0xe210c000        0x0
+ .iplt          0xe210c000        0x0 common/scif.o
+
+.rel.dyn        0xe210c000        0x0
+ .rel.iplt      0xe210c000        0x0 common/scif.o
+
+.data           0xe210c000        0x0
+                0xe210c000                        __DATA_START__ = .
+ *(.data*)
+                0xe210c000                        __DATA_END__ = .
+
+.igot.plt       0xe210c000        0x0
+ .igot.plt      0xe210c000        0x0 common/scif.o
+
+stacks          0xe210c000     0x1000
+                0xe210c000                        __STACKS_START__ = .
+ *(tzfw_normal_stacks)
+ tzfw_normal_stacks
+                0xe210c000     0x1000 rtos/rtos.o
+                0xe210d000                        __STACKS_END__ = .
+
+.bss            0xe210d000        0x4
+                0xe210d000                        __BSS_START__ = .
+ *(SORT_BY_ALIGNMENT(.bss*))
+ .bss.putc      0xe210d000        0x4 common/scif.o
+ *(COMMON)
+                0xe210d004                        __BSS_END__ = .
+                0x00000004                        __BSS_SIZE__ = SIZEOF (.bss)
+                0x00000001                        ASSERT ((. <= 0xe24fe800), CR7 dummy rtos has exceeded its limit.)
+OUTPUT(dummy_rtos.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000      0x61d
+ .debug_info    0x00000000      0x241 common/scif.o
+ .debug_info    0x00000241      0x249 common/generic_timer.o
+ .debug_info    0x0000048a       0x26 rtos/rtos.o
+ .debug_info    0x000004b0      0x16d rtos/rtos_main.o
+
+.debug_abbrev   0x00000000      0x37e
+ .debug_abbrev  0x00000000      0x12b common/scif.o
+ .debug_abbrev  0x0000012b      0x184 common/generic_timer.o
+ .debug_abbrev  0x000002af       0x14 rtos/rtos.o
+ .debug_abbrev  0x000002c3       0xbb rtos/rtos_main.o
+
+.debug_loclists
+                0x00000000      0x1e8
+ .debug_loclists
+                0x00000000      0x102 common/scif.o
+ .debug_loclists
+                0x00000102       0xe6 common/generic_timer.o
+
+.debug_aranges  0x00000000       0xb0
+ .debug_aranges
+                0x00000000       0x48 common/scif.o
+ .debug_aranges
+                0x00000048       0x28 common/generic_timer.o
+ .debug_aranges
+                0x00000070       0x20 rtos/rtos.o
+ .debug_aranges
+                0x00000090       0x20 rtos/rtos_main.o
+
+.debug_rnglists
+                0x00000000       0x6a
+ .debug_rnglists
+                0x00000000       0x32 common/scif.o
+ .debug_rnglists
+                0x00000032       0x25 common/generic_timer.o
+ .debug_rnglists
+                0x00000057       0x13 rtos/rtos_main.o
+
+.debug_line     0x00000000      0x4d3
+ .debug_line    0x00000000      0x218 common/scif.o
+ .debug_line    0x00000218      0x135 common/generic_timer.o
+ .debug_line    0x0000034d       0xd8 rtos/rtos.o
+ .debug_line    0x00000425       0xae rtos/rtos_main.o
+
+.debug_str      0x00000000      0x29e
+ .debug_str     0x00000000      0x29e common/scif.o
+                                0x218 (size before relaxing)
+ .debug_str     0x0000029e      0x226 common/generic_timer.o
+ .debug_str     0x0000029e       0x7d rtos/rtos.o
+ .debug_str     0x0000029e      0x1da rtos/rtos_main.o
+
+.comment        0x00000000       0x45
+ .comment       0x00000000       0x45 common/scif.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045       0x46 common/generic_timer.o
+ .comment       0x00000045       0x46 rtos/rtos_main.o
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x33 common/scif.o
+ .ARM.attributes
+                0x00000033       0x33 common/generic_timer.o
+ .ARM.attributes
+                0x00000066       0x21 rtos/rtos.o
+ .ARM.attributes
+                0x00000087       0x33 rtos/rtos_main.o
+
+.debug_frame    0x00000000       0xec
+ .debug_frame   0x00000000       0x88 common/scif.o
+ .debug_frame   0x00000088       0x3c common/generic_timer.o
+ .debug_frame   0x000000c4       0x28 rtos/rtos_main.o
