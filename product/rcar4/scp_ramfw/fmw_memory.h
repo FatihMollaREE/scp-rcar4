@@ -6,6 +6,7 @@
 #define FMW_MEMORY_H
 
 #include <system_mmap_scp.h>
+#include <rcar4_mmap_scp.h>
 
 #define FMW_MEM_MODE ARCH_MEM_MODE_SINGLE_REGION
 

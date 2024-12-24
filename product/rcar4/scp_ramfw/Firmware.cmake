@@ -16,9 +16,9 @@ set(SCP_ENABLE_SCMI_RESET_INIT TRUE)
 
 set(SCP_ENABLE_IPO_INIT FALSE)
 
-set(SCP_ENABLE_OUTBAND_MSG_SUPPORT_INIT TRUE)
+set(SCP_ENABLE_OUTBAND_MSG_SUPPORT_INIT FALSE)
 
-set(SCP_ARCHITECTURE "armv8-a") # muss ich noch implementieren (armv8-r) // vllt mal testen mit armv8-a arch
+set(SCP_ARCHITECTURE "armv8-r") 
 
 list(PREPEND SCP_MODULE_PATHS "${CMAKE_CURRENT_LIST_DIR}/../module/rcar4_reset")
 

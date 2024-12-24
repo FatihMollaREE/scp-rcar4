@@ -4,7 +4,7 @@
 
 include_guard()
 
-set(CMAKE_SYSTEM_PROCESSOR "<processor-name>")  # worauf kompiliere ich  Wo gebe ich überhaupt das verzeichniss an für compiler??? C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\13.3 rel1\bin
+set(CMAKE_SYSTEM_PROCESSOR "arm")  # worauf kompiliere ich  Wo gebe ich überhaupt das verzeichniss an für compiler??? C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\13.3 rel1\bin
 
 set(CMAKE_TOOLCHAIN_PREFIX "arm-none-eabi-")
 

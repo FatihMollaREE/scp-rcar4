@@ -225,7 +225,7 @@ STACK_INIT:
 
 
 	/* Loader Main */
-	BL     rtos_main
+	BL     arch_main
 
 NO_BOOT:
 	nop

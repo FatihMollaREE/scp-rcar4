@@ -10,7 +10,7 @@
 
 
 /* tbd - copied form rcar_mmap.h
-#define SCP_SRAM_BASE (0xE6302000U)
+#define SCP_SRAM_BASE (0xE6302000U) 
 #define SCP_SRAM_SIZE (0x00001000U)
 #define SCP_SRAM_STACK_BASE (SCP_SRAM_BASE + SCP_SRAM_SIZE)
 #define SCP_SRAM_STACK_SIZE (0x00001000U) unterschied von dem zum anderen stack? ders ja nur 2 * 1024
