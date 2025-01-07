@@ -124,6 +124,6 @@ void fwk_arch_suspend(void)
      * needs to be defined
      */
 #if !defined(FMW_DISABLE_ARCH_SUSPEND)
-    arch_suspend();
+    arch_suspend(); 
 #endif
 }

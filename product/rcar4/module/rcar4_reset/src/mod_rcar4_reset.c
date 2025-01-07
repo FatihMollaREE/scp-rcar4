@@ -17,7 +17,7 @@
 
 #include <stdint.h>
 #include <stdlib.h>
-#include <lib/utils_def.h>
+//#include <lib/utils_def.h>
 
 static struct rcar4_reset_ctx module_ctx;
 
@@ -27,7 +27,7 @@ static void udelay(uint32_t cycles)
   volatile uint32_t i;
 
     for (i = 0UL; i < cycles ; ++i)
-        __asm__ volatile ("nop");
+        __asm__ volatile ("nop"); /* FATIH assembler quick help*/
 }
 
 static const struct mod_reset_domain_drv_api api_reset = {
@@ -40,12 +40,12 @@ static int rcar4_auto_domain(fwk_id_t dev_id, uint32_t state)
 
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(dev_id);
 
-    mmio_write_32( SRCR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // set reset
+    mmio_write_32(SOFTWARE_RESET_BASE + SRCR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // set reset
 
     // RLCK @ 32,8kHz  ~= 30,49us
     udelay(SCSR_DELAY_US); // wait for RLCK as per user manual
 
-    mmio_write_32( SRSTCLR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // release reset
+    mmio_write_32(SOFTWARE_RESET_BASE + SRSTCLR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // release reset
 
     return FWK_SUCCESS;
 
@@ -57,7 +57,7 @@ static int rcar4_assert_domain(fwk_id_t dev_id)
 
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(dev_id);
 
-    mmio_write_32( SRCR(ctx->config->control_reg) , BIT(ctx->config->bit) );
+   mmio_write_32(SOFTWARE_RESET_BASE + SRCR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // set reset
 
     return FWK_SUCCESS;
 }
@@ -69,7 +69,7 @@ static int rcar4_deassert_domain(fwk_id_t dev_id)
 
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(dev_id);
 
-    mmio_write_32( SRSTCLR(ctx->config->control_reg) , BIT(ctx->config->bit) );
+     mmio_write_32(SOFTWARE_RESET_BASE + SRSTCLR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // release reset
 
     return FWK_SUCCESS;
 }

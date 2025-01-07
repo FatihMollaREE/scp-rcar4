@@ -30,9 +30,9 @@ struct rcar4_reset_ctx {
 };
 
 /* software reset control register offsets */
-#define SOFTWARE_RESET_BASE + SRCR(i) (0x2C + (i) * 4)
+#define SRCR(i) (0x2C00 + (i) * 4)
 /* software reset clearing register offsets*/
-#define SOFTWARE_RESET_BASE + 0x80 + SRSTCLR(i) (0x2C + (i) * 4) 
+#define SRSTCLR(i) (0x2C00 + 0x80  + (i) * 4)
 
 #define CPG_SMSTPCR0    0
 #define CPG_SMSTPCR1    1

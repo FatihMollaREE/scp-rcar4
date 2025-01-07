@@ -119,7 +119,7 @@ MEMORY {
                                                       FMW_STACK_SIZE
 #endif
     stack (rw):  ORIGIN = STACK_BASE, LENGTH = STACK_SIZE
-    #hier bin ich unsicher, brauch ich das, was muss dann hierhin?# sram (rxw): ORIGIN = ((0xE6302000)), LENGTH = (0x00001000)
+    sram (rxw): ORIGIN = ((0xE6302000)), LENGTH = (0x00001000)
 }
 
 

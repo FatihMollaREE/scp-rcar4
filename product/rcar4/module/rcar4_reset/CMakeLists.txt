@@ -2,7 +2,7 @@
 # LICENSE
 #
 
-add_library($(SCP_MODULE_TARGET) SCP_MODULE)
+add_library(${SCP_MODULE_TARGET} SCP_MODULE)
 
 target_include_directories(${SCP_MODULE_TARGET}
                            PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")

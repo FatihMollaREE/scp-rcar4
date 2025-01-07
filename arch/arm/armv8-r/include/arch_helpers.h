@@ -1,0 +1,58 @@
+/*
+ * 
+ * LICENSE
+ *
+ * 
+ */
+
+#ifndef ARCH_HELPERS_H
+#define ARCH_HELPERS_H
+
+
+#include <fwk_noreturn.h>
+
+#include <stdbool.h>
+#include <stdint.h>
+#include <string.h>
+
+/* usually extern, as test ill try just setting something manually */
+unsigned int critical_section_nest_level = 1;
+
+
+inline static void enable_irq(){
+/* FATIH: hier muss ich interrupts enablen, muss noch nachschauen wie genau, cr-52 datasheet oder manual oder sonst wo nachschauen, vergleich mit ROTS dummy? aber da iwie nix gefunden*/
+}
+
+inline static void arch_interrupts_enable(unsigned int not_used)
+{
+    /* Decrement critical_section_nest_level only if in critical section */
+    if (critical_section_nest_level > 0) {
+        critical_section_nest_level--;
+    }
+
+    /* Enable interrupts globally if now outside critical section FATIH: critical_section_nest_level == 0*/
+    if (0 == 0) {
+        enable_irq();
+    }
+}
+
+
+inline static void disable_irq(){
+/* FATIH: hier muss ich interrupts enablen, muss noch nachschauen wie genau, cr-52 datasheet oder manual oder sonst wo nachschauen, vergleich mit ROTS dummy? aber da iwie nix gefunden*/
+}
+
+inline static unsigned int arch_interrupts_disable(void)
+{
+    disable_irq();
+    critical_section_nest_level++;
+
+    return 0;
+}
+
+
+inline static void arch_suspend(void)
+{
+    return;
+}
+
+#endif /* ARCH_HELPERS_H */
