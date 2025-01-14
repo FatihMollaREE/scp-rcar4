@@ -177,7 +177,7 @@ struct fwk_arch_interrupt_driver {
      * \retval ::FWK_E_PARAM One or more parameters were invalid.
      * \retval ::FWK_E_STATE An interrupt is not currently being serviced.
      */
-    int (*get_current)(unsigned int *interrupt);
+    int (*get_current)(unsigned int *interrupt); // fatih: brauche ich für transport / mfis ??
 
     /*!
      * \brief Check if in interrupt context.

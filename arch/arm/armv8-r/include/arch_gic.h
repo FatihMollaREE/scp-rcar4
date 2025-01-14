@@ -1,18 +1,19 @@
 /*
- * Renesas SCP/MCP Software
- * Copyright (c) 2020-2021, Renesas Electronics Corporation. All rights
- * reserved.
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
+*
+* License
+*
+*/
 
-#ifndef ARMV8A_GIC_H
-#define ARMV8A_GIC_H
+#ifndef ARMV8R_GIC_H
+#define ARMV8R_GIC_H
 
 #include <fwk_arch.h>
 
 #include <arch_helpers.h>
+#include "../include/utils_def.h"
 
+
+/* Fatih: temp testing*/
 /* Constants to categorise priorities */
 #define GIC_HIGHEST_SEC_PRIORITY 0x0
 #define GIC_LOWEST_SEC_PRIORITY 0x7f
@@ -34,7 +35,6 @@
 
 /* Mask for the configuration field common to all GIC interfaces */
 #define GIC_CFG_MASK U(0x3)
-
 /*******************************************************************************
  * GIC Distributor interface register offsets that are common to GICv2
  ******************************************************************************/
@@ -42,7 +42,7 @@
 #define GICD_TYPER U(0x4)
 #define GICD_IIDR U(0x8)
 #define GICD_IGROUPR U(0x80)
-#define GICD_ISENABLER U(0x100) // Fatih: passen all diese Register?
+#define GICD_ISENABLER U(0x100)
 #define GICD_ICENABLER U(0x180)
 #define GICD_ISPENDR U(0x200)
 #define GICD_ICPENDR U(0x280)
@@ -120,16 +120,17 @@
 #define ITARGETSR_SHIFT 2
 #define ICFGR_SHIFT 4
 #define NSACR_SHIFT 4
+/* Fatih: temp testing*/
 
 /* GIC */
-#define RCAR_GICD_BASE U(0xF1010000)
-#define RCAR_GICR_BASE U(0xF1010000)
-#define RCAR_GICC_BASE U(0xF1020000)
-#define RCAR_GICH_BASE U(0xF1040000)
-#define RCAR_GICV_BASE U(0xF1060000)
+#define RCAR4_GICD_BASE U(0xF1000000) // bin mir echt unsicher ob das oder doch 0xF0000000
+#define RCAR4_GICR_BASE U(0xF1010000)
+#define RCAR4_GICC_BASE U(0xF1020000)
+#define RCAR4_GICH_BASE U(0xF1040000)
+#define RCAR4_GICV_BASE U(0xF1060000)
 
 void gic_init(void);
 int arm_gic_init(const struct fwk_arch_interrupt_driver **driver);
 void irq_global(uint32_t iid);
 
-#endif /* ARMV8A_GIC_H */
+#endif /* ARMV8R_GIC_H */

@@ -17,7 +17,27 @@
 
 #include <stdint.h>
 #include <stdlib.h>
-//#include <lib/utils_def.h>
+#include <utils_def.h>
+
+/* #include <lib/utils_def.h> Fatih: hier löschen falls alles klappt
+#if defined(__LINKER__) || defined(__ASSEMBLY__)
+#    define U(_x) (_x)
+#    define UL(_x) (_x)
+#    define ULL(_x) (_x)
+#    define L(_x) (_x)
+#    define LL(_x) (_x)
+#else
+#    define U(_x) (_x##U)
+#    define UL(_x) (_x##UL)
+#    define ULL(_x) (_x##ULL)
+#    define L(_x) (_x##L)
+#    define LL(_x) (_x##LL)
+#endif
+
+#define BIT BIT_32
+#define BIT_32(nr) (U(1) << (nr))
+#include <lib/utils_def.h> */
+
 
 static struct rcar4_reset_ctx module_ctx;
 
@@ -30,9 +50,6 @@ static void udelay(uint32_t cycles)
         __asm__ volatile ("nop"); /* FATIH assembler quick help*/
 }
 
-static const struct mod_reset_domain_drv_api api_reset = {
-    .set_reset_state = rcar4_set_reset_state,
-};
 
 static int rcar4_auto_domain(fwk_id_t dev_id, uint32_t state)
 {
@@ -110,6 +127,10 @@ static int rcar4_reset_init(fwk_id_t module_id, unsigned int element_count, cons
     return FWK_SUCCESS;
 }
 
+static const struct mod_reset_domain_drv_api api_reset = {
+    .set_reset_state = rcar4_set_reset_state,
+};
+
 static int rcar4_reset_element_init(fwk_id_t element_id, unsigned int sub_element_count, const void* data)
 {
     struct rcar4_reset_dev_ctx *ctx;
@@ -120,6 +141,8 @@ static int rcar4_reset_element_init(fwk_id_t element_id, unsigned int sub_elemen
 
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(element_id);
     ctx->config = dev_config;
+    
+    return FWK_SUCCESS;
 }
 
 static int rcar4_reset_process_bind_request(fwk_id_t source_id, fwk_id_t target_id, fwk_id_t api_id, const void **api)

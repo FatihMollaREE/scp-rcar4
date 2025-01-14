@@ -17,7 +17,8 @@ target_include_directories(
 target_sources(
     rcar4-bl
     PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/config_scmi.c"
-            "${CMAKE_CURRENT_SOURCE_DIR}/config_transport.c")
+            "${CMAKE_CURRENT_SOURCE_DIR}/config_transport.c"
+            "${CMAKE_CURRENT_SOURCE_DIR}/../src/rcar4_core.c")
 
     if(SCP_ENABLE_SCMI_RESET)
     target_sources(rcar4-bl
