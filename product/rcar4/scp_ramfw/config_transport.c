@@ -10,7 +10,7 @@
 #include <rcar4_core.h>
 #include <rcar4_mfismh.h>
 #include <rcar4_scmi.h>
-#include <software_mmap.h> // scheint als würde man hier sagen wo die kommunikation stattfindet tbi FATIH WICHTIG
+#include <software_mmap.h>
 
 #include <mod_power_domain.h>
 //#include <mod_rcar_pd_sysc.h>

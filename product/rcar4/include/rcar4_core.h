@@ -9,7 +9,7 @@
 #ifndef RCAR4_CORE_H
 #define RCAR4_CORE_H
 
-//#define RCAR4_CORE_PER_CLUSTER_MAX 8
+#define RCAR4_CORE_PER_CLUSTER_MAX 8
 
 unsigned int rcar_core_get_count(void);
 unsigned int rcar_cluster_get_count(void);
