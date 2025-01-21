@@ -1,4 +1,4 @@
-/*
+/* Fatih: einfach alle funktionen zu dummys gemacht
  * Renesas SCP/MCP Software
  * Copyright (c) 2020-2024, Renesas Electronics Corporation. All rights
  * reserved.
@@ -6,8 +6,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-#include <rcar_common.h>
-#include <rcar_mmap.h>
+#include <rcar4_common.h>
+#include <rcar4_mmap.h>
 
 #include <fwk_attributes.h>
 #include <fwk_mmio.h>
@@ -15,7 +15,7 @@
 void FWK_SECTION(".system_ram") cpg_write(uintptr_t regadr, uint32_t regval)
 {
     uint32_t value = (regval);
-    fwk_mmio_write_32((uintptr_t)RCAR_CPGWPR, ~value);
+    fwk_mmio_write_32((uintptr_t)RCAR4_CPGWPR, ~value);
     fwk_mmio_write_32(regadr, value);
 }
 
@@ -32,21 +32,23 @@ void FWK_SECTION(".system_ram")
 
 static inline void cpu_relax(void)
 {
-    __asm__ volatile("yield" ::: "memory");
+//    __asm__ volatile("yield" ::: "memory");
 }
 
 static uint64_t FWK_SECTION(".system_ram") get_cntfrq(void)
 {
-    uint64_t val;
-    __asm__ volatile("mrs %0, cntfrq_el0" : "=r"(val));
-    return val;
+//    uint64_t val;
+//    __asm__ volatile("mrs %0, cntfrq_el0" : "=r"(val));
+//    return val;
+        return 999;
 }
 
 static uint64_t FWK_SECTION(".system_ram") get_cntvct(void)
 {
-    uint64_t val;
-    __asm__ volatile("mrs %0, cntvct_el0" : "=r"(val));
-    return val;
+//    uint64_t val;
+//    __asm__ volatile("mrs %0, cntvct_el0" : "=r"(val));
+//    return val;
+    return 999;
 }
 
 static void FWK_SECTION(".system_ram") delay(uint64_t cycles)

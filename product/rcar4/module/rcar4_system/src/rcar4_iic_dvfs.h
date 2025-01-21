@@ -8,8 +8,8 @@
 
 /* The use of "subordinate" may not be in sync with platform documentation */
 
-#ifndef RCAR_IIC_DVFS_H
-#define RCAR_IIC_DVFS_H
+#ifndef RCAR4_IIC_DVFS_H
+#define RCAR4_IIC_DVFS_H
 
 /* PMIC subordinate */
 #define PMIC          (0x30)
@@ -21,7 +21,7 @@
 #define EEPROM   (0x50)
 #define BOARD_ID (0x70)
 
-int32_t rcar_iic_dvfs_receive(uint8_t subordinate, uint8_t reg, uint8_t *data);
-int32_t rcar_iic_dvfs_send(uint8_t subordinate, uint8_t regr, uint8_t data);
+int32_t rcar4_iic_dvfs_receive(uint8_t subordinate, uint8_t reg, uint8_t *data);
+int32_t rcar4_iic_dvfs_send(uint8_t subordinate, uint8_t regr, uint8_t data);
 
-#endif /* RCAR_IIC_DVFS_H */
+#endif /* RCAR4_IIC_DVFS_H */

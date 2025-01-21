@@ -30,7 +30,7 @@
  */
 
 #include <stdint.h>
-#include <scif.h>
+//#include <scif.h>
 #include "reg_rcar_gen3.h"
 
 #define	RST_MODEMR0						0xE6160000	// R	32	Mode Monitor Register

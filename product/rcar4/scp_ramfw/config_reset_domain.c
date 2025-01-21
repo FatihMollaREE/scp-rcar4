@@ -4,7 +4,7 @@
 *
 */
 
-//include <reset_devices.h>
+#include <reset_devices.h>
 //#include <reset_mstp_devices.h>
 
 #include <mod_reset_domain.h>
@@ -32,6 +32,13 @@ const struct fwk_element reset_domain_element_table[] = {
     },
     [RESET_DEV_IDX_COUNTFM] = { 0 }, /* Termination description. */
 
+};
+
+static const struct mod_reset_domain_config reset_domain_config = {
+#ifdef BUILD_HAS_SCMI_NOTIFICATIONS
+    .notification_id = FWK_ID_NOTIFICATION_INIT(FWK_MODULE_IDX_RESET_DOMAIN,
+        MOD_RESET_DOMAIN_NOTIFICATION_AUTORESET),
+#endif
 };
 
 static const struct fwk_element *reset_domain_get_element_table

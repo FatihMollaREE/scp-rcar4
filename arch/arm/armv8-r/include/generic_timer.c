@@ -38,7 +38,7 @@
 
 #include <stdint.h>
 #include <timer.h>
-#include "scif.h"
+//#include "scif.h"
 
 #define RCAR_CNTC_EXTAL     (16666600U) /* V4H/V4M : 16.666600MHz */
 

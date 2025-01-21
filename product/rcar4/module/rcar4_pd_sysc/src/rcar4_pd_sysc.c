@@ -6,8 +6,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-#include <rcar_common.h>
-#include <rcar_pd_sysc.h>
+#include <rcar4_common.h>
+#include <rcar4_pd_sysc.h>
 
 #include <fwk_mmio.h>
 #include <fwk_status.h>
@@ -15,9 +15,9 @@
 #include <stddef.h>
 
 /*****************************************************************************
- * LOCAL FUNCTIONS
+ * LOCAL FUNCTIONS fatih: nix gemacht
  *****************************************************************************/
-static int rcar_sysc_pwr_on_off(struct rcar_sysc_pd_ctx *pd_ctx, bool on)
+static int rcar4_sysc_pwr_on_off(struct rcar4_sysc_pd_ctx *pd_ctx, bool on)
 {
     unsigned int sr_bit, reg_offs;
     int k;
@@ -50,7 +50,7 @@ static int rcar_sysc_pwr_on_off(struct rcar_sysc_pd_ctx *pd_ctx, bool on)
     return 0;
 }
 
-int rcar_sysc_power(struct rcar_sysc_pd_ctx *pd_ctx, bool on)
+int rcar4_sysc_power(struct rcar4_sysc_pd_ctx *pd_ctx, bool on)
 {
     unsigned int isr_mask = BIT_SHIFT(pd_ctx->config->isr_bit);
     unsigned int chan_mask = BIT_SHIFT(pd_ctx->config->chan_bit);
@@ -67,7 +67,7 @@ int rcar_sysc_power(struct rcar_sysc_pd_ctx *pd_ctx, bool on)
 
     /* Submit power shutoff or resume request until it was accepted */
     for (k = 0; k < PWRER_RETRIES; k++) {
-        ret = rcar_sysc_pwr_on_off(pd_ctx, on);
+        ret = rcar4_sysc_pwr_on_off(pd_ctx, on);
         if (ret)
             return ret;
 
@@ -104,7 +104,7 @@ int rcar_sysc_power(struct rcar_sysc_pd_ctx *pd_ctx, bool on)
     return ret;
 }
 
-int rcar_sysc_power_get(struct rcar_sysc_pd_ctx *pd_ctx, unsigned int *statee)
+int rcar4_sysc_power_get(struct rcar4_sysc_pd_ctx *pd_ctx, unsigned int *statee)
 {
     *statee = pd_ctx->current_state;
 

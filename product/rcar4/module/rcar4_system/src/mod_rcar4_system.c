@@ -6,16 +6,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-#include <rcar_mmap.h>
-#include <rcar_pwc.h>
-#include <rcar_scmi.h>
-#include <rcar_sds.h>
+#include <rcar4_mmap.h>
+#include <rcar4_pwc.h>
+#include <rcar4_scmi.h>
+#include <rcar4_sds.h>
 
 #include <mod_clock.h>
-#include <mod_rcar_clock.h>
-#include <mod_rcar_reg_sensor.h>
-#include <mod_rcar_scif.h>
-#include <mod_rcar_system.h>
+#include <mod_rcar4_clock.h>
+//#include <mod_rcar4_reg_sensor.h>
+//#include <mod_rcar4_scif.h>
+#include <mod_rcar4_system.h>
 #include <mod_scmi.h>
 #include <mod_system_power.h>
 
@@ -34,36 +34,67 @@
 
 #include <arch_gic.h>
 #include <arch_helpers.h>
-#include <arch_system.h>
+
+/* fatih: tmp backdoor*/
+//#include <arch_system.h>
+
+/*
+ * Renesas SCP/MCP Software
+ * Copyright (c) 2020-2021, Renesas Electronics Corporation. All rights
+ * reserved.
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+#ifndef ARMV8A_SYSTEM_H
+#define ARMV8A_SYSTEM_H
+
+#define R_WARMBOOT (0xAA55AA55)
+#define R_SUSPEND (0x55AA55AA)
+#define R_RESET (0x5555AAAA)
+#define R_OFF (0xAAAA5555)
+#define R_CLEAR (0)
+
+#ifdef __ASSEMBLER__
+.extern _boot_flag.extern _shutdown_request
+#else
+extern volatile uint32_t _boot_flag;
+extern volatile uint32_t _shutdown_request;
+
+#endif /* __ASSEMBLY__ */
+
+#endif /* ARMV8A_SYSTEM_H */
+
+/* fatih: backdoor end*/
 
 /* Device context */
-struct rcar_system_dev_ctx {
-    const struct mod_rcar_system_dev_config *config;
-    struct mod_rcar_system_drv_api *api;
+struct rcar4_system_dev_ctx {
+    const struct mod_rcar4_system_dev_config *config;
+    struct mod_rcar4_system_drv_api *api;
 };
 
 /* Module context */
-struct rcar_system_ctx {
-    struct rcar_system_dev_ctx *dev_ctx_table;
+struct rcar4_system_ctx {
+    struct rcar4_system_dev_ctx *dev_ctx_table;
     unsigned int dev_count;
     struct mod_sds_api *sds_api;
 };
 
-static struct rcar_system_ctx module_ctx;
+static struct rcar4_system_ctx module_ctx;
 
 /*-----------------------------------------------------------*/
 #define P_STATUS (_shutdown_request)
 
 static fwk_id_t sds_feature_availability_id =
-    FWK_ID_ELEMENT_INIT(FWK_MODULE_IDX_SDS, RCAR_SDS_RAM_FEATURES_IDX);
+    FWK_ID_ELEMENT_INIT(FWK_MODULE_IDX_SDS, RCAR4_SDS_RAM_FEATURES_IDX);
 
 /* SCMI services required to enable the messaging stack */
 static unsigned int scmi_notification_table[] = {
-    RCAR_SCMI_SERVICE_IDX_PSCI,
-    RCAR_SCMI_SERVICE_IDX_OSPM,
-    RCAR_SCMI_SERVICE_IDX_VMM,
-    RCAR_SCMI_SERVICE_IDX_VM1,
-    RCAR_SCMI_SERVICE_IDX_VM2,
+    RCAR4_SCMI_SERVICE_IDX_PSCI,
+    RCAR4_SCMI_SERVICE_IDX_OSPM,
+    RCAR4_SCMI_SERVICE_IDX_VMM,
+    RCAR4_SCMI_SERVICE_IDX_VM1,
+    RCAR4_SCMI_SERVICE_IDX_VM2,
 };
 
 IMPORT_SYM(unsigned long, __system_ram_start__, SYSTEM_RAM_START);
@@ -76,7 +107,7 @@ IMPORT_SYM(unsigned long, __sram_copy_start__, SRAM_COPY_START);
 
 static int messaging_stack_ready(void)
 {
-    const uint32_t rcar_sys_flags = RCAR_SDS_FEATURE_FIRMWARE_MASK;
+    const uint32_t rcar4_sys_flags = RCAR4_SDS_FEATURE_FIRMWARE_MASK;
 
     const struct mod_sds_structure_desc *sds_structure_desc =
         fwk_module_get_data(sds_feature_availability_id);
@@ -89,7 +120,7 @@ static int messaging_stack_ready(void)
      * stack
      */
     return module_ctx.sds_api->struct_write(sds_structure_desc->id,
-        0, (const void *)(&rcar_sys_flags), sds_structure_desc->size);
+        0, (const void *)(&rcar4_sys_flags), sds_structure_desc->size);
 }
 
 bool is_available_shutdown_req(uint32_t req)
@@ -110,7 +141,7 @@ bool is_available_shutdown_req(uint32_t req)
     return ret;
 }
 
-void rcar_system_code_copy_to_system_ram(void)
+void rcar4_system_code_copy_to_system_ram(void)
 {
     memcpy(
         (void *)SCP_SRAM_BASE,
@@ -120,14 +151,14 @@ void rcar_system_code_copy_to_system_ram(void)
 
 int _platform_init(void *params)
 {
-    rcar_system_code_copy_to_system_ram();
+    rcar4_system_code_copy_to_system_ram();
     return FWK_SUCCESS;
 }
 
 void vApplicationIdleHook(void)
 {
     uint32_t req;
-    struct rcar_system_dev_ctx *ctx;
+    struct rcar4_system_dev_ctx *ctx;
     fwk_id_t element_id = FWK_ID_ELEMENT_INIT(FWK_MODULE_IDX_CLOCK, 0);
     uint32_t i;
     unsigned int flags;
@@ -139,12 +170,12 @@ void vApplicationIdleHook(void)
         switch (req) {
         case R_SUSPEND:
             _boot_flag = R_WARMBOOT;
-            while (!(fwk_mmio_read_32(RCAR_CA57PSTR) & 0x0f))
+            while (!(fwk_mmio_read_32(RCAR4_CA57PSTR) & 0x0f))
                 continue;
 
             _save_system();
 
-            rcar_system_code_copy_to_system_ram();
+            rcar4_system_code_copy_to_system_ram();
 
             for (i = 0; i < module_ctx.dev_count; i++) {
                 element_id.element.element_idx = i;
@@ -160,10 +191,10 @@ void vApplicationIdleHook(void)
             fwk_interrupt_global_enable(flags);
             break;
         case R_RESET:
-            rcar_system_reset();
+            rcar4_system_reset();
             break;
         case R_OFF:
-            rcar_system_off();
+            rcar4_system_off();
             break;
         default:
             break;
@@ -175,7 +206,7 @@ void vApplicationIdleHook(void)
  * Functions fulfilling the framework's module interface
  */
 
-static int rcar_system_shutdown(enum mod_pd_system_shutdown system_shutdown)
+static int rcar4_system_shutdown(enum mod_pd_system_shutdown system_shutdown)
 {
     switch (system_shutdown) {
     case MOD_PD_SYSTEM_SHUTDOWN:
@@ -192,14 +223,14 @@ static int rcar_system_shutdown(enum mod_pd_system_shutdown system_shutdown)
 }
 
 static const struct mod_system_power_driver_api
-    rcar_system_system_power_driver_api = { .system_shutdown =
-                                                rcar_system_shutdown };
+    rcar4_system_system_power_driver_api = { .system_shutdown =
+                                                rcar4_system_shutdown };
 
 /*
  * Functions fulfilling the framework's module interface
  */
 
-static int rcar_system_init(
+static int rcar4_system_init(
     fwk_id_t module_id,
     unsigned int element_count,
     const void *data)
@@ -210,19 +241,19 @@ static int rcar_system_init(
         return FWK_SUCCESS;
 
     module_ctx.dev_ctx_table =
-        fwk_mm_calloc(element_count, sizeof(struct rcar_system_dev_ctx));
+        fwk_mm_calloc(element_count, sizeof(struct rcar4_system_dev_ctx));
     if (module_ctx.dev_ctx_table == NULL)
         return FWK_E_NOMEM;
 
     return FWK_SUCCESS;
 }
-static int rcar_system_element(
+static int rcar4_system_element(
     fwk_id_t element_id,
     unsigned int sub_element_count,
     const void *data)
 {
-    struct rcar_system_dev_ctx *ctx;
-    const struct mod_rcar_system_dev_config *dev_config = data;
+    struct rcar4_system_dev_ctx *ctx;
+    const struct mod_rcar4_system_dev_config *dev_config = data;
 
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(element_id);
     ctx->config = dev_config;
@@ -230,9 +261,9 @@ static int rcar_system_element(
     return FWK_SUCCESS;
 }
 
-static int rcar_system_bind(fwk_id_t id, unsigned int round)
+static int rcar4_system_bind(fwk_id_t id, unsigned int round)
 {
-    struct rcar_system_dev_ctx *ctx;
+    struct rcar4_system_dev_ctx *ctx;
 
     if (round == 1)
         return FWK_SUCCESS;
@@ -250,18 +281,18 @@ static int rcar_system_bind(fwk_id_t id, unsigned int round)
         ctx->config->driver_id, ctx->config->api_id, &ctx->api);
 }
 
-static int rcar_system_process_bind_request(
+static int rcar4_system_process_bind_request(
     fwk_id_t source_id,
     fwk_id_t target_id,
     fwk_id_t api_id,
     const void **api)
 {
-    *api = &rcar_system_system_power_driver_api;
+    *api = &rcar4_system_system_power_driver_api;
 
     return FWK_SUCCESS;
 }
 
-static int rcar_system_start(fwk_id_t id)
+static int rcar4_system_start(fwk_id_t id)
 {
     int status;
     unsigned int i;
@@ -295,7 +326,7 @@ static int rcar_system_start(fwk_id_t id)
         id);
 }
 
-static int rcar_system_process_notification(
+static int rcar4_system_process_notification(
     const struct fwk_event *event,
     struct fwk_event *resp_event)
 {
@@ -325,13 +356,13 @@ static int rcar_system_process_notification(
     return FWK_SUCCESS;
 }
 
-const struct fwk_module module_rcar_system = {
-    .api_count = MOD_RCAR_SYSTEM_API_COUNT,
+const struct fwk_module module_rcar4_system = {
+    .api_count = MOD_RCAR4_SYSTEM_API_COUNT,
     .type = FWK_MODULE_TYPE_DRIVER,
-    .init = rcar_system_init,
-    .element_init = rcar_system_element,
-    .bind = rcar_system_bind,
-    .start = rcar_system_start,
-    .process_bind_request = rcar_system_process_bind_request,
-    .process_notification = rcar_system_process_notification,
+    .init = rcar4_system_init,
+    .element_init = rcar4_system_element,
+    .bind = rcar4_system_bind,
+    .start = rcar4_system_start,
+    .process_bind_request = rcar4_system_process_bind_request,
+    .process_notification = rcar4_system_process_notification,
 };

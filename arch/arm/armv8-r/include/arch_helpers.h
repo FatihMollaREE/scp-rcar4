@@ -16,8 +16,7 @@
 #include <string.h>
 
 /* usually extern, as test ill try just setting something manually */
-unsigned int critical_section_nest_level = 1;
-
+extern unsigned int critical_section_nest_level;
 
 inline static void enable_irq(){
 /* FATIH: hier muss ich interrupts enablen, muss noch nachschauen wie genau, cr-52 datasheet oder manual oder sonst wo nachschauen, vergleich mit ROTS dummy? aber da iwie nix gefunden*/

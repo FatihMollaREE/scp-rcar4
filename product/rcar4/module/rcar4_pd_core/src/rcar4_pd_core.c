@@ -18,7 +18,7 @@
 
 #include <stddef.h>
 
-void rcar4_pwrc_cpuoff(unsigned int core)
+void rcar4_pwrc_cpuoff(uint32_t core)
 {
     uintptr_t off_reg;
     uint32_t cpu_no;

@@ -18,9 +18,38 @@
 #include <arch_gic.h>
 
 /* FATIH: tmp defines? */
-#define IS_SUPPORT_INT(n) ((n >= RCAR_MFIS_MIN) && (n < RCAR_MFIS_MAX))
+#define C_INT_ID (INT_ID(c_interrupt))
+#ifndef RCAR4_SCMI_LIB
+#    define RCAR4_MFIS_MIN U(256)
+#    define RCAR4_MFIS_NO U(8)
+#    define RCAR4_MFIS_MAX (RCAR4_MFIS_MIN + RCAR4_MFIS_NO)
+#    define IS_SUPPORT_INT(n) ((n >= RCAR4_MFIS_MIN) && (n < RCAR4_MFIS_MAX))
+#    define EFECTIVE_NO(n) (n - RCAR4_MFIS_MIN)
+#else
+#    define IS_SUPPORT_INT(n) ((n >= SMCMH_IRQ_START) && (n < SMCMH_IRQ_END))
+#    define EFECTIVE_NO(n) (n & 0xff)
+#endif /* RCAR4_SCMI_LIB */
 #define CHECK_BIT(d, b) ((d >> b) & 1)
 #define IID_LEN (10)
+
+
+/* Prototypes: */
+void gic_cpuif_enable(void);
+
+__STATIC_FORCEINLINE void __enable_fault_irq(void)
+{
+  __ASM volatile ("cpsie f" : : : "memory");
+}
+
+/**
+  \brief   Disable FIQ
+  \details Disables FIQ interrupts by setting special-purpose register FAULTMASK.
+           Can only be executed in Privileged modes.
+ */
+__STATIC_FORCEINLINE void __disable_fault_irq(void)
+{
+  __ASM volatile ("cpsid f" : : : "memory");
+}
 
 /*
  * For interrupts with parameters, their entry in the vector table points to a
@@ -182,8 +211,8 @@ void gic_cpuif_enable(void)
     val |= IRQ_BYP_DIS_GRP0 | FIQ_BYP_DIS_GRP1 | IRQ_BYP_DIS_GRP1;
 
     /* Program the idle priority in the PMR */
-    gicc_write_pmr(RCAR_GICC_BASE, GIC_PRI_MASK); // Fatih: kontrolliere diese Register, finde iwie nix zu GICC
-    gicc_write_ctlr(RCAR_GICC_BASE, val);
+    gicc_write_pmr(RCAR4_GICC_BASE, GIC_PRI_MASK); // Fatih: kontrolliere diese Register, finde iwie nix zu GICC
+    gicc_write_ctlr(RCAR4_GICC_BASE, val);
 }
 
 static unsigned int gicd_read_isenabler(uintptr_t base, unsigned int id)
@@ -243,7 +272,7 @@ static int is_pending(unsigned int interrupt, bool *pending)
 
     bit = interrupt % 32;
     *pending =
-        ((gicd_read_ispendr(RCAR_GICD_BASE, interrupt) & (1 << bit)) ? true :
+        ((gicd_read_ispendr(RCAR4_GICD_BASE, interrupt) & (1 << bit)) ? true :
                                                                        false);
 
     return FWK_SUCCESS;
@@ -257,7 +286,7 @@ static int set_pending(unsigned int interrupt)
         return FWK_E_PARAM;
 
     bit = interrupt % 32;
-    gicd_write_ispendr(RCAR_GICD_BASE, interrupt, 1U << bit);
+    gicd_write_ispendr(RCAR4_GICD_BASE, interrupt, 1U << bit);
 
     return FWK_SUCCESS;
 }
@@ -319,7 +348,7 @@ static int is_enabled(unsigned int interrupt, bool *enabled)
     if (!IS_SUPPORT_INT(interrupt))
         return FWK_E_PARAM;
 
-    *enabled = (bool)gicd_get_isenabler(RCAR_GICD_BASE, interrupt); 
+    *enabled = (bool)gicd_get_isenabler(RCAR4_GICD_BASE, interrupt); 
 
     return FWK_SUCCESS;
 }
@@ -329,7 +358,7 @@ static int enable(unsigned int interrupt)
     if (!IS_SUPPORT_INT(interrupt))
         return FWK_E_PARAM;
 
-    gicd_set_isenabler(RCAR_GICD_BASE, interrupt);
+    gicd_set_isenabler(RCAR4_GICD_BASE, interrupt);
 
     return FWK_SUCCESS;
 }
@@ -339,7 +368,7 @@ static int disable(unsigned int interrupt)
     if (!IS_SUPPORT_INT(interrupt))
         return FWK_E_PARAM;
 
-    gicd_set_icenabler(RCAR_GICD_BASE, interrupt);
+    gicd_set_icenabler(RCAR4_GICD_BASE, interrupt);
 
     return FWK_SUCCESS;
 }
@@ -362,7 +391,7 @@ static int clear_pending(unsigned int interrupt)
         return FWK_E_PARAM;
 
     bit = interrupt % 32;
-    gicd_write_icpendr(RCAR_GICD_BASE, interrupt, 1U << bit);
+    gicd_write_icpendr(RCAR4_GICD_BASE, interrupt, 1U << bit);
 
     return FWK_SUCCESS;
 }

@@ -23,8 +23,37 @@
 #include <fwk_module_idx.h>
 #include <fwk_notification.h>
 
-#include <arch_system.h>
+/* fatih: tmp backdoor*/
+//#include <arch_system.h>
 
+/*
+ * Renesas SCP/MCP Software
+ * Copyright (c) 2020-2021, Renesas Electronics Corporation. All rights
+ * reserved.
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+#ifndef ARMV8A_SYSTEM_H
+#define ARMV8A_SYSTEM_H
+
+#define R_WARMBOOT (0xAA55AA55)
+#define R_SUSPEND (0x55AA55AA)
+#define R_RESET (0x5555AAAA)
+#define R_OFF (0xAAAA5555)
+#define R_CLEAR (0)
+
+#ifdef __ASSEMBLER__
+.extern _boot_flag.extern _shutdown_request
+#else
+extern volatile uint32_t _boot_flag;
+extern volatile uint32_t _shutdown_request;
+
+#endif /* __ASSEMBLY__ */
+
+#endif /* ARMV8A_SYSTEM_H */
+
+/* fatih: backdoor end*/
 #include <stdbool.h>
 
 static struct rcar4_pd_sysc_ctx rcar4_pd_sysc_ctx;
@@ -139,7 +168,7 @@ static int rcar4_core_pd_prepare_for_system_suspend(fwk_id_t core_pd_id)
     fwk_mmio_write_32(RCAR4_CA57CPU0CR, CPU_PWR_OFF);
 
     fwk_mmio_write_32(RCAR4_CA57CPUCMCR, MODE_L2_DOWN);
-    _shutdown_request = R_SUSPEND;
+    //_shutdown_request = R_SUSPEND; Fatih: hier einf temp das weggemacht, hab auch noch nicht geguckt was das hier alles machen soll
 
     return FWK_SUCCESS;
 }

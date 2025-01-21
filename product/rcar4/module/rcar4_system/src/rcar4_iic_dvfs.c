@@ -8,9 +8,9 @@
 
 /* The use of "subordinate" may not be in sync with platform documentation */
 
-#include "rcar_common.h"
-#include "rcar_iic_dvfs.h"
-#include "rcar_mmap.h"
+#include "rcar4_common.h"
+#include "rcar4_iic_dvfs.h"
+#include "rcar4_mmap.h"
 
 #include <fwk_attributes.h>
 #include <fwk_mmio.h>
@@ -83,8 +83,8 @@ typedef enum {
 #define IIC_DVFS_FUNC(__name, ...) \
     static int32_t FWK_SECTION(".system_ram") dvfs_##__name(__VA_ARGS__)
 
-#define RCAR_DVFS_API(__name, ...) \
-    int32_t FWK_SECTION(".system_ram") rcar_iic_dvfs_##__name(__VA_ARGS__)
+#define RCAR4_DVFS_API(__name, ...) \
+    int32_t FWK_SECTION(".system_ram") rcar4_iic_dvfs_##__name(__VA_ARGS__)
 
 extern void panic(void);
 
@@ -180,9 +180,9 @@ IIC_DVFS_FUNC(start, DVFS_STATE_T *state)
     mode = fwk_mmio_read_8(IIC_DVFS_REG_ICCR) | IIC_DVFS_BIT_ICCR_ENABLE;
     fwk_mmio_write_8(IIC_DVFS_REG_ICCR, mode);
 
-    lsi_product = fwk_mmio_read_32(RCAR_PRR) & RCAR_PRODUCT_MASK;
-    if (lsi_product != RCAR_PRODUCT_E3) {
-        reg = fwk_mmio_read_32(RCAR_MODEMR) & CHECK_MD13_MD14;
+    lsi_product = fwk_mmio_read_32(RCAR4_PRR) & RCAR4_PRODUCT_MASK;
+    if (lsi_product != RCAR4_PRODUCT_E3) {
+        reg = fwk_mmio_read_32(RCAR4_MODEMR) & CHECK_MD13_MD14;
         switch (reg) {
         case MD14_MD13_TYPE_0:
             iccl = IIC_DVFS_SET_ICCL_EXTAL_TYPE_0;
@@ -480,7 +480,7 @@ IIC_DVFS_FUNC(read, DVFS_STATE_T *state, uint8_t *reg_data)
     return DVFS_PROCESS;
 }
 
-RCAR_DVFS_API(send, uint8_t subordinate, uint8_t reg_addr, uint8_t reg_data)
+RCAR4_DVFS_API(send, uint8_t subordinate, uint8_t reg_addr, uint8_t reg_data)
 {
     DVFS_STATE_T state = DVFS_START;
     int32_t result = DVFS_PROCESS;
@@ -518,7 +518,7 @@ RCAR_DVFS_API(send, uint8_t subordinate, uint8_t reg_addr, uint8_t reg_data)
     return result;
 }
 
-RCAR_DVFS_API(receive, uint8_t subordinate, uint8_t reg, uint8_t *data)
+RCAR4_DVFS_API(receive, uint8_t subordinate, uint8_t reg, uint8_t *data)
 {
     DVFS_STATE_T state = DVFS_START;
     int32_t result = DVFS_PROCESS;

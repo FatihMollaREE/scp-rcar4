@@ -6,15 +6,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-#ifndef RCAR_PD_SYSC_H
-#define RCAR_PD_SYSC_H
+#ifndef RCAR4_PD_SYSC_H
+#define RCAR4_PD_SYSC_H
 
 /*!
  * \cond
  * @{
  */
 
-#include <mod_rcar_pd_sysc.h>
+#include <mod_rcar4_pd_sysc.h>
 
 #include <fwk_macros.h>
 
@@ -23,6 +23,7 @@
 
 #define BIT_SHIFT(nr) (1UL << (nr))
 
+/* FATIH: hier noch nix angeguckt/geändert*/
 /* SYSC Common */
 #define SYSC_BASE_ADDR (0xE6180000U) /* SYSC Base Address*/
 #define SYSCSR 0x00 /* SYSC Status Register */
@@ -60,12 +61,12 @@
 /*
  * Interface
  */
-int rcar_sysc_power(struct rcar_sysc_pd_ctx *pd_ctx, bool on);
-int rcar_sysc_power_get(struct rcar_sysc_pd_ctx *pd_ctx, unsigned int *statee);
+int rcar4_sysc_power(struct rcar4_sysc_pd_ctx *pd_ctx, bool on);
+int rcar4_sysc_power_get(struct rcar4_sysc_pd_ctx *pd_ctx, unsigned int *statee);
 
 /*!
  * \endcond
  * @}
  */
 
-#endif /* RCAR_PD_SYSC_H */
+#endif /* RCAR4_PD_SYSC_H */

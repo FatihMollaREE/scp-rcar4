@@ -6,6 +6,7 @@
 
 #include <mod_scmi_reset_domain.h>
 #include <rcar4_scmi.h>
+#include <reset_devices.h>
 
 #include <fwk_element.h>
 #include <fwk_macros.h>

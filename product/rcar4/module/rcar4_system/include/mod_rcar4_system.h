@@ -6,26 +6,26 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-#ifndef MOD_RCAR_SYSTEM_H
-#define MOD_RCAR_SYSTEM_H
+#ifndef MOD_RCAR4_SYSTEM_H
+#define MOD_RCAR4_SYSTEM_H
 
 #include <fwk_id.h>
 
 /*!
- * \addtogroup GroupRCARModule RCAR Product Modules
+ * \addtogroup GroupRCAR4Module RCAR4 Product Modules
  * @{
  */
 
 /*!
- * \defgroup GroupRCARSystem RCAR System Support
+ * \defgroup GroupRCAR4System RCAR4 System Support
  *
  * @{
  */
 
-/*!
+/*! Fatih: nix gemacht ganze datei
  * \brief System device configuration.
  */
-struct mod_rcar_system_dev_config {
+struct mod_rcar4_system_dev_config {
     /*! Reference to the device element within the associated driver module */
     const fwk_id_t driver_id;
 
@@ -36,26 +36,26 @@ struct mod_rcar_system_dev_config {
 /*!
  * \brief API indices.
  */
-enum mod_rcar_system_api_idx {
+enum mod_rcar4_system_api_idx {
     /*! API index for the driver interface of the SYSTEM POWER module */
-    MOD_RCAR_SYSTEM_API_IDX_SYSTEM_POWER_DRIVER,
+    MOD_RCAR4_SYSTEM_API_IDX_SYSTEM_POWER_DRIVER,
 
     /*! Number of defined APIs */
-    MOD_RCAR_SYSTEM_API_COUNT
+    MOD_RCAR4_SYSTEM_API_COUNT
 };
 
 /*!
  * @cond
  */
 
-void rcar_system_code_copy_to_system_ram(void);
+void rcar4_system_code_copy_to_system_ram(void);
 extern void vConfigureTickInterrupt(void);
 extern void _save_system(void);
 
 /*!
- * \brief rcar system module interface.
+ * \brief rcar4 system module interface.
  */
-struct mod_rcar_system_drv_api {
+struct mod_rcar4_system_drv_api {
     int (*resume)(void);
 };
 
@@ -71,4 +71,4 @@ struct mod_rcar_system_drv_api {
  * @}
  */
 
-#endif /* MOD_RCAR_SYSTEM_H */
+#endif /* MOD_RCAR4_SYSTEM_H */

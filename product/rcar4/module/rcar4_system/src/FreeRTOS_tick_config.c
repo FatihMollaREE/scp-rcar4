@@ -8,8 +8,8 @@
 
 #include "FreeRTOS.h"
 #include "arch_gic.h"
-#include "rcar_irq.h"
-#include "rcar_mmap.h"
+#include "rcar4_irq.h"
+#include "rcar4_mmap.h"
 #include "task.h"
 
 #include <fwk_mmio.h>
@@ -35,12 +35,12 @@ static void init_generic_timer(void)
         EXTAL_MD14_MD13_TYPE_3 /* MD14/MD13 : 0b11 */
     };
 
-    modemr = fwk_mmio_read_32(RCAR_MODEMR);
+    modemr = fwk_mmio_read_32(RCAR4_MODEMR);
     modemr_pll = (modemr & MODEMR_BOOT_PLL_MASK);
 
     /* Set frequency data in CNTFID0 */
     reg_cntfid = pll_table[modemr_pll >> MODEMR_BOOT_PLL_SHIFT];
-    reg = fwk_mmio_read_32(RCAR_PRR) & (RCAR_PRODUCT_MASK | RCAR_CUT_MASK);
+    reg = fwk_mmio_read_32(RCAR4_PRR) & (RCAR4_PRODUCT_MASK | RCAR4_CUT_MASK);
     switch (modemr_pll) {
     case MD14_MD13_TYPE_0:
 #ifdef SALVATORE_XS
@@ -48,7 +48,7 @@ static void init_generic_timer(void)
 #endif
         break;
     case MD14_MD13_TYPE_3:
-        if (RCAR_PRODUCT_H3_CUT10 == reg) {
+        if (RCAR4_PRODUCT_H3_CUT10 == reg) {
             reg_cntfid = reg_cntfid >> 1U;
         }
         break;
@@ -57,44 +57,53 @@ static void init_generic_timer(void)
         break;
     }
     /* Update memory mapped and register based freqency */
-    __asm__ volatile("msr cntfrq_el0, %0" ::"r"(reg_cntfid));
+    /* fatih: tmp disable da falsche arch*/
+    //__asm__ volatile("msr cntfrq_el0, %0" ::"r"(reg_cntfid));
 }
 
 void disable_cntv(void)
 {
-    uint32_t cntv_ctl;
-    cntv_ctl = 0;
-    __asm__ volatile("msr cntv_ctl_el0, %0" ::"r"(cntv_ctl));
+    //uint32_t cntv_ctl;
+    //cntv_ctl = 0;
+    /* fatih: tmp disable da falsche arch*/
+    //__asm__ volatile("msr cntv_ctl_el0, %0" ::"r"(cntv_ctl));
 }
 /*-----------------------------------------------------------*/
 
 void enable_cntv(void)
 {
-    uint32_t cntv_ctl;
-    cntv_ctl = 1;
-    __asm__ volatile("msr cntv_ctl_el0, %0" ::"r"(cntv_ctl));
+    //uint32_t cntv_ctl;
+    //cntv_ctl = 1;
+    /* fatih: tmp disable da falsche arch*/
+    //__asm__ volatile("msr cntv_ctl_el0, %0" ::"r"(cntv_ctl));
 }
 /*-----------------------------------------------------------*/
 
 void write_cntv_tval(uint32_t val)
 {
-    __asm__ volatile("msr cntv_tval_el0, %0" ::"r"(val));
+    /* fatih: tmp disable da falsche arch*/
+    //__asm__ volatile("msr cntv_tval_el0, %0" ::"r"(val));
     return;
 }
 /*-----------------------------------------------------------*/
 
 uint32_t read_cntfrq(void)
 {
-    uint32_t val;
-    __asm__ volatile("mrs %0, cntfrq_el0" : "=r"(val));
-    return val;
+    //uint32_t val;
+    //uint32_t ;
+    /* fatih: tmp disable da falsche arch*/
+    //__asm__ volatile("mrs %0, cntfrq_el0" : "=r"(val));
+    //return val;
+    return 99;
 }
 /*-----------------------------------------------------------*/
 
 uint32_t read_cntv_tval(void)
 {
     uint32_t val;
-    __asm__ volatile("mrs %0, cntvct_el0" : "=r"(val));
+    val = 99;
+    /* fatih: tmp disable da falsche arch*/
+//    __asm__ volatile("mrs %0, cntvct_el0" : "=r"(val));
     return val;
 }
 /*-----------------------------------------------------------*/
@@ -144,8 +153,8 @@ void vApplicationIRQHandler(void)
 {
     uint32_t ulInterruptID;
 
-    c_interrupt = fwk_mmio_read_32(RCAR_GICC_BASE + GICC_IAR);
-    fwk_mmio_write_32(RCAR_GICC_BASE + GICC_EOIR, c_interrupt);
+    c_interrupt = fwk_mmio_read_32(RCAR4_GICC_BASE + GICC_IAR);
+    fwk_mmio_write_32(RCAR4_GICC_BASE + GICC_EOIR, c_interrupt);
     ulInterruptID = c_interrupt & 0x00000FFFUL;
 
     /* call handler function */

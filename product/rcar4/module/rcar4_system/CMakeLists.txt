@@ -12,14 +12,13 @@ target_include_directories(${SCP_MODULE_TARGET}
 
 target_sources(
     ${SCP_MODULE_TARGET}
-    PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src/rcar_pwc.c"
+    PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src/rcar4_pwc.c"
             "${CMAKE_CURRENT_SOURCE_DIR}/src/FreeRTOS_tick_config.c"
-            "${CMAKE_CURRENT_SOURCE_DIR}/src/rcar_iic_dvfs.c"
-            "${CMAKE_CURRENT_SOURCE_DIR}/src/mod_rcar_system.c"
-            "${CMAKE_CURRENT_SOURCE_DIR}/src/rcar_common.c"
-            "${CMAKE_CURRENT_SOURCE_DIR}/src/rcar_call_sram.S")
+            "${CMAKE_CURRENT_SOURCE_DIR}/src/rcar4_iic_dvfs.c"
+            "${CMAKE_CURRENT_SOURCE_DIR}/src/mod_rcar4_system.c"
+            "${CMAKE_CURRENT_SOURCE_DIR}/src/rcar4_common.c"
+            "${CMAKE_CURRENT_SOURCE_DIR}/src/rcar4_call_sram.S")
 
 target_link_libraries(${SCP_MODULE_TARGET}
-    PRIVATE module-sds module-rcar-clock module-rcar-reg-sensor module-sensor
-            module-rcar-scif module-scmi module-system-power
+    PRIVATE module-sds module-rcar4-clock module-scmi module-system-power
             ${SCP_ARCHITECTURE_TARGET})

@@ -6,10 +6,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-#include <rcar_common.h>
-#include <rcar_iic_dvfs.h>
-#include <rcar_mmap.h>
-#include <rcar_pwc.h>
+#include <rcar4_common.h>
+#include <rcar4_iic_dvfs.h>
+#include <rcar4_mmap.h>
+#include <rcar4_pwc.h>
 
 #include <fwk_attributes.h>
 #include <fwk_mmio.h>
@@ -60,7 +60,7 @@
 #define SRESCR_CODE (0x5AA5U << 16)
 #define BIT_SOFTRESET (1U << 15)
 #define SCTLR_EL3_M_BIT ((uint32_t)1U << 0)
-#define RCAR_CONV_MICROSEC (1000000U)
+#define RCAR4_CONV_MICROSEC (1000000U)
 
 #define DBCAM_FLUSH(__bit) \
     do { \
@@ -69,23 +69,23 @@
         !(fwk_mmio_read_32(DBSC4_REG_DBCAM##__bit##STAT0) & \
           DBSC4_BIT_DBCAMxSTAT0))
 
-extern uint32_t rcar_pwrc_switch_stack(
+extern uint32_t rcar4_pwrc_switch_stack(
     uintptr_t jump,
     uintptr_t stack,
     void *arg);
 
 extern void panic(void);
 
-static void FWK_SECTION(".system_ram") rcar_pwrc_set_self_refresh(void)
+static void FWK_SECTION(".system_ram") rcar4_pwrc_set_self_refresh(void)
 {
-    uint32_t reg = fwk_mmio_read_32(RCAR_PRR);
+    uint32_t reg = fwk_mmio_read_32(RCAR4_PRR);
     uint32_t cut, product;
 
-    product = reg & RCAR_PRODUCT_MASK;
-    cut = reg & RCAR_CUT_MASK;
+    product = reg & RCAR4_PRODUCT_MASK;
+    cut = reg & RCAR4_CUT_MASK;
 
-    if (!((product == RCAR_PRODUCT_M3 && cut < RCAR_CUT_VER30) ||
-          (product == RCAR_PRODUCT_H3 && cut < RCAR_CUT_VER20)))
+    if (!((product == RCAR4_PRODUCT_M3 && cut < RCAR4_CUT_VER30) ||
+          (product == RCAR4_PRODUCT_H3 && cut < RCAR4_CUT_VER20)))
         fwk_mmio_write_32(
             DBSC4_REG_DBSYSCNT0, DBSC4_SET_DBSYSCNT0_WRITE_ENABLE);
 
@@ -98,16 +98,16 @@ static void FWK_SECTION(".system_ram") rcar_pwrc_set_self_refresh(void)
     /* Set the Self-Refresh mode */
     fwk_mmio_write_32(DBSC4_REG_DBACEN, 0);
 
-    if (product == RCAR_PRODUCT_H3 && cut < RCAR_CUT_VER20)
+    if (product == RCAR4_PRODUCT_H3 && cut < RCAR4_CUT_VER20)
         udelay(100);
-    else if (product == RCAR_PRODUCT_H3) {
+    else if (product == RCAR4_PRODUCT_H3) {
         fwk_mmio_write_32(DBSC4_REG_DBCAM0CTRL0, 1);
         DBCAM_FLUSH(0);
         DBCAM_FLUSH(1);
         DBCAM_FLUSH(2);
         DBCAM_FLUSH(3);
         fwk_mmio_write_32(DBSC4_REG_DBCAM0CTRL0, 0);
-    } else if (product == RCAR_PRODUCT_M3) {
+    } else if (product == RCAR4_PRODUCT_M3) {
         fwk_mmio_write_32(DBSC4_REG_DBCAM0CTRL0, 1);
         DBCAM_FLUSH(0);
         DBCAM_FLUSH(1);
@@ -152,45 +152,48 @@ static void FWK_SECTION(".system_ram") rcar_pwrc_set_self_refresh(void)
     fwk_mmio_write_32(DBSC4_REG_DBRFEN, 0U);
     udelay(1);
 
-    if (product == RCAR_PRODUCT_M3 && cut < RCAR_CUT_VER30)
+    if (product == RCAR4_PRODUCT_M3 && cut < RCAR4_CUT_VER30)
         return;
 
-    if (product == RCAR_PRODUCT_H3 && cut < RCAR_CUT_VER20)
+    if (product == RCAR4_PRODUCT_H3 && cut < RCAR4_CUT_VER20)
         return;
 
     fwk_mmio_write_32(DBSC4_REG_DBSYSCNT0, DBSC4_SET_DBSYSCNT0_WRITE_DISABLE);
 }
 
-void FWK_SECTION(".system_ram") FWK_NOINLINE rcar_pwrc_go_suspend_to_ram(void)
+void FWK_SECTION(".system_ram") FWK_NOINLINE rcar4_pwrc_go_suspend_to_ram(void)
 {
     int32_t rc = -1, qllm = -1;
     uint8_t mode;
     uint32_t i;
 
-    rcar_pwrc_set_self_refresh();
+    rcar4_pwrc_set_self_refresh();
 
     /* Set QLLM Cnt Disable */
     for (i = 0; (i < PMIC_RETRY_MAX) && (qllm != 0); i++)
-        qllm = rcar_iic_dvfs_send(PMIC, PMIC_QLLM_CNT, 0);
+        qllm = rcar4_iic_dvfs_send(PMIC, PMIC_QLLM_CNT, 0);
 
     /* Set trigger of power down to PMIV */
     for (i = 0; (i < PMIC_RETRY_MAX) && (rc != 0) && (qllm == 0); i++) {
-        rc = rcar_iic_dvfs_receive(PMIC, PMIC_BKUP_MODE_CNT, &mode);
+        rc = rcar4_iic_dvfs_receive(PMIC, PMIC_BKUP_MODE_CNT, &mode);
         if (rc == 0) {
             mode |= BIT_BKUP_CTRL_OUT;
-            rc = rcar_iic_dvfs_send(PMIC, PMIC_BKUP_MODE_CNT, mode);
+            rc = rcar4_iic_dvfs_send(PMIC, PMIC_BKUP_MODE_CNT, mode);
         }
     }
-
-    wfi();
+    /*fatih: wfi weggemacht */
+    //wfi();
 
     while (1)
         continue;
 }
 
-void rcar_pwrc_set_suspend_to_ram(void)
+void rcar4_pwrc_set_suspend_to_ram(void)
 {
-    uintptr_t jump = (uintptr_t)&rcar_pwrc_go_suspend_to_ram;
+    /* fatih: temp hier alles weggemacht*/
+    #if(0)
+    
+    uintptr_t jump = (uintptr_t)&rcar4_pwrc_go_suspend_to_ram;
     uintptr_t stack = (uintptr_t)(SCP_SRAM_STACK_BASE + SCP_SRAM_STACK_SIZE);
     uint32_t sctlr;
 
@@ -199,21 +202,23 @@ void rcar_pwrc_set_suspend_to_ram(void)
     sctlr &= (uint32_t)~SCTLR_EL3_M_BIT;
     write_sctlr_el3((uint64_t)sctlr);
 
-    rcar_pwrc_switch_stack(jump, stack, NULL);
+    rcar4_pwrc_switch_stack(jump, stack, NULL);
+    
+    #endif
 }
 
-void rcar_system_off(void)
+void rcar4_system_off(void)
 {
-    if (rcar_iic_dvfs_send(PMIC, DVFS_SET_VID, DVFS_SET_VID_0V))
+    if (rcar4_iic_dvfs_send(PMIC, DVFS_SET_VID, DVFS_SET_VID_0V))
         panic();
 }
 
-void rcar_system_reset(void)
+void rcar4_system_reset(void)
 {
-#if RCAR_SOFTWARE_RESET
-    fwk_mmio_write_32(RCAR_SRESCR, SRESCR_CODE | BIT_SOFTRESET);
+#if RCAR4_SOFTWARE_RESET
+    fwk_mmio_write_32(RCAR4_SRESCR, SRESCR_CODE | BIT_SOFTRESET);
 #else
-    if (rcar_iic_dvfs_send(PMIC, BKUP_MODE_CNT, P_ALL_OFF))
+    if (rcar4_iic_dvfs_send(PMIC, BKUP_MODE_CNT, P_ALL_OFF))
         panic();
-#endif /* RCAR_SOFTWARE_RESET */
+#endif /* RCAR4_SOFTWARE_RESET */
 }

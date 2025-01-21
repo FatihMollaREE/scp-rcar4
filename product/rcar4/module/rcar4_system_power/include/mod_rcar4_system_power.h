@@ -7,16 +7,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-#ifndef MOD_RCAR_SYSTEM_POWER_H
-#define MOD_RCAR_SYSTEM_POWER_H
+#ifndef MOD_RCAR4_SYSTEM_POWER_H
+#define MOD_RCAR4_SYSTEM_POWER_H
 
 #include <mod_power_domain.h>
 
 #include <fwk_id.h>
 
 /*!
- * \ingroup GroupRCARModule RCAR Product Modules
- * \defgroup GroupRCARSystemPower System Power Support
+ * \ingroup GroupRCAR4Module RCAR4 Product Modules
+ * \defgroup GroupRCAR4SystemPower System Power Support
  *
  * @{
  */
@@ -123,4 +123,4 @@ static const fwk_id_t mod_system_power_api_id_pd_driver_input = FWK_ID_API_INIT(
  * @}
  */
 
-#endif /* MOD_RCAR_SYSTEM_POWER_H */
+#endif /* MOD_RCAR4_SYSTEM_POWER_H */

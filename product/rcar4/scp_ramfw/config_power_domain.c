@@ -198,6 +198,7 @@ static struct fwk_element rcar4_power_domain_static_element_table[] = {
                 FWK_ARRAY_SIZE(toplevel_allowed_state_mask_table)
         }),
     },
+    /* fatih: 
     [CONFIG_POWER_DOMAIN_CHILD_DDR_BKUP] = {
         .name = "pmic_ddr_bkup",
         .data = &((struct mod_power_domain_element_config) {
@@ -212,6 +213,7 @@ static struct fwk_element rcar4_power_domain_static_element_table[] = {
                 FWK_ARRAY_SIZE(toplevel_allowed_state_mask_table)
         }),
     },
+    */
     [CONFIG_POWER_DOMAIN_CHILD_ALWAYS_ON] = {
         .name = "always-on",
         .data = &((struct mod_power_domain_element_config) {

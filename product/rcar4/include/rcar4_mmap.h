@@ -5,8 +5,14 @@
 #ifndef RCAR4_MMAP_H
 #define RCAR4_MMAP_H
 
+#include <rcar4_def.h>
+
 /* The base-address of Module Standby, Software Reset */
 #define SOFTWARE_RESET_BASE 0xE6150000
+
+/* fatih: einfach tmp werte stimmen nicht unbedingt*/
+#define PERIPHERAL_BASE UINT64_C(0xE6000000)
+#define CPG_BASE (PERIPHERAL_BASE + 0x00150000)
 
 
 /* Peripherals */
