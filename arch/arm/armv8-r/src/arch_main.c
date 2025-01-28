@@ -12,6 +12,8 @@
 #include <arch_gic.h>
 #include <stdbool.h>
 
+unsigned int critical_section_nest_level;
+
 void panic(void)
 {
 	while(true)

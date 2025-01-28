@@ -15,7 +15,7 @@
 #include <stdint.h>
 #include <string.h>
 
-/* usually extern, as test ill try just setting something manually */
+
 extern unsigned int critical_section_nest_level;
 
 inline static void enable_irq(){
@@ -30,7 +30,7 @@ inline static void arch_interrupts_enable(unsigned int not_used)
     }
 
     /* Enable interrupts globally if now outside critical section FATIH: critical_section_nest_level == 0*/
-    if (0 == 0) {
+    if (critical_section_nest_level == 0) {
         enable_irq();
     }
 }

@@ -1,0 +1,2 @@
+"C:/Renesas/rcar-xos/v3.31.0/tools/toolchains/mingw64/bin/gcc-ar.exe" cr libfoo.a CMakeFiles/foo.dir/foo.c.obj
+"C:/Renesas/rcar-xos/v3.31.0/tools/toolchains/mingw64/bin/gcc-ranlib.exe" libfoo.a

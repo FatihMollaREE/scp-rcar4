@@ -31,17 +31,23 @@ struct fwk_element {
 }
 */
 
-#if 0 
+#if 1 
 const struct fwk_element rcar4_reset_element_table[] = {
     {
-        .name = "srt0",
+        .name = "srt28", /* PWM */
         .data = &( (struct mod_rcar4_reset_dev_config) {
-            .control_reg = CPG_SMSTPCR0,
-            .bit = 0,
+            .control_reg = CPG_SMSTPCR6,
+            .bit = 28,
         }),
     },
     {0}, // Terminate description 
 };
+
+/*
+static const struct mod_reset_domain_config rcar4_reset_config = {
+
+};
+*/
 
 static const struct fwk_element *rcar4_reset_get_element_table(fwk_id_t module_id)
 {
@@ -50,17 +56,6 @@ static const struct fwk_element *rcar4_reset_get_element_table(fwk_id_t module_i
 #endif
 
 struct fwk_module_config config_rcar4_reset = {
-    .data = NULL,    // &rcar4_reset_config, ?
-    //.elements = FWK_MODULE_DYNAMIC_ELEMENTS(rcar4_reset_get_element_table),
-    .elements = FWK_MODULE_STATIC_ELEMENTS({
-    [0] =  {
-        .name = "srt28", /* PWM */
-        .data = &( (struct mod_rcar4_reset_dev_config) {
-            .control_reg = CPG_SMSTPCR6,
-            .bit = 28,
-        }),
-        },
-    
-    [1] = {0}, /* Terminate description */
-    }),
+    .data =  NULL, //&rcar4_reset_config, 
+    .elements = FWK_MODULE_DYNAMIC_ELEMENTS(rcar4_reset_get_element_table),
 };

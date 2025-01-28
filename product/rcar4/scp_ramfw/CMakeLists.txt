@@ -4,6 +4,7 @@
 #
 #
 
+#set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -march=armv8-r -mthumb")
 
 add_executable(rcar4-bl)
 
@@ -36,6 +37,7 @@ target_sources(
             "${CMAKE_CURRENT_SOURCE_DIR}/config_rcar4_system.c"
             "${CMAKE_CURRENT_SOURCE_DIR}/config_sds.c"
             "${CMAKE_CURRENT_SOURCE_DIR}/../src/rcar4_core.c"
+            "${CMAKE_CURRENT_SOURCE_DIR}/../src/rcar4_syscalls.c"
             "${freertos_source}/timers.c"
             "${freertos_source}/list.c"
             "${freertos_source}/queue.c"

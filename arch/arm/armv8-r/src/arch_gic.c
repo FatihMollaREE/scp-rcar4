@@ -36,9 +36,10 @@
 /* Prototypes: */
 void gic_cpuif_enable(void);
 
+// Fatih: cpsie und cpsid wieder an machen, aber iwas stimmt nicht mit arm und thumb mode
 __STATIC_FORCEINLINE void __enable_fault_irq(void)
 {
-  __ASM volatile ("cpsie f" : : : "memory");
+ // __ASM volatile ("cpsie i" : : : "memory");
 }
 
 /**
@@ -48,7 +49,7 @@ __STATIC_FORCEINLINE void __enable_fault_irq(void)
  */
 __STATIC_FORCEINLINE void __disable_fault_irq(void)
 {
-  __ASM volatile ("cpsid f" : : : "memory");
+ // __ASM volatile ("cpsid i" : : : "memory");
 }
 
 /*

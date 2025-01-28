@@ -1,24 +1,40 @@
 /*
-* LICENSE
-*/
-
+ * Renesas SCP/MCP Software
+ * Copyright (c) 2020-2021, Renesas Electronics Corporation. All rights
+ * reserved.
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
 
 #ifndef MOD_RCAR4_RESET_H
 #define MOD_RCAR4_RESET_H
-
 
 #include <stdint.h>
 #include <fwk_element.h>
 #include <rcar4_mmap.h>
 #include <mod_reset_domain.h>
 
-/* APIs provided by the driver */
+/*!
+ * \addtogroup GroupRCAR4Module RCAR4 Product Modules
+ * @{
+ */
+
+/*!
+ * \defgroup GroupRCAR4Reset Reset
+ * @{
+ */
+
+/*!
+ * \brief APIs provided by the driver.
+ */
 enum mod_rcar4_reset_api_type {
-    
     MOD_RCAR4_RESET_API_TYPE_CLOCK,
-    MOD_RCAR4_RESET_API_COUNT, // tbu  
+    MOD_RCAR4_RESET_API_COUNT,
 };
 
+/*!
+ * \brief Subsystem reset device configuration.
+ */
 struct mod_rcar4_reset_dev_config {
     /*! Pointer to the reset's control register. */
     volatile uint32_t const control_reg;
@@ -43,12 +59,13 @@ struct rcar4_reset_ctx {
     unsigned int dev_count;
 };
 
-/* software reset control register offsets */
-#define SRCR(i) (0x2C00 + (i) * 4)
-/* software reset clearing register offsets*/
-#define SRSTCLR(i) (0x2C00 + 0x80  + (i) * 4)
-
-#define CPG_SMSTPCR0    0
+/*
+ * Module Reset Control Register offsets
+ */
+static const uint16_t srcr[] = {
+    0x0A0, 0x0A8, 0x0B0, 0x0B8, 0x0BC, 0x0C4, 0x1C8, 0x1CC,
+    0x920, 0x924, 0x928, 0x92C,
+};
 #define CPG_SMSTPCR1    1
 #define CPG_SMSTPCR2    2
 #define CPG_SMSTPCR3    3
@@ -59,30 +76,23 @@ struct rcar4_reset_ctx {
 #define CPG_SMSTPCR8    8
 #define CPG_SMSTPCR9    9
 #define CPG_SMSTPCR10   10
-#define CPG_SMSTPCR11   11
-#define CPG_SMSTPCR12   12
-#define CPG_SMSTPCR13   13
-#define CPG_SMSTPCR14   14
-#define CPG_SMSTPCR15   15
-#define CPG_SMSTPCR16   16
-#define CPG_SMSTPCR17   17
-#define CPG_SMSTPCR18   18
-#define CPG_SMSTPCR19   19
-#define CPG_SMSTPCR20   20
-#define CPG_SMSTPCR21   21
-#define CPG_SMSTPCR22   22
-#define CPG_SMSTPCR23   23
-#define CPG_SMSTPCR24   24
-#define CPG_SMSTPCR25   25
-#define CPG_SMSTPCR26   26
-#define CPG_SMSTPCR27   27
-#define CPG_SMSTPCR28   28
-#define CPG_SMSTPCR29   29
 
+/* Software Reset Clearing Register offsets */
+#define SRSTCLR(i) (0x940 + (i) * 4)
 
 #define DELAY_CNT_1US       (10UL)
 #define SCSR_DELAY_US       (DELAY_CNT_1US * 35)
 
+/*!
+ * @endcond
+ */
 
+/*!
+ * @}
+ */
+
+/*!
+ * @}
+ */
 
 #endif /* MOD_RCAR4_RESET_H */

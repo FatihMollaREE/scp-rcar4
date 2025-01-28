@@ -41,13 +41,15 @@ static int rcar4_auto_domain(fwk_id_t dev_id, uint32_t state)
 
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(dev_id);
 
-     fwk_mmio_write_32(SOFTWARE_RESET_BASE + SRCR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // set reset
+    fwk_mmio_write_32(
+        (CPG_BASE + srcr[ctx->config->control_reg]), BIT(ctx->config->bit));
 
     /* Wait for at least one cycle of the RCLK clock (@ ca. 32 kHz) */
     udelay(SCSR_DELAY_US);
 
     /* Release module from reset state */
-    fwk_mmio_write_32(SOFTWARE_RESET_BASE + SRSTCLR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // release reset
+    fwk_mmio_write_32(
+        (CPG_BASE + SRSTCLR(ctx->config->control_reg)), BIT(ctx->config->bit));
 
     return FWK_SUCCESS;
 }
@@ -58,7 +60,8 @@ static int rcar4_assert_domain(fwk_id_t dev_id)
 
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(dev_id);
 
-    fwk_mmio_write_32(SOFTWARE_RESET_BASE + SRCR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // set reset
+    fwk_mmio_write_32(
+        (CPG_BASE + srcr[ctx->config->control_reg]), BIT(ctx->config->bit));
 
     return FWK_SUCCESS;
 }
@@ -69,7 +72,8 @@ static int rcar4_deassert_domain(fwk_id_t dev_id)
 
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(dev_id);
 
-    fwk_mmio_write_32(SOFTWARE_RESET_BASE + SRSTCLR(ctx->config->control_reg) , BIT(ctx->config->bit) ); // release reset
+    fwk_mmio_write_32(
+        (CPG_BASE + SRSTCLR(ctx->config->control_reg)), BIT(ctx->config->bit));
 
     return FWK_SUCCESS;
 }

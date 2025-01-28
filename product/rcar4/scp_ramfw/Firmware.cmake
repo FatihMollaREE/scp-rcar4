@@ -19,7 +19,7 @@ set(SCP_ENABLE_IPO_INIT FALSE)
 set(SCP_ENABLE_OUTBAND_MSG_SUPPORT_INIT TRUE)
 
 set(SCP_ARCHITECTURE "armv8-r") 
-
+                                                                   
 list(PREPEND SCP_MODULE_PATHS "${CMAKE_CURRENT_LIST_DIR}/../module/rcar4_reset")
 list(PREPEND SCP_MODULE_PATHS "${CMAKE_CURRENT_LIST_DIR}/../module/rcar4_mfismh")
 list(PREPEND SCP_MODULE_PATHS "${CMAKE_CURRENT_LIST_DIR}/../module/rcar4_system_power")

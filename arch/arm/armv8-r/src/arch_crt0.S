@@ -43,6 +43,7 @@
 
 	.global	Vector
 	.global	Start
+    .globl _shutdown_request
 	.local	rtos_stacks
 
 /*****************************************************************************
@@ -289,5 +290,10 @@ FIQ:
 
 rtos_stacks:
 	.space   4 * 1024
+
+_shutdown_request:
+    .long 0
+
+    .align 4
 
 	.end

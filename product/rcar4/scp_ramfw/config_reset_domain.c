@@ -25,7 +25,7 @@ const struct fwk_element reset_domain_element_table[] = {
             .driver_id = FWK_ID_ELEMENT_INIT(FWK_MODULE_IDX_RCAR4_RESET,/*FATIH woher kommen die module indexes, passt das so?*/
                 RESET_DEV_IDX_SRT28),
             .driver_api_id = FWK_ID_API_INIT(FWK_MODULE_IDX_RCAR4_RESET,
-                MOD_RCAR_RESET_API_TYPE_CLOCK),
+                MOD_RCAR4_RESET_API_TYPE_CLOCK),
             .modes = MOD_RESET_DOMAIN_MODE_EXPLICIT_ASSERT |
                 MOD_RESET_DOMAIN_MODE_EXPLICIT_DEASSERT,
         }),
@@ -34,13 +34,14 @@ const struct fwk_element reset_domain_element_table[] = {
 
 };
 
+/* fatih tmp fix try
 static const struct mod_reset_domain_config reset_domain_config = {
 #ifdef BUILD_HAS_SCMI_NOTIFICATIONS
     .notification_id = FWK_ID_NOTIFICATION_INIT(FWK_MODULE_IDX_RESET_DOMAIN,
         MOD_RESET_DOMAIN_NOTIFICATION_AUTORESET),
 #endif
 };
-
+*/
 static const struct fwk_element *reset_domain_get_element_table
     (fwk_id_t module_id)
 {
@@ -48,6 +49,6 @@ static const struct fwk_element *reset_domain_get_element_table
 }
 
 struct fwk_module_config config_reset_domain = {
-    .data = &reset_domain_config,
+    .data = NULL,//&reset_domain_config,
     .elements = FWK_MODULE_DYNAMIC_ELEMENTS(reset_domain_get_element_table),
 };
