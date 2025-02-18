@@ -1,0 +1,1 @@
+C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE -ffunction-sections -fdata-sections -fshort-enums -Wall -Werror -Wextra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-missing-field-initializers -flto -fno-fat-lto-objects -Wl,--gc-sections CMakeFiles/boo.dir/main.c.obj -o boo  libfoo.a 

@@ -8,7 +8,7 @@ int _write(int file, char *ptr, int len);
 int _close(int file);
 int _lseek(int file, int ptr, int dir);
 int _read(int file, char *ptr, int len);
-void *_sbrk(int incr);
+void *_sbrk(int increment);
 void _exit(int status);
 int _fstat(int file, struct stat *st);
 int _isatty(int file);

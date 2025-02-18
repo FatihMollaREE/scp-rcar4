@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/product/rcar4/module/rcar4_system/src/rcar4_call_sram.S
+

@@ -1,0 +1,37 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/module/power_domain/src/mod_power_domain.c" "module/modules/power-domain/CMakeFiles/module-power-domain.dir/src/mod_power_domain.c.obj" "gcc" "module/modules/power-domain/CMakeFiles/module-power-domain.dir/src/mod_power_domain.c.obj.d"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/module/power_domain/src/power_domain_notifications.c" "module/modules/power-domain/CMakeFiles/module-power-domain.dir/src/power_domain_notifications.c.obj" "gcc" "module/modules/power-domain/CMakeFiles/module-power-domain.dir/src/power_domain_notifications.c.obj.d"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/module/power_domain/src/power_domain_state_checks.c" "module/modules/power-domain/CMakeFiles/module-power-domain.dir/src/power_domain_state_checks.c.obj" "gcc" "module/modules/power-domain/CMakeFiles/module-power-domain.dir/src/power_domain_state_checks.c.obj.d"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/module/power_domain/src/power_domain_utils.c" "module/modules/power-domain/CMakeFiles/module-power-domain.dir/src/power_domain_utils.c.obj" "gcc" "module/modules/power-domain/CMakeFiles/module-power-domain.dir/src/power_domain_utils.c.obj.d"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/framework/CMakeFiles/framework.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/rcar4-pd-sysc/CMakeFiles/module-rcar4-pd-sysc.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/rcar4-clock/CMakeFiles/module-rcar4-clock.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/rcar4-pd-core/CMakeFiles/module-rcar4-pd-core.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/rcar4-system/CMakeFiles/module-rcar4-system.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/rcar4-system-power/CMakeFiles/module-rcar4-system-power.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/rcar4-mfismh/CMakeFiles/module-rcar4-mfismh.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/rcar4-reset/CMakeFiles/module-rcar4-reset.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/clock/CMakeFiles/module-clock.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/reset-domain/CMakeFiles/module-reset-domain.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/scmi/CMakeFiles/module-scmi.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/scmi-reset-domain/CMakeFiles/module-scmi-reset-domain.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/sds/CMakeFiles/module-sds.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/module/modules/transport/CMakeFiles/module-transport.dir/DependInfo.cmake"
+  "C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/DEBUGbuild/arch/armv8-r/CMakeFiles/arch-armv8r.dir/DependInfo.cmake"
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

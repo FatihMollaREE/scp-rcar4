@@ -1,0 +1,2 @@
+C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\ARM-NO~2.EXE qc libarch-armv8r.a CMakeFiles/arch-armv8r.dir/src/arch_crt0.S.obj CMakeFiles/arch-armv8r.dir/src/arch_gic.c.obj CMakeFiles/arch-armv8r.dir/src/arch_main.c.obj
+C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR17F9~1.EXE libarch-armv8r.a

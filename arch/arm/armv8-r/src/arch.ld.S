@@ -106,7 +106,7 @@ ASSERT(STACK_SIZE > 0, "FMW_STACK_SIZE is too small")
 
 OUTPUT_FORMAT("elf32-littlearm")
 OUTPUT_ARCH(arm)
-ENTRY(Vector) /* eventuell hier anpassen*/
+ENTRY(Vector)
 
 MEMORY {
 #if FMW_MEM_MODE == ARCH_MEM_MODE_SINGLE_REGION
@@ -171,7 +171,22 @@ SECTIONS
         __BSS_END__ = .;
     } >mem0
 
+    .stack (NOLOAD) : {
+        . = . + STACK_SIZE;
+    } > stack
+
+    __STACK_START__ = LOADADDR(.stack);
+    __STACK_SIZE__ = SIZEOF(.stack);
+    __STACK_END__ = __STACK_START__ + __STACK_SIZE__;
+    __STACK_TOP__ = __STACK_END__;
+
+    __BSS_START__ = ADDR(.bss);
     __BSS_SIZE__ = SIZEOF(.bss);
+    __BSS_END__ = __BSS_START__ + __BSS_SIZE__;
+
+    __HEAP_START__ = __BSS_START__ + __BSS_SIZE__;
+    __HEAP_END__ = __STACK_START__;
+    __HEAP_SIZE__ = __HEAP_END__ - __HEAP_START__;
 
     ASSERT(. <= 0xE24FE800, "CR7 dummy rtos has exceeded its limit.")
 }

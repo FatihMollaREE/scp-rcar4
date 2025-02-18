@@ -323,6 +323,7 @@ struct op_points {
     unsigned long volt; /* uV */
 };
 
+#if 0
 #define PLL_BASE_CLOCK (16640000UL)
 #define CPG_FRQCRB (CPG_BASE + 0x0004)
 #define CPG_FRQCRB_KICK 0x80000000
@@ -341,6 +342,7 @@ struct op_points {
 #endif
 #define CPG_PLL2CR_ZFC_MASK 0x7F000000
 #define CPG_PLL2CR_ZFC_SHIFT 24
+#endif 
 
 #define min(x, y) \
     ({ \

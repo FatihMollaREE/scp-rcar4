@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/product/rcar4/src/CMSIS-FreeRTOS/Source/portable/GCC/ARM_CA53_64_Rcar/portASM.S
+

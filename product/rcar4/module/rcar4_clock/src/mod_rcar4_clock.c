@@ -1160,7 +1160,7 @@ static int rcar4_clock_start(fwk_id_t id)
 
 const struct fwk_module module_rcar4_clock = {
     .type = FWK_MODULE_TYPE_DRIVER,
-    .api_count = MOD_RCAR4_CLOCK_API_COUNT,
+    .api_count = MOD_RCAR4_CLOCK_API_COUNT, // fatih
     .event_count = 0,
     .init = rcar4_clock_init,
     .element_init = rcar4_clock_element_init,
