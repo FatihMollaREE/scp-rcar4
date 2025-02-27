@@ -151,8 +151,8 @@ static void send_notifications(struct fwk_event *notification_event,
 /*
  * Private interface functions
  */
-
-static FWK_CONSTRUCTOR void fwk_notification_init(void)
+// Fatih: FWK_CONSTRUCTOR wurde entfernt, ist das okay?
+static  void fwk_notification_init(void) 
 {
     static struct __fwk_notification_subscription
         subscriptions[FMW_NOTIFICATION_MAX];
@@ -166,6 +166,7 @@ static FWK_CONSTRUCTOR void fwk_notification_init(void)
         fwk_list_push_tail(
             &ctx.free_subscription_dlist, &subscriptions[i].dlist_node);
     }
+    return; // fatih: aktuell returned er nicht alleine
 }
 
 void __fwk_notification_reset(void)
@@ -199,17 +200,17 @@ int fwk_notification_subscribe(fwk_id_t notification_id, fwk_id_t source_id,
         goto error;
     }
 
-    subscription_dlist = get_subscription_dlist(notification_id, source_id);
+    subscription_dlist = get_subscription_dlist(notification_id, source_id); // Fatih: ist die Logik hier nicht falsch?
     if (search_subscription(subscription_dlist, source_id, target_id) != NULL) {
         status = FWK_E_STATE;
         goto error;
     }
 
-    subscription = FWK_LIST_GET(
+    subscription = FWK_LIST_GET( // warum kommt hier null zurück
         fwk_list_pop_head(&ctx.free_subscription_dlist),
         struct __fwk_notification_subscription, dlist_node);
 
-    if (subscription == NULL) {
+    if (subscription == NULL) { // subscription ist wohl grad null fehler
         status = FWK_E_NOMEM;
         fwk_unexpected();
         goto error;
@@ -219,7 +220,7 @@ int fwk_notification_subscribe(fwk_id_t notification_id, fwk_id_t source_id,
     subscription->target_id = target_id;
 
     flags = fwk_interrupt_global_disable();
-    fwk_list_push_tail(subscription_dlist, &subscription->dlist_node);
+    fwk_list_push_tail(subscription_dlist, &subscription->dlist_node); // fatih: ist subscription_dlist nicht eig null? müsste das hier nicht nicht asserten?
     (void)fwk_interrupt_global_enable(flags);
 
     return FWK_SUCCESS;

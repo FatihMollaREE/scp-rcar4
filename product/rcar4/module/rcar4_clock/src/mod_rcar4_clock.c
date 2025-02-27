@@ -25,7 +25,7 @@
 static struct rcar4_clock_ctx module_ctx;
 static int current_a57_opp_limit = 0;
 static const struct op_points *current_a57_opp_table;
-static int current_a53_opp_limit = 0;
+static int current_a53_opp_limit = 0; 
 static const struct op_points *current_a53_opp_table;
 static int dvfs_inited = 0;
 
@@ -1102,39 +1102,44 @@ static int rcar4_clock_element_init(
     struct rcar4_clock_dev_ctx *ctx;
     const struct mod_rcar4_clock_dev_config *dev_config = data;
 
+    
     if (!fwk_module_is_valid_element_id(element_id))
-        return FWK_E_PARAM;
-
+    return FWK_E_PARAM;
+    
     ctx = module_ctx.dev_ctx_table + fwk_id_get_element_idx(element_id);
-
+    
     /* Verify that the rate entries in the device's lookup table are ordered */
     while (i < dev_config->rate_count) {
         current_rate = dev_config->rate_table[i].rate;
-
+        
         /* The rate entries must be in ascending order */
         if (current_rate < last_rate)
-            return FWK_E_DATA;
-
+        return FWK_E_DATA;
+        
         last_rate = current_rate;
         i++;
     }
-
+    
     ctx->config = dev_config;
-
+    
     if (ctx->config->defer_initialization)
-        return FWK_SUCCESS;
-
+    return FWK_SUCCESS;
+    
     ctx->current_state = MOD_CLOCK_STATE_RUNNING;
     ctx->initialized = true;
-
+    
     /*
-     * Clock devices that are members of a clock group must skip initialization
-     * at this time since they will be set to a specific rate by the CSS Clock
-     * driver during the start stage or in response to a notification.
-     */
-    if (ctx->config->is_group_member)
-        return FWK_SUCCESS;
-
+    * Clock devices that are members of a clock group must skip initialization
+    * at this time since they will be set to a specific rate by the CSS Clock
+    * driver during the start stage or in response to a notification.
+    */
+   if (ctx->config->is_group_member)
+   return FWK_SUCCESS;
+   
+   #if 1
+   return 0x0;
+   #endif // Fatih backdoor test 
+   
     return do_rcar4_clock_set_rate(
         element_id, dev_config->initial_rate, MOD_CLOCK_ROUND_MODE_NONE);
 }

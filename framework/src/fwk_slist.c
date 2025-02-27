@@ -117,7 +117,6 @@ struct fwk_slist_node *__fwk_slist_pop_head(struct fwk_slist *list)
     if (__fwk_slist_is_empty(list)) {
         return NULL;
     }
-
     popped = list->head;
     if (popped->next == (struct fwk_slist_node *)list) {
         list->tail = (struct fwk_slist_node *)list;

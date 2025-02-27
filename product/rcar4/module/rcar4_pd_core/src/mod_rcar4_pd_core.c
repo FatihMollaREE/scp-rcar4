@@ -164,10 +164,10 @@ static int rcar4_core_pd_reset(fwk_id_t core_pd_id)
 
 static int rcar4_core_pd_prepare_for_system_suspend(fwk_id_t core_pd_id)
 {
-    fwk_mmio_write_32(RCAR4_CPGWPR, ~CPU_PWR_OFF);
-    fwk_mmio_write_32(RCAR4_CA57CPU0CR, CPU_PWR_OFF);
+   //fwk_mmio_write_32(RCAR4_CPGWPR, ~CPU_PWR_OFF);
+    //fwk_mmio_write_32(RCAR4_CA57CPU0CR, CPU_PWR_OFF);
 
-    fwk_mmio_write_32(RCAR4_CA57CPUCMCR, MODE_L2_DOWN);
+    //fwk_mmio_write_32(RCAR4_CA57CPUCMCR, MODE_L2_DOWN);
     //_shutdown_request = R_SUSPEND; Fatih: hier einf temp das weggemacht, hab auch noch nicht geguckt was das hier alles machen soll
 
     return FWK_SUCCESS;

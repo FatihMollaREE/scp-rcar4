@@ -471,7 +471,9 @@ static bool is_interrupt_context(void)
     if (c_interrupt == 0) {
         return false;
     }
-
+    volatile int a = 7;
+    a++;
+    
     return true;
 }
 

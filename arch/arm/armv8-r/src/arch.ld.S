@@ -160,6 +160,12 @@ SECTIONS
         __STACKS_END__ = .;
     } >mem0
 
+    .init_array : {
+        __init_array_start = .;
+        KEEP(*(.init_array*))
+        __init_array_end = .;
+    } >mem0
+
     /*
      * The .bss section gets initialised to 0 at runtime.
      * Its base address must be 16-byte aligned.

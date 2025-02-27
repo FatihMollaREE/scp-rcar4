@@ -67,7 +67,7 @@ CMAKE_C_COMPILER_AR:FILEPATH=C:/Program Files (x86)/Arm GNU Toolchain arm-none-e
 CMAKE_C_COMPILER_RANLIB:FILEPATH=C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/bin/arm-none-eabi-gcc-ranlib.exe
 
 //Flags used by the C compiler during all build types.
-CMAKE_C_FLAGS:STRING=-ffunction-sections -fdata-sections -fshort-enums -Wall -Werror -Wextra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-missing-field-initializers
+CMAKE_C_FLAGS:STRING=-ffunction-sections -fdata-sections -fshort-enums -Wall -Werror -Wextra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-missing-field-initializers -Wno-error=unused-but-set-variable -Wno-error=unused-variable
 
 //Flags used by the C compiler during DEBUG builds.
 CMAKE_C_FLAGS_DEBUG:STRING=-Og -g

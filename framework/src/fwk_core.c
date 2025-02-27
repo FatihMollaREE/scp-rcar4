@@ -307,13 +307,27 @@ int __fwk_init(size_t event_count)
     return FWK_SUCCESS;
 }
 
+// FWK_MODULE_IDX_RCAR4_RESET == 12
+int makeFatihsEvent(void){
+    struct fwk_event_light fEvent= {
+        .source_id = FWK_ID_MODULE(9),
+        .target_id = FWK_ID_MODULE(12),
+        .id = FWK_ID_EVENT(12, 0),
+        .response_requested = false 
+    };
+
+    return fwk_put_event(&fEvent);
+}
+
+// fatih: hier noch mein event entfernen
 void fwk_process_event_queue(void)
 {
+    static volatile int fatihEVENT = 0;
     for (;;) {
         while (!fwk_list_is_empty(&ctx.event_queue)) {
             process_next_event();
         }
-
+        if(fatihEVENT > 100) {makeFatihsEvent();}
         if (!process_isr()) {
             break;
         }

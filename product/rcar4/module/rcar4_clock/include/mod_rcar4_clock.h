@@ -323,7 +323,7 @@ struct op_points {
     unsigned long volt; /* uV */
 };
 
-#if 0
+#if 1
 #define PLL_BASE_CLOCK (16640000UL)
 #define CPG_FRQCRB (CPG_BASE + 0x0004)
 #define CPG_FRQCRB_KICK 0x80000000

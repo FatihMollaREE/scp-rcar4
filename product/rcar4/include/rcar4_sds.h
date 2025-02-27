@@ -9,6 +9,7 @@
 #define RCAR4_SDS_H
 
 #include <mod_sds.h>
+/* glaube die datei ist vorallem für die shared memory region da, unteranderem schreibt er aber auch die version usw dahin und wv cpu cores und was noch immer*/
 
 /*
  * Structure identifiers.

@@ -57,7 +57,9 @@ module/modules/rcar4-reset/CMakeFiles/module-rcar4-reset.dir/src/mod_rcar4_reset
   ../framework/include/fwk_dlist.h \
   ../framework/include/fwk_slist.h \
   ../framework/include/fwk_io.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdarg.h
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdarg.h \
+  ../framework/include/fwk_core.h \
+  ../framework/include/internal/fwk_core.h
 
 
 ../framework/include/fwk_align.h:
@@ -65,6 +67,8 @@ module/modules/rcar4-reset/CMakeFiles/module-rcar4-reset.dir/src/mod_rcar4_reset
 ../product/rcar4/module/rcar4_reset/src/mod_rcar4_reset.c:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/stdint.h:
+
+../framework/include/internal/fwk_core.h:
 
 ../arch/arm/armv8-r/include/utils_def.h:
 
@@ -171,3 +175,5 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-
 ../framework/include/fwk_module.h:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdarg.h:
+
+../framework/include/fwk_core.h:

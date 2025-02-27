@@ -61,7 +61,7 @@
 
 /* SDS Memory Region */
 #define SDS_MEM_BASE (SHARED_SECURE_BASE)
-#if 0 /* Tentative */
+#if 1 /* Tentative */
 #    define SDS_MEM_SIZE (3520)
 #else
 #    define SDS_MEM_SIZE (0)
@@ -74,7 +74,7 @@
 
 /* SCMI Secure Payload Areas */
 #define SCMI_PAYLOAD_SIZE (128)
-#define SCMI_PAYLOAD_S_A2P_BASE (SDS_MEM_BASE + SDS_MEM_SIZE)
+#define SCMI_PAYLOAD_S_A2P_BASE (SDS_MEM_BASE + SDS_MEM_SIZE) // 0xE630_4DC0
 #define SCMI_PAYLOAD_S_P2A_BASE (SCMI_PAYLOAD_S_A2P_BASE + SCMI_PAYLOAD_SIZE)
 
 /*

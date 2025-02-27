@@ -16,7 +16,7 @@
 enum mod_rcar4_reset_api_type {
     
     MOD_RCAR4_RESET_API_TYPE_CLOCK,
-    MOD_RCAR4_RESET_API_COUNT, // tbu  
+    MOD_RCAR4_RESET_API_COUNT, // tbc  
 };
 
 struct mod_rcar4_reset_dev_config {

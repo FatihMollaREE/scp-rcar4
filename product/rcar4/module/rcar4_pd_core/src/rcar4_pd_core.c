@@ -32,8 +32,9 @@ void rcar4_pwrc_cpuoff(uint32_t core)
         off_reg = (uintptr_t)RCAR4_CA57CPU0CR;
         cpu_no = core;
     }
-    fwk_mmio_write_32(RCAR4_CPGWPR, ~((uint32_t)CPU_PWR_OFF));
-    fwk_mmio_write_32(off_reg + (cpu_no * 0x0010U), (uint32_t)CPU_PWR_OFF);
+    //Fatih: register wurden noch nicht geprüft
+    //fwk_mmio_write_32(RCAR4_CPGWPR, ~((uint32_t)CPU_PWR_OFF));
+    //fwk_mmio_write_32(off_reg + (cpu_no * 0x0010U), (uint32_t)CPU_PWR_OFF);
 }
 
 void rcar4_pwrc_cpuon(uint32_t core)
@@ -63,10 +64,10 @@ void rcar4_pwrc_cpuon(uint32_t core)
     res_data = fwk_mmio_read_32(res_reg) | upper_value;
     SCU_power_up(core);
     wup_data = (uint32_t)((uint32_t)1U << cpu_no);
-    fwk_mmio_write_32(RCAR4_CPGWPR, ~wup_data);
-    fwk_mmio_write_32(on_reg, wup_data);
+    //fwk_mmio_write_32(RCAR4_CPGWPR, ~wup_data);
+    //fwk_mmio_write_32(on_reg, wup_data);
     /* Dessert to CPU reset    */
-    fwk_mmio_write_32(res_reg, (res_data & (~((uint32_t)1U << (3U - cpu_no)))));
+    //fwk_mmio_write_32(res_reg, (res_data & (~((uint32_t)1U << (3U - cpu_no)))));
 }
 
 void SCU_power_up(uint32_t core)
@@ -99,20 +100,20 @@ void SCU_power_up(uint32_t core)
     }
     if ((fwk_mmio_read_32(reg_PWRSR) & (uint32_t)STATUS_PWRDOWN) != 0x0000U) {
         if (fwk_mmio_read_32(reg_CPUCMCR) != 0U) {
-            fwk_mmio_write_32(reg_CPUCMCR, (uint32_t)0x00000000U);
+            //fwk_mmio_write_32(reg_CPUCMCR, (uint32_t)0x00000000U);
         }
         /* set SYSCIER and SYSCIMR        */
-        fwk_mmio_write_32(
-            reg_SYSCIER, (fwk_mmio_read_32(reg_SYSCIER) | reg_SYSC_bit));
-        fwk_mmio_write_32(
-            reg_SYSCIMR, (fwk_mmio_read_32(reg_SYSCIMR) | reg_SYSC_bit));
+        //fwk_mmio_write_32(
+        //    reg_SYSCIER, (fwk_mmio_read_32(reg_SYSCIER) | reg_SYSC_bit));
+        //fwk_mmio_write_32(
+        //    reg_SYSCIMR, (fwk_mmio_read_32(reg_SYSCIMR) | reg_SYSC_bit));
         do {
             /* SYSCSR[1]=1?                */
             while ((fwk_mmio_read_32(reg_SYSCSR) & (uint32_t)REQ_RESUME) == 0U)
                 continue;
 
             /* If SYSCSR[1]=1 then set bit in PWRONCRn to 1    */
-            fwk_mmio_write_32(reg_PWRONCR, 0x0001U);
+        //    fwk_mmio_write_32(reg_PWRONCR, 0x0001U);
         } while ((fwk_mmio_read_32(reg_PWRER) & 0x0001U) != 0U);
 
         /* bit in SYSCISR=1 ?                */
@@ -120,7 +121,7 @@ void SCU_power_up(uint32_t core)
             continue;
 
         /* clear bit in SYSCISR                */
-        fwk_mmio_write_32(reg_SYSCISCR, reg_SYSC_bit);
+        //fwk_mmio_write_32(reg_SYSCISCR, reg_SYSC_bit);
 
         /* Check the SCU power-up            */
         while ((fwk_mmio_read_32(reg_PWRSR) & (uint32_t)STATUS_PWRUP) ==

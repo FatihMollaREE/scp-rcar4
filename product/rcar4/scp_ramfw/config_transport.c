@@ -97,11 +97,9 @@ static const struct fwk_element *transport_get_element_table(fwk_id_t module_id)
 {
     unsigned int idx;
     struct mod_transport_channel_config *config;
- /* ich glaub ich muss das schon verstehen um das richtig zu implementieren*/
+ 
     for (idx = 0; idx < RCAR4_SCMI_SERVICE_IDX_COUNT; idx++) {
-        config =
-            (struct mod_transport_channel_config *)(transport_element_table[idx]
-                                                        .data);
+        config = (struct mod_transport_channel_config *)(transport_element_table[idx].data);
         config->pd_source_id = (fwk_id_t)FWK_ID_ELEMENT_INIT(
             FWK_MODULE_IDX_POWER_DOMAIN,
             CONFIG_POWER_DOMAIN_CHILD_ALWAYS_ON + rcar4_core_get_count() +

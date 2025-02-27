@@ -46,6 +46,11 @@
     .globl _shutdown_request
 	.local	rtos_stacks
 
+    #ifdef BUILD_HAS_NOTIFICATION
+    .extern __fwk_notification_reset
+    #endif
+
+
 /*****************************************************************************
  *	Vector table
  *****************************************************************************/
@@ -224,6 +229,9 @@ STACK_INIT:
 ;#	sub	r0, r0, #0x80			/* STACK_BASE_SVC */
 	mov	sp, r0
 
+    #ifdef BUILD_HAS_NOTIFICATION 
+    bl  __fwk_notification_reset
+    #endif
 
 	/* Loader Main */
 	BL     arch_main

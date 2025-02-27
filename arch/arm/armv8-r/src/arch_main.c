@@ -11,6 +11,7 @@
 #include <fwk_status.h>
 #include <arch_gic.h>
 #include <stdbool.h>
+#include <fwk_assert.h>
 
 unsigned int critical_section_nest_level;
 

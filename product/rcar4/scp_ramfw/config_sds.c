@@ -17,11 +17,11 @@
 #include <clock_devices.h>
 
 static const uint32_t feature_flags = RCAR4_SDS_FEATURE_FIRMWARE_INIT;
-//static const uint32_t version_packed = FWK_BUILD_VERSION;
+static const uint32_t version_packed = FWK_BUILD_VERSION;
 
 static const struct mod_sds_region_desc sds_module_regions[] = {
     [RCAR4_SDS_REGION_SECURE] = {
-        .base = (void*)(TRUSTED_RAM_BASE + RCAR4_SDS_SCP_RAM_BASE_OFFSET),
+        .base = (void*)(TRUSTED_RAM_BASE + RCAR4_SDS_SCP_RAM_BASE_OFFSET), // 0xE630_4800
         .size = RCAR4_SDS_SCP_RAM_SIZE,
     },
 };
@@ -42,7 +42,7 @@ static const struct fwk_element sds_element_table[] = {
         .data = &((struct mod_sds_structure_desc) {
             .id = RCAR4_SDS_RAM_VERSION,
             .size = RCAR4_SDS_RAM_VERSION_SIZE,
-            .payload = NULL, /* fatih: einfach NULL gemacht war vorher: &version_packed */
+            .payload = &version_packed,
             .finalize = true,
         }),
     },
@@ -60,9 +60,9 @@ static const struct fwk_element sds_element_table[] = {
 
 static const struct fwk_element *sds_get_element_table(fwk_id_t module_id)
 {
-    //static_assert(BUILD_VERSION_MAJOR < UINT8_MAX, "Invalid version size");
-    //static_assert(BUILD_VERSION_MINOR < UINT8_MAX, "Invalid version size");
-    //static_assert(BUILD_VERSION_PATCH < UINT16_MAX, "Invalid version size");
+    static_assert(BUILD_VERSION_MAJOR < UINT8_MAX, "Invalid version size");
+    static_assert(BUILD_VERSION_MINOR < UINT8_MAX, "Invalid version size");
+    static_assert(BUILD_VERSION_PATCH < UINT16_MAX, "Invalid version size");
 
     return sds_element_table;
 }

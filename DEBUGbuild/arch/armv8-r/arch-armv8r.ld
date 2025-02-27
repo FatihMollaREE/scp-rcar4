@@ -36,6 +36,11 @@ SECTIONS
         KEEP(*(tzfw_normal_stacks))
         __STACKS_END__ = .;
     } >mem0
+    .init_array : {
+        __init_array_start = .;
+        KEEP(*(.init_array*))
+        __init_array_end = .;
+    } >mem0
     .bss : ALIGN(16) {
         __BSS_START__ = .;
         *(SORT_BY_ALIGNMENT(.bss*))

@@ -59,4 +59,6 @@ module/modules/rcar4-reset/CMakeFiles/module-rcar4-reset.dir/src/mod_rcar4_reset
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/framework/include/fwk_slist.h
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/framework/include/fwk_io.h
  C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdarg.h
+ C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/framework/include/fwk_core.h
+ C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/framework/include/internal/fwk_core.h
 

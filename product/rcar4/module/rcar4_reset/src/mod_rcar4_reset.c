@@ -18,6 +18,7 @@
 #include <fwk_module.h>
 #include <fwk_module_idx.h>
 #include <fwk_status.h>
+#include <fwk_core.h>
 
 #include <stdint.h>
 #include <stdlib.h>
@@ -148,11 +149,18 @@ static int reet_process_bind_request(fwk_id_t source_id,
     return FWK_SUCCESS;
 }
 
+static int process_event(const struct fwk_event *event, struct fwk_event *resp_event){
+    //volatile uint32_t *addr = (volatile uint32_t*) 0xE6306010;
+    //*(addr) = 0xBEEFDEAD;
+    return FWK_SUCCESS;
+}
+
 const struct fwk_module module_rcar4_reset = {
     .type = FWK_MODULE_TYPE_DRIVER,
     .api_count = MOD_RCAR4_RESET_API_COUNT,
-    .event_count = 0,
     .init = reset_init,
+    .event_count = 1,
+    .process_event = process_event,
     .element_init = reset_element_init,
     .process_bind_request = reet_process_bind_request,
 };
