@@ -2,4 +2,4 @@
 135f321145ccba429377a147da9efb3d CMakeFiles/check
 bb55183dedbed708fda58dcd35bc9055 CMakeFiles/rcar4-bl-all
 b58429a40733a9b8d57dc0831bc8fe7e arch/armv8-r/CMakeFiles/arch-armv8r-lds
-570ffb29c57a717d551517e91c90d61c arch/armv8-r/arch-armv8r.ld
+792dfb47b919d7ba64963b0bc26586df arch/armv8-r/arch-armv8r.ld

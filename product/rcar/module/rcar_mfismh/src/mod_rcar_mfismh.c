@@ -163,7 +163,7 @@ static int mfismh_device_init(
     device_ctx->config = config;
     device_ctx->slot_count = slot_count;
 
-    mfis_regs = (struct mfismh_reg *)MFISAREICR_BASE;
+    mfis_regs = (struct mfismh_reg *)MFISARIICR_BASE; // fatih: rcar hatte hier zwar scheinbar auch die a.core -> r.core hat es abeer mfisareicr gennant, also falsch?
 
     return FWK_SUCCESS;
 }

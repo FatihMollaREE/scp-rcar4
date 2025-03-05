@@ -114,7 +114,9 @@ static void mfismh_isr(void)
  */
 static int raise_interrupt(fwk_id_t slot_id)
 {
-    /* This function is unsupported. */
+    // komme ich hier rein?
+    while(1);
+
     return FWK_SUCCESS;
 }
 
@@ -163,7 +165,7 @@ static int mfismh_device_init(
     device_ctx->config = config;
     device_ctx->slot_count = slot_count;
 
-    mfis_regs = (struct mfismh_reg *)MFISAREICR_BASE; // Fatih: nicht sicher ob die Base passt, weil die addressen irgendwie springen
+    mfis_regs = (struct mfismh_reg *)MFISARIICR_BASE; // Fatih: nicht sicher ob die Base passt, weil die addressen irgendwie springen
 
     return FWK_SUCCESS;
 }

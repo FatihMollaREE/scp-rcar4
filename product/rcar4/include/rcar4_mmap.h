@@ -17,7 +17,7 @@
 
 /* Peripherals */
 #define MFIS_BASE (0xE6260000) // Fatih: hier muss ich nochmal nachschauen und Matthias fragen, siehe Excel
-#define MFISAREICR_BASE (MFIS_BASE + 0x1400)
+#define MFISARIICR_BASE (MFIS_BASE + 0x1400) // fatih:rcar hatte hier zwar scheinbar auch die a.core -> r.core hat es abeer mfisareicr gennant, also falsch?
 //#define CPG_BASE (PERIPHERAL_BASE + 0x00150000)
 
 /* Memory */ 

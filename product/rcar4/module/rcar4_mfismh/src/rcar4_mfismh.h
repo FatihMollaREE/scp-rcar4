@@ -15,6 +15,8 @@
 
 #include <stdint.h>
 
+// nach excel sind interupts von mfis bei ca. 117 oder 916? anders als bei rcar 3 sowie unten
+
 #define MFIS_IRQ_MIN (256U)
 #define MFIS_IRQ_MAX (MFIS_IRQ_MIN + 8U)
 #define MFIS_IRQ2NO(irn) (irn - MFIS_IRQ_MIN)

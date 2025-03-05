@@ -2283,1260 +2283,1259 @@ ro              0xe2100000    0x1c000
  .text.system_power_mod_init
                 0xe21061f4       0xac ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
  .text.raise_interrupt
-                0xe21062a0        0x8 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
+                0xe21062a0        0x4 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
  .text.mfismh_process_bind_request
-                0xe21062a8       0x94 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
+                0xe21062a4       0x94 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
  .text.mfismh_start
-                0xe210633c       0x80 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
+                0xe2106338       0x80 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
  .text.mfismh_isr
-                0xe21063bc       0xc0 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
+                0xe21063b8       0xc0 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
  .text.mfismh_bind
-                0xe210647c       0x9c ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
+                0xe2106478       0x9c ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
  .text.mfismh_device_init
-                0xe2106518       0x6c ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
+                0xe2106514       0x6c ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
  .text.mfismh_init
-                0xe2106584       0x4c ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
- .text.udelay   0xe21065d0       0x34 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
+                0xe2106580       0x4c ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
+ .text.udelay   0xe21065cc       0x34 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
  .text.reet_process_bind_request
-                0xe2106604       0x14 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
+                0xe2106600       0x14 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
  .text.process_event
-                0xe2106618        0x8 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
+                0xe2106614        0x8 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
  .text.rcar4_auto_domain
-                0xe2106620       0x7c ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
+                0xe210661c       0x7c ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
  .text.rcar4_assert_domain
-                0xe210669c       0x48 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
+                0xe2106698       0x48 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
  .text.rcar4_deassert_domain
-                0xe21066e4       0x48 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
+                0xe21066e0       0x48 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
  .text.rcar4_set_reset_state
-                0xe210672c       0x50 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
+                0xe2106728       0x50 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
  .text.reset_element_init
-                0xe210677c       0x44 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
+                0xe2106778       0x44 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
  .text.reset_init
-                0xe21067c0       0x50 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
+                0xe21067bc       0x50 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
  .text.process_request_event
-                0xe2106810       0x44 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe210680c       0x44 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_dev_init
-                0xe2106854       0x2c ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2106850       0x2c ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_request_complete
-                0xe2106880      0x10c ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
-                0xe2106880                clock_request_complete
+                0xe210687c      0x10c ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe210687c                clock_request_complete
  .text.create_async_request
-                0xe210698c       0x54 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2106988       0x54 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.create_async_request_set_rate
-                0xe21069e0       0x7c ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe21069dc       0x7c ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_process_notification_response
-                0xe2106a5c       0xfc ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2106a58       0xfc ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_process_pd_transition_notification
-                0xe2106b58       0xd8 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2106b54       0xd8 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_process_pd_pre_transition_notification
-                0xe2106c30      0x134 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2106c2c      0x134 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_process_notification
-                0xe2106d64       0xc0 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2106d60       0xc0 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.notify_rate
-                0xe2106e24       0x78 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2106e20       0x78 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.process_response_event
-                0xe2106e9c       0xc8 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2106e98       0xc8 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_process_event
-                0xe2106f64       0x64 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2106f60       0x64 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_process_bind_request
-                0xe2106fc8       0xb0 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2106fc4       0xb0 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_start
-                0xe2107078      0x17c ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2107074      0x17c ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_bind
-                0xe21071f4       0x98 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe21071f0       0x98 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_init
-                0xe210728c       0x50 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2107288       0x50 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_get_ctx
-                0xe21072dc       0x60 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
-                0xe21072dc                clock_get_ctx
+                0xe21072d8       0x60 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe21072d8                clock_get_ctx
  .text.clock_get_info
-                0xe210733c       0x70 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2107338       0x70 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_get_state
-                0xe21073ac       0x88 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe21073a8       0x88 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_set_state
-                0xe2107434       0x78 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2107430       0x78 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_get_rate_from_index
-                0xe21074ac       0x58 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe21074a8       0x58 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_get_rate
-                0xe2107504       0x88 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2107500       0x88 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.clock_set_rate
-                0xe210758c      0x128 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2107588      0x128 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .text.pd_get_last_core_pd_id
-                0xe21076b4       0x44 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe21076b0       0x44 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.process_reset_request
-                0xe21076f8       0x98 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe21076f4       0x98 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.perform_shutdown_send_response
-                0xe2107790       0x78 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe210778c       0x78 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.send_pd_set_state_delayed_response
-                0xe2107808       0x60 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2107804       0x60 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.report_power_state_transition
-                0xe2107868       0x74 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2107864       0x74 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_system_shutdown
-                0xe21078dc       0x9c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe21078d8       0x9c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_report_power_state_transition
-                0xe2107978       0x30 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2107974       0x30 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.process_get_state_request
-                0xe21079a8       0x98 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe21079a4       0x98 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_get_state
-                0xe2107a40       0x40 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2107a3c       0x40 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_process_bind_request
-                0xe2107a80      0x160 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2107a7c      0x160 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_reset
-                0xe2107be0       0x90 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2107bdc       0x90 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_set_state
-                0xe2107c70       0xc8 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2107c6c       0xc8 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_system_suspend
-                0xe2107d38      0x100 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2107d34      0x100 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_get_domain_parent_id
-                0xe2107e38       0x84 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2107e34       0x84 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_get_domain_type
-                0xe2107ebc       0x64 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2107eb8       0x64 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_start
-                0xe2107f20       0xec ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
- .text.pd_bind  0xe210800c       0xe8 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2107f1c       0xec ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+ .text.pd_bind  0xe2108008       0xe8 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.connect_pd_tree
-                0xe21080f4       0x8c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe21080f0       0x8c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_post_init
-                0xe2108180       0x10 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe210817c       0x10 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_power_domain_init
-                0xe2108190      0x128 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
- .text.pd_init  0xe21082b8       0x84 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe210818c      0x128 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+ .text.pd_init  0xe21082b4       0x84 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.initiate_power_state_transition
-                0xe210833c       0xdc ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
-                0xe210833c                initiate_power_state_transition
+                0xe2108338       0xdc ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2108338                initiate_power_state_transition
  .text.process_set_state_request
-                0xe2108418      0x250 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2108414      0x250 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.complete_system_suspend
-                0xe2108668       0xd0 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2108664       0xd0 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.process_system_suspend_request
-                0xe2108738      0x118 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2108734      0x118 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.process_power_state_transition_report_deeper_state
-                0xe2108850       0x54 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
-                0xe2108850                process_power_state_transition_report_deeper_state
+                0xe210884c       0x54 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe210884c                process_power_state_transition_report_deeper_state
  .text.process_power_state_transition_report_shallower_state
-                0xe21088a4       0x7c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
-                0xe21088a4                process_power_state_transition_report_shallower_state
+                0xe21088a0       0x7c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe21088a0                process_power_state_transition_report_shallower_state
  .text.process_power_state_transition_report
-                0xe2108920      0x21c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe210891c      0x21c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.perform_shutdown
-                0xe2108b3c      0x158 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
-                0xe2108b3c                perform_shutdown
+                0xe2108b38      0x158 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2108b38                perform_shutdown
  .text.process_system_shutdown_request
-                0xe2108c94       0xac ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2108c90       0xac ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.pd_process_event
-                0xe2108d40      0x170 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2108d3c      0x170 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .text.is_valid_state
-                0xe2108eb0       0x30 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe2108eb0                is_valid_state
+                0xe2108eac       0x30 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2108eac                is_valid_state
  .text.normalize_state
-                0xe2108ee0       0x50 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe2108ee0                normalize_state
+                0xe2108edc       0x50 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2108edc                normalize_state
  .text.is_deeper_state
-                0xe2108f30       0x2c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe2108f30                is_deeper_state
+                0xe2108f2c       0x2c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2108f2c                is_deeper_state
  .text.is_shallower_state
-                0xe2108f5c       0x2c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe2108f5c                is_shallower_state
+                0xe2108f58       0x2c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2108f58                is_shallower_state
  .text.is_allowed_by_child
-                0xe2108f88       0x28 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe2108f88                is_allowed_by_child
+                0xe2108f84       0x28 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2108f84                is_allowed_by_child
  .text.is_allowed_by_children
-                0xe2108fb0       0x60 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe2108fb0                is_allowed_by_children
+                0xe2108fac       0x60 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2108fac                is_allowed_by_children
  .text.get_state_name
-                0xe2109010       0x40 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe2109010                get_state_name
+                0xe210900c       0x40 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe210900c                get_state_name
  .text.number_of_bits_to_shift
-                0xe2109050       0x2c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe2109050                number_of_bits_to_shift
+                0xe210904c       0x2c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe210904c                number_of_bits_to_shift
  .text.retrieve_mapped_state
-                0xe210907c       0x20 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe210907c                retrieve_mapped_state
+                0xe2109078       0x20 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2109078                retrieve_mapped_state
  .text.get_level_state_from_composite_state
-                0xe210909c       0x24 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe210909c                get_level_state_from_composite_state
+                0xe2109098       0x24 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2109098                get_level_state_from_composite_state
  .text.get_highest_level_from_composite_state
-                0xe21090c0       0x8c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe21090c0                get_highest_level_from_composite_state
+                0xe21090bc       0x8c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe21090bc                get_highest_level_from_composite_state
  .text.is_valid_composite_state
-                0xe210914c      0x110 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe210914c                is_valid_composite_state
+                0xe2109148      0x110 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2109148                is_valid_composite_state
  .text.is_upwards_transition_propagation
-                0xe210925c       0x88 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe210925c                is_upwards_transition_propagation
+                0xe2109258       0x88 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2109258                is_upwards_transition_propagation
  .text.is_allowed_by_parent_and_children
-                0xe21092e4       0x84 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe21092e4                is_allowed_by_parent_and_children
+                0xe21092e0       0x84 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe21092e0                is_allowed_by_parent_and_children
  .text.is_state_in_transition
-                0xe2109368       0x44 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
-                0xe2109368                is_state_in_transition
+                0xe2109364       0x44 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2109364                is_state_in_transition
  .text.check_power_state_pre_transition_notification
-                0xe21093ac       0x38 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+                0xe21093a8       0x38 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
  .text.process_pre_shutdown_notification_response
-                0xe21093e4       0x54 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
-                0xe21093e4                process_pre_shutdown_notification_response
+                0xe21093e0       0x54 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+                0xe21093e0                process_pre_shutdown_notification_response
  .text.process_power_state_transition_notification_response
-                0xe2109438      0x11c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
-                0xe2109438                process_power_state_transition_notification_response
+                0xe2109434      0x11c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+                0xe2109434                process_power_state_transition_notification_response
  .text.initiate_power_state_pre_transition_notification
-                0xe2109554       0xf4 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
-                0xe2109554                initiate_power_state_pre_transition_notification
+                0xe2109550       0xf4 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+                0xe2109550                initiate_power_state_pre_transition_notification
  .text.process_power_state_pre_transition_notification_response
-                0xe2109648       0xd4 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
-                0xe2109648                process_power_state_pre_transition_notification_response
+                0xe2109644       0xd4 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+                0xe2109644                process_power_state_pre_transition_notification_response
  .text.pd_process_notification
-                0xe210971c       0xc8 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
-                0xe210971c                pd_process_notification
+                0xe2109718       0xc8 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+                0xe2109718                pd_process_notification
  .text.check_and_notify_system_shutdown
-                0xe21097e4       0xb0 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
-                0xe21097e4                check_and_notify_system_shutdown
+                0xe21097e0       0xb0 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+                0xe21097e0                check_and_notify_system_shutdown
  .text.notify_warm_reset
-                0xe2109894       0x88 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
-                0xe2109894                notify_warm_reset
+                0xe2109890       0x88 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+                0xe2109890                notify_warm_reset
  .text.reset_issued_notify
-                0xe210991c       0xd4 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
+                0xe2109918       0xd4 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
  .text.rd_process_event
-                0xe21099f0       0x3c ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
+                0xe21099ec       0x3c ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
  .text.rd_process_bind_request
-                0xe2109a2c       0x38 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
+                0xe2109a28       0x38 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
  .text.set_reset_state
-                0xe2109a64       0x50 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
+                0xe2109a60       0x50 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
  .text.rd_element_init
-                0xe2109ab4       0x28 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
- .text.rd_bind  0xe2109adc       0x64 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
- .text.rd_init  0xe2109b40       0x34 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
+                0xe2109ab0       0x28 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
+ .text.rd_bind  0xe2109ad8       0x64 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
+ .text.rd_init  0xe2109b3c       0x34 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
  .text.scmi_message_header
-                0xe2109b74       0x18 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109b70       0x18 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.read_message_id
-                0xe2109b8c        0x8 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109b88        0x8 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.read_message_type
-                0xe2109b94        0xc ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109b90        0xc ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.read_protocol_id
-                0xe2109ba0        0xc ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109b9c        0xc ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.read_token
-                0xe2109bac       0x10 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109ba8       0x10 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.get_message_type_str
-                0xe2109bbc       0x7c ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109bb8       0x7c ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.is_message_type_valid
-                0xe2109c38       0x34 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109c34       0x34 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.get_agent_count
-                0xe2109c6c       0x30 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109c68       0x30 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.get_agent_type
-                0xe2109c9c       0x54 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109c98       0x54 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.response_message_handler
-                0xe2109cf0       0x38 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
-                0xe2109cf0                response_message_handler
+                0xe2109cec       0x38 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109cec                response_message_handler
  .text.get_agent_id
-                0xe2109d28       0x40 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109d24       0x40 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.signal_error
-                0xe2109d68       0x4c ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109d64       0x4c ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.scmi_notify
-                0xe2109db4       0xc8 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109db0       0xc8 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.write_payload
-                0xe2109e7c       0x50 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109e78       0x50 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.get_max_payload_size
-                0xe2109ecc       0x4c ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109ec8       0x4c ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.scmi_service_init
-                0xe2109f18       0x60 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109f14       0x60 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.scmi_send_message
-                0xe2109f78       0xe8 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
-                0xe2109f78                scmi_send_message
- .text.respond  0xe210a060       0xf4 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109f74       0xe8 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2109f74                scmi_send_message
+ .text.respond  0xe210a05c       0xf4 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.scmi_message_validation
-                0xe210a154       0xa8 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe210a150       0xa8 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.scmi_process_notification
-                0xe210a1fc       0xec ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe210a1f8       0xec ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.scmi_process_bind_request
-                0xe210a2e8      0x17c ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe210a2e4      0x17c ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.signal_message
-                0xe210a464       0x74 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe210a460       0x74 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.scmi_start
-                0xe210a4d8       0xac ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe210a4d4       0xac ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.scmi_bind
-                0xe210a584      0x2b4 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe210a580      0x2b4 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.scmi_init
-                0xe210a838       0xf0 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe210a834       0xf0 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.send_to_message_handler
-                0xe210a928       0x38 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
-                0xe210a928                send_to_message_handler
+                0xe210a924       0x38 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe210a924                send_to_message_handler
  .text.scmi_process_event
-                0xe210a960      0x38c ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe210a95c      0x38c ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .text.scmi_base_protocol_version_handler
-                0xe210acec       0x44 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe210ace8       0x44 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .text.scmi_base_protocol_message_attributes_handler
-                0xe210ad30       0x80 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe210ad2c       0x80 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .text.scmi_base_discover_implementation_version_handler
-                0xe210adb0       0x48 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe210adac       0x48 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .text.scmi_base_discover_list_protocols_handler
-                0xe210adf8      0x2dc ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe210adf4      0x2dc ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .text.scmi_base_protocol_attributes_handler
-                0xe210b0d4      0x108 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe210b0d0      0x108 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .text.scmi_base_discover_agent_handler
-                0xe210b1dc      0x164 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe210b1d8      0x164 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .text.scmi_base_discover_sub_vendor_handler
-                0xe210b340       0x78 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe210b33c       0x78 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .text.scmi_base_discover_vendor_handler
-                0xe210b3b8       0x78 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe210b3b4       0x78 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .text.scmi_base_message_handler
-                0xe210b430       0xac ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
-                0xe210b430                scmi_base_message_handler
+                0xe210b42c       0xac ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe210b42c                scmi_base_message_handler
  .text.scmi_base_set_api
-                0xe210b4dc       0x10 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
-                0xe210b4dc                scmi_base_set_api
+                0xe210b4d8       0x10 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe210b4d8                scmi_base_set_api
  .text.scmi_base_set_shared_ctx
-                0xe210b4ec       0x10 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
-                0xe210b4ec                scmi_base_set_shared_ctx
+                0xe210b4e8       0x10 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe210b4e8                scmi_base_set_shared_ctx
  .text.protocol_version_handler
-                0xe210b4fc       0x44 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210b4f8       0x44 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.protocol_attributes_handler
-                0xe210b540       0x9c ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210b53c       0x9c ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.protocol_message_attributes_handler
-                0xe210b5dc       0x80 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210b5d8       0x80 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.get_agent_id
-                0xe210b65c       0x50 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210b658       0x50 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.get_agent_entry
-                0xe210b6ac       0x4c ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210b6a8       0x4c ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.scmi_reset_get_scmi_protocol_id
-                0xe210b6f8       0x10 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210b6f4       0x10 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.scmi_reset_message_handler
-                0xe210b708       0xa8 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210b704       0xa8 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.scmi_reset_init
-                0xe210b7b0       0x38 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210b7ac       0x38 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.scmi_reset_process_bind_request
-                0xe210b7e8       0x38 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210b7e4       0x38 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.get_reset_device
-                0xe210b820       0xa8 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210b81c       0xa8 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.reset_attributes_handler
-                0xe210b8c8       0xe4 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210b8c4       0xe4 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.scmi_reset_bind
-                0xe210b9ac       0x70 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210b9a8       0x70 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.scmi_reset_domain_reset_request_policy
-                0xe210ba1c       0x10 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
-                0xe210ba1c                scmi_reset_domain_reset_request_policy
+                0xe210ba18       0x10 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210ba18                scmi_reset_domain_reset_request_policy
  .text.reset_request_handler
-                0xe210ba2c      0x220 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe210ba28      0x220 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .text.header_is_valid
-                0xe210bc4c       0x94 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210bc48       0x94 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.validate_structure_access
-                0xe210bce0       0x40 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210bcdc       0x40 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.reinitialize_memory_region
-                0xe210bd20       0xfc ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210bd1c       0xfc ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.sds_element_init
-                0xe210be1c        0x8 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210be18        0x8 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.create_memory_region
-                0xe210be24       0xb0 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210be20       0xb0 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.get_structure_info
-                0xe210bed4      0x12c ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210bed0      0x12c ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.structure_exists
-                0xe210c000       0x28 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210bffc       0x28 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.struct_finalize
-                0xe210c028       0x34 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c024       0x34 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.sds_struct_finalize
-                0xe210c05c       0x10 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c058       0x10 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.sds_struct_read
-                0xe210c06c       0x98 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c068       0x98 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.struct_alloc
-                0xe210c104      0x170 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c100      0x170 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.struct_write
-                0xe210c274       0xc8 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c270       0xc8 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.struct_init
-                0xe210c33c       0x74 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c338       0x74 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.sds_struct_write
-                0xe210c3b0       0x30 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c3ac       0x30 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.mod_sds_clock_changed
-                0xe210c3e0       0x60 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c3dc       0x60 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.init_sds
-                0xe210c440      0x10c ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c43c      0x10c ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.sds_process_notification
-                0xe210c54c      0x120 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c548      0x120 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.sds_process_bind_request
-                0xe210c66c       0x34 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c668       0x34 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.sds_start
-                0xe210c6a0      0x128 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c69c      0x128 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.sds_init
-                0xe210c7c8       0x84 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe210c7c4       0x84 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .text.arch_interrupts_enable
-                0xe210c84c       0x3c ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210c848       0x3c ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_trigger_interrupt
-                0xe210c888       0x6c ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210c884       0x6c ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_release_channel_lock
-                0xe210c8f4       0x30 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210c8f0       0x30 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_get_payload
-                0xe210c924       0xb8 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210c920       0xb8 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_get_message_header
-                0xe210c9dc       0x9c ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210c9d8       0x9c ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_get_max_payload_size
-                0xe210ca78       0x5c ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210ca74       0x5c ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_get_secure
-                0xe210cad4       0x64 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210cad0       0x64 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_mailbox_init
-                0xe210cb38       0xb0 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210cb34       0xb0 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_process_notification
-                0xe210cbe8      0x140 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210cbe4      0x140 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_process_bind_request
-                0xe210cd28      0x138 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210cd24      0x138 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_transmit
-                0xe210ce60      0x13c ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210ce5c      0x13c ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_respond
-                0xe210cf9c      0x134 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210cf98      0x134 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_message_handler
-                0xe210d0d0      0x1c4 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210d0cc      0x1c4 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_signal_message
-                0xe210d294       0x84 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210d290       0x84 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_write_payload
-                0xe210d318       0xcc ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210d314       0xcc ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_start
-                0xe210d3e4      0x138 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210d3e0      0x138 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_bind
-                0xe210d51c      0x104 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210d518      0x104 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_channel_init
-                0xe210d620      0x118 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe210d61c      0x118 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .text.transport_init
-                0xe210d738       0x30 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
- .text          0xe210d768      0x114 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_udivsi3.o)
-                0xe210d768                __aeabi_uidiv
-                0xe210d768                __udivsi3
-                0xe210d85c                __aeabi_uidivmod
- .text          0xe210d87c        0x4 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_dvmd_tls.o)
-                0xe210d87c                __aeabi_idiv0
-                0xe210d87c                __aeabi_ldiv0
- .text          0xe210d880       0x3c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_aeabi_uldivmod.o)
-                0xe210d880                __aeabi_uldivmod
+                0xe210d734       0x30 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+ .text          0xe210d764      0x114 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_udivsi3.o)
+                0xe210d764                __aeabi_uidiv
+                0xe210d764                __udivsi3
+                0xe210d858                __aeabi_uidivmod
+ .text          0xe210d878        0x4 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_dvmd_tls.o)
+                0xe210d878                __aeabi_idiv0
+                0xe210d878                __aeabi_ldiv0
+ .text          0xe210d87c       0x3c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_aeabi_uldivmod.o)
+                0xe210d87c                __aeabi_uldivmod
  .text.__udivmoddi4
-                0xe210d8bc      0x128 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_udivmoddi4.o)
-                0xe210d8bc                __udivmoddi4
- .text          0xe210d9e4       0x28 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_clzdi2.o)
-                0xe210d9e4                __clzdi2
- .text          0xe210da0c       0x48 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_clzsi2.o)
-                0xe210da0c                __clzsi2
- .text.calloc   0xe210da54       0x28 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-calloc.o)
-                0xe210da54                calloc
+                0xe210d8b8      0x128 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_udivmoddi4.o)
+                0xe210d8b8                __udivmoddi4
+ .text          0xe210d9e0       0x28 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_clzdi2.o)
+                0xe210d9e0                __clzdi2
+ .text          0xe210da08       0x48 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_clzsi2.o)
+                0xe210da08                __clzsi2
+ .text.calloc   0xe210da50       0x28 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-calloc.o)
+                0xe210da50                calloc
  .text._calloc_r
-                0xe210da7c       0xd0 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-callocr.o)
-                0xe210da7c                _calloc_r
- .text.malloc   0xe210db4c       0x20 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-malloc.o)
-                0xe210db4c                malloc
- .text.free     0xe210db6c       0x20 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-malloc.o)
-                0xe210db6c                free
+                0xe210da78       0xd0 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-callocr.o)
+                0xe210da78                _calloc_r
+ .text.malloc   0xe210db48       0x20 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-malloc.o)
+                0xe210db48                malloc
+ .text.free     0xe210db68       0x20 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-malloc.o)
+                0xe210db68                free
  .text._malloc_r
-                0xe210db8c      0x7b4 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mallocr.o)
-                0xe210db8c                _malloc_r
+                0xe210db88      0x7b4 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mallocr.o)
+                0xe210db88                _malloc_r
  .text.__malloc_lock
-                0xe210e340       0x18 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mlock.o)
-                0xe210e340                __malloc_lock
+                0xe210e33c       0x18 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mlock.o)
+                0xe210e33c                __malloc_lock
  .text.__malloc_unlock
-                0xe210e358       0x18 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mlock.o)
-                0xe210e358                __malloc_unlock
+                0xe210e354       0x18 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mlock.o)
+                0xe210e354                __malloc_unlock
  .text._realloc_r
-                0xe210e370      0x4b8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-reallocr.o)
-                0xe210e370                _realloc_r
+                0xe210e36c      0x4b8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-reallocr.o)
+                0xe210e36c                _realloc_r
  .text.snprintf
-                0xe210e828       0xd8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-snprintf.o)
-                0xe210e828                snprintf
+                0xe210e824       0xd8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-snprintf.o)
+                0xe210e824                snprintf
  .text.vsnprintf
-                0xe210e900       0xb8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-vsnprintf.o)
-                0xe210e900                vsnprintf
- .text.memmove  0xe210e9b8      0x154 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-memmove.o)
-                0xe210e9b8                memmove
- .text.memset   0xe210eb0c       0xfc C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-memset.o)
-                0xe210eb0c                memset
- .text.strncpy  0xe210ec08       0xd0 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-strncpy.o)
-                0xe210ec08                strncpy
- .text._sbrk_r  0xe210ecd8       0x44 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-sbrkr.o)
-                0xe210ecd8                _sbrk_r
- .text.__errno  0xe210ed1c       0x10 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-errno.o)
-                0xe210ed1c                __errno
+                0xe210e8fc       0xb8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-vsnprintf.o)
+                0xe210e8fc                vsnprintf
+ .text.memmove  0xe210e9b4      0x154 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-memmove.o)
+                0xe210e9b4                memmove
+ .text.memset   0xe210eb08       0xfc C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-memset.o)
+                0xe210eb08                memset
+ .text.strncpy  0xe210ec04       0xd0 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-strncpy.o)
+                0xe210ec04                strncpy
+ .text._sbrk_r  0xe210ecd4       0x44 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-sbrkr.o)
+                0xe210ecd4                _sbrk_r
+ .text.__errno  0xe210ed18       0x10 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-errno.o)
+                0xe210ed18                __errno
  .text.__retarget_lock_acquire_recursive
-                0xe210ed2c        0x4 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-lock.o)
-                0xe210ed2c                __retarget_lock_acquire_recursive
+                0xe210ed28        0x4 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-lock.o)
+                0xe210ed28                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0xe210ed30        0x4 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-lock.o)
-                0xe210ed30                __retarget_lock_release_recursive
- .text.sysconf  0xe210ed34       0x30 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-sysconf.o)
-                0xe210ed34                sysconf
- .text.memcpy   0xe210ed64      0x114 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-memcpy-stub.o)
-                0xe210ed64                memcpy
- .text.strlen   0xe210ee78       0x60 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-strlen-stub.o)
-                0xe210ee78                strlen
+                0xe210ed2c        0x4 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-lock.o)
+                0xe210ed2c                __retarget_lock_release_recursive
+ .text.sysconf  0xe210ed30       0x30 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-sysconf.o)
+                0xe210ed30                sysconf
+ .text.memcpy   0xe210ed60      0x114 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-memcpy-stub.o)
+                0xe210ed60                memcpy
+ .text.strlen   0xe210ee74       0x60 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-strlen-stub.o)
+                0xe210ee74                strlen
  .text.startup.register_fini
-                0xe210eed8       0x28 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-__call_atexit.o)
- .text.atexit   0xe210ef00       0x20 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-atexit.o)
-                0xe210ef00                atexit
+                0xe210eed4       0x28 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-__call_atexit.o)
+ .text.atexit   0xe210eefc       0x20 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-atexit.o)
+                0xe210eefc                atexit
  .text._malloc_trim_r
-                0xe210ef20      0x114 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-freer.o)
-                0xe210ef20                _malloc_trim_r
- .text._free_r  0xe210f034      0x2e8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-freer.o)
-                0xe210f034                _free_r
+                0xe210ef1c      0x114 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-freer.o)
+                0xe210ef1c                _malloc_trim_r
+ .text._free_r  0xe210f030      0x2e8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-freer.o)
+                0xe210f030                _free_r
  .text._svfprintf_r
-                0xe210f31c     0x2bf4 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-svfprintf.o)
-                0xe210f31c                _svfprintf_r
+                0xe210f318     0x2bf4 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-svfprintf.o)
+                0xe210f318                _svfprintf_r
  .text.__ssprint_r
-                0xe2111f10       0xa8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-ssprint_r.o)
-                0xe2111f10                __ssprint_r
+                0xe2111f0c       0xa8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-ssprint_r.o)
+                0xe2111f0c                __ssprint_r
  .text.__locale_mb_cur_max
-                0xe2111fb8       0x10 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-locale.o)
-                0xe2111fb8                __locale_mb_cur_max
+                0xe2111fb4       0x10 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-locale.o)
+                0xe2111fb4                __locale_mb_cur_max
  .text._localeconv_r
-                0xe2111fc8        0xc C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-localeconv.o)
-                0xe2111fc8                _localeconv_r
+                0xe2111fc4        0xc C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-localeconv.o)
+                0xe2111fc4                _localeconv_r
  .text.__libc_fini_array
-                0xe2111fd4       0x44 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-fini.o)
-                0xe2111fd4                __libc_fini_array
- .text.memchr   0xe2112018       0xf0 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-memchr-stub.o)
-                0xe2112018                memchr
- .text.frexp    0xe2112108       0xa4 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libm_a-s_frexp.o)
-                0xe2112108                frexp
+                0xe2111fd0       0x44 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-fini.o)
+                0xe2111fd0                __libc_fini_array
+ .text.memchr   0xe2112014       0xf0 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-memchr-stub.o)
+                0xe2112014                memchr
+ .text.frexp    0xe2112104       0xa4 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libm_a-s_frexp.o)
+                0xe2112104                frexp
  .text.__register_exitproc
-                0xe21121ac       0xb8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-__atexit.o)
-                0xe21121ac                __register_exitproc
- .text.quorem   0xe2112264      0x1d8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-dtoa.o)
- *fill*         0xe211243c        0x4 
- .text._dtoa_r  0xe2112440     0x16cc C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-dtoa.o)
-                0xe2112440                _dtoa_r
+                0xe21121a8       0xb8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-__atexit.o)
+                0xe21121a8                __register_exitproc
+ .text.quorem   0xe2112260      0x1d8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-dtoa.o)
+ .text._dtoa_r  0xe2112438     0x16cc C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-dtoa.o)
+                0xe2112438                _dtoa_r
  .text.__ascii_mbtowc
-                0xe2113b0c       0x44 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mbtowc_r.o)
-                0xe2113b0c                __ascii_mbtowc
- .text._Balloc  0xe2113b50       0x8c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe2113b50                _Balloc
- .text._Bfree   0xe2113bdc       0x1c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe2113bdc                _Bfree
+                0xe2113b04       0x44 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mbtowc_r.o)
+                0xe2113b04                __ascii_mbtowc
+ .text._Balloc  0xe2113b48       0x8c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe2113b48                _Balloc
+ .text._Bfree   0xe2113bd4       0x1c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe2113bd4                _Bfree
  .text.__multadd
-                0xe2113bf8      0x100 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe2113bf8                __multadd
+                0xe2113bf0      0x100 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe2113bf0                __multadd
  .text.__hi0bits
-                0xe2113cf8       0x60 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe2113cf8                __hi0bits
+                0xe2113cf0       0x60 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe2113cf0                __hi0bits
  .text.__lo0bits
-                0xe2113d58       0xa0 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe2113d58                __lo0bits
- .text.__i2b    0xe2113df8       0xac C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe2113df8                __i2b
+                0xe2113d50       0xa0 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe2113d50                __lo0bits
+ .text.__i2b    0xe2113df0       0xac C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe2113df0                __i2b
  .text.__multiply
-                0xe2113ea4      0x218 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe2113ea4                __multiply
+                0xe2113e9c      0x218 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe2113e9c                __multiply
  .text.__pow5mult
-                0xe21140bc      0x12c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe21140bc                __pow5mult
+                0xe21140b4      0x12c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe21140b4                __pow5mult
  .text.__lshift
-                0xe21141e8      0x144 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe21141e8                __lshift
- .text.__mcmp   0xe211432c       0x54 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe211432c                __mcmp
- .text.__mdiff  0xe2114380      0x214 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe2114380                __mdiff
- .text.__d2b    0xe2114594      0x128 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe2114594                __d2b
+                0xe21141e0      0x144 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe21141e0                __lshift
+ .text.__mcmp   0xe2114324       0x54 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe2114324                __mcmp
+ .text.__mdiff  0xe2114378      0x214 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe2114378                __mdiff
+ .text.__d2b    0xe211458c      0x128 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe211458c                __d2b
  .text.__ascii_wctomb
-                0xe21146bc       0x30 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-wctomb_r.o)
-                0xe21146bc                __ascii_wctomb
+                0xe21146b4       0x30 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-wctomb_r.o)
+                0xe21146b4                __ascii_wctomb
  .text._wcrtomb_r
-                0xe21146ec       0x5c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-wcrtomb.o)
-                0xe21146ec                _wcrtomb_r
+                0xe21146e4       0x5c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-wcrtomb.o)
+                0xe21146e4                _wcrtomb_r
  .text._wcsrtombs_r
-                0xe2114748       0x2c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-wcsrtombs.o)
-                0xe2114748                _wcsrtombs_r
+                0xe2114740       0x2c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-wcsrtombs.o)
+                0xe2114740                _wcsrtombs_r
  .text.__ssputs_r
-                0xe2114774      0x12c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-ssputs_r.o)
-                0xe2114774                __ssputs_r
+                0xe211476c      0x12c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-ssputs_r.o)
+                0xe211476c                __ssputs_r
  .text._wcsnrtombs_l
-                0xe21148a0      0x198 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-wcsnrtombs.o)
-                0xe21148a0                _wcsnrtombs_l
+                0xe2114898      0x198 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-wcsnrtombs.o)
+                0xe2114898                _wcsnrtombs_l
  .text._wcsnrtombs_r
-                0xe2114a38       0x40 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-wcsnrtombs.o)
-                0xe2114a38                _wcsnrtombs_r
- .text          0xe2114a78      0x424 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_arm_addsubdf3.o)
-                0xe2114a78                __aeabi_drsub
-                0xe2114a80                __aeabi_dsub
-                0xe2114a80                __subdf3
-                0xe2114a84                __aeabi_dadd
-                0xe2114a84                __adddf3
-                0xe2114d94                __floatunsidf
-                0xe2114d94                __aeabi_ui2d
-                0xe2114db8                __floatsidf
-                0xe2114db8                __aeabi_i2d
-                0xe2114de0                __aeabi_f2d
-                0xe2114de0                __extendsfdf2
-                0xe2114e28                __floatundidf
-                0xe2114e28                __aeabi_ul2d
-                0xe2114e3c                __floatdidf
-                0xe2114e3c                __aeabi_l2d
- .text          0xe2114e9c      0x49c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_arm_muldivdf3.o)
-                0xe2114e9c                __aeabi_dmul
-                0xe2114e9c                __muldf3
-                0xe211512c                __divdf3
-                0xe211512c                __aeabi_ddiv
- .text          0xe2115338      0x144 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_arm_cmpdf2.o)
-                0xe2115338                __gtdf2
-                0xe2115338                __gedf2
-                0xe2115340                __ltdf2
-                0xe2115340                __ledf2
-                0xe2115348                __nedf2
-                0xe2115348                __eqdf2
-                0xe2115348                __cmpdf2
-                0xe21153d0                __aeabi_cdrcmple
-                0xe21153ec                __aeabi_cdcmpeq
-                0xe21153ec                __aeabi_cdcmple
-                0xe2115404                __aeabi_dcmpeq
-                0xe211541c                __aeabi_dcmplt
-                0xe2115434                __aeabi_dcmple
-                0xe211544c                __aeabi_dcmpge
-                0xe2115464                __aeabi_dcmpgt
- .text          0xe211547c       0x38 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_arm_unorddf2.o)
-                0xe211547c                __unorddf2
-                0xe211547c                __aeabi_dcmpun
- .text          0xe21154b4       0x5c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_arm_fixdfsi.o)
-                0xe21154b4                __aeabi_d2iz
-                0xe21154b4                __fixdfsi
+                0xe2114a30       0x40 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-wcsnrtombs.o)
+                0xe2114a30                _wcsnrtombs_r
+ .text          0xe2114a70      0x424 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_arm_addsubdf3.o)
+                0xe2114a70                __aeabi_drsub
+                0xe2114a78                __aeabi_dsub
+                0xe2114a78                __subdf3
+                0xe2114a7c                __aeabi_dadd
+                0xe2114a7c                __adddf3
+                0xe2114d8c                __floatunsidf
+                0xe2114d8c                __aeabi_ui2d
+                0xe2114db0                __floatsidf
+                0xe2114db0                __aeabi_i2d
+                0xe2114dd8                __aeabi_f2d
+                0xe2114dd8                __extendsfdf2
+                0xe2114e20                __floatundidf
+                0xe2114e20                __aeabi_ul2d
+                0xe2114e34                __floatdidf
+                0xe2114e34                __aeabi_l2d
+ .text          0xe2114e94      0x49c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_arm_muldivdf3.o)
+                0xe2114e94                __aeabi_dmul
+                0xe2114e94                __muldf3
+                0xe2115124                __divdf3
+                0xe2115124                __aeabi_ddiv
+ .text          0xe2115330      0x144 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_arm_cmpdf2.o)
+                0xe2115330                __gtdf2
+                0xe2115330                __gedf2
+                0xe2115338                __ltdf2
+                0xe2115338                __ledf2
+                0xe2115340                __nedf2
+                0xe2115340                __eqdf2
+                0xe2115340                __cmpdf2
+                0xe21153c8                __aeabi_cdrcmple
+                0xe21153e4                __aeabi_cdcmpeq
+                0xe21153e4                __aeabi_cdcmple
+                0xe21153fc                __aeabi_dcmpeq
+                0xe2115414                __aeabi_dcmplt
+                0xe211542c                __aeabi_dcmple
+                0xe2115444                __aeabi_dcmpge
+                0xe211545c                __aeabi_dcmpgt
+ .text          0xe2115474       0x38 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_arm_unorddf2.o)
+                0xe2115474                __unorddf2
+                0xe2115474                __aeabi_dcmpun
+ .text          0xe21154ac       0x5c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libgcc.a(_arm_fixdfsi.o)
+                0xe21154ac                __aeabi_d2iz
+                0xe21154ac                __fixdfsi
  *(.rodata*)
  .rodata.str1.4
-                0xe2115510     0x1df2 CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
+                0xe2115508     0x1df2 CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
                                  0x5f (size before relaxing)
- *fill*         0xe2117302        0x2 
+ *fill*         0xe21172fa        0x2 
  .rodata.rcar4_power_domain_config
-                0xe2117304        0xc CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
+                0xe21172fc        0xc CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
  .rodata.core_pd_allowed_state_mask_table
-                0xe2117310        0xc CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
+                0xe2117308        0xc CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
  .rodata.cluster_pd_allowed_state_mask_table
-                0xe211731c       0x20 CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
+                0xe2117314       0x20 CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
  .rodata.toplevel_allowed_state_mask_table
-                0xe211733c       0x20 CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
+                0xe2117334       0x20 CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
  .rodata.systop_allowed_state_mask_table
-                0xe211735c        0x4 CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
+                0xe2117354        0x4 CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
  .rodata.config_rcar4_pd_sysc
-                0xe2117360        0xc CMakeFiles/rcar4-bl.dir/config_rcar4_pd_sysc.c.obj
-                0xe2117360                config_rcar4_pd_sysc
+                0xe2117358        0xc CMakeFiles/rcar4-bl.dir/config_rcar4_pd_sysc.c.obj
+                0xe2117358                config_rcar4_pd_sysc
  .rodata.str1.4
-                0xe211736c       0x56 CMakeFiles/rcar4-bl.dir/config_rcar4_pd_sysc.c.obj
+                0xe2117364       0x56 CMakeFiles/rcar4-bl.dir/config_rcar4_pd_sysc.c.obj
  .rodata.config_rcar4_pd_core
-                0xe211736c        0xc CMakeFiles/rcar4-bl.dir/config_rcar4_pd_core.c.obj
-                0xe211736c                config_rcar4_pd_core
+                0xe2117364        0xc CMakeFiles/rcar4-bl.dir/config_rcar4_pd_core.c.obj
+                0xe2117364                config_rcar4_pd_core
  .rodata.str1.4
-                0xe2117378       0x7f CMakeFiles/rcar4-bl.dir/config_rcar4_pd_core.c.obj
+                0xe2117370       0x7f CMakeFiles/rcar4-bl.dir/config_rcar4_pd_core.c.obj
  .rodata.cluster_pd_name_table
-                0xe2117378        0x8 CMakeFiles/rcar4-bl.dir/config_rcar4_pd_core.c.obj
+                0xe2117370        0x8 CMakeFiles/rcar4-bl.dir/config_rcar4_pd_core.c.obj
  .rodata.core_pd_name_table
-                0xe2117380       0x20 CMakeFiles/rcar4-bl.dir/config_rcar4_pd_core.c.obj
+                0xe2117378       0x20 CMakeFiles/rcar4-bl.dir/config_rcar4_pd_core.c.obj
  .rodata.str1.4
-                0xe21173a0       0x21 CMakeFiles/rcar4-bl.dir/config_clock.c.obj
+                0xe2117398       0x21 CMakeFiles/rcar4-bl.dir/config_clock.c.obj
  .rodata.str1.4
-                0xe21173a0       0x2b CMakeFiles/rcar4-bl.dir/config_rcar4_clock.c.obj
+                0xe2117398       0x2b CMakeFiles/rcar4-bl.dir/config_rcar4_clock.c.obj
  .rodata.rcar4_clock_element_table
-                0xe21173a0       0x48 CMakeFiles/rcar4-bl.dir/config_rcar4_clock.c.obj
+                0xe2117398       0x48 CMakeFiles/rcar4-bl.dir/config_rcar4_clock.c.obj
  .rodata.str1.4
-                0xe21173e8       0x3c CMakeFiles/rcar4-bl.dir/config_rcar4_mfismh.c.obj
+                0xe21173e0       0x3c CMakeFiles/rcar4-bl.dir/config_rcar4_mfismh.c.obj
  .rodata.mfismh_element_table
-                0xe21173e8       0x48 CMakeFiles/rcar4-bl.dir/config_rcar4_mfismh.c.obj
+                0xe21173e0       0x48 CMakeFiles/rcar4-bl.dir/config_rcar4_mfismh.c.obj
  .rodata.str1.4
-                0xe2117430       0x1c CMakeFiles/rcar4-bl.dir/config_transport.c.obj
+                0xe2117428       0x1c CMakeFiles/rcar4-bl.dir/config_transport.c.obj
  .rodata.transport_element_table
-                0xe2117430       0x48 CMakeFiles/rcar4-bl.dir/config_transport.c.obj
+                0xe2117428       0x48 CMakeFiles/rcar4-bl.dir/config_transport.c.obj
  .rodata.str1.4
-                0xe2117478       0x24 CMakeFiles/rcar4-bl.dir/config_scmi.c.obj
+                0xe2117470       0x24 CMakeFiles/rcar4-bl.dir/config_scmi.c.obj
  .rodata.agent_table
-                0xe2117478       0x30 CMakeFiles/rcar4-bl.dir/config_scmi.c.obj
+                0xe2117470       0x30 CMakeFiles/rcar4-bl.dir/config_scmi.c.obj
  .rodata.element_table
-                0xe21174a8       0x48 CMakeFiles/rcar4-bl.dir/config_scmi.c.obj
+                0xe21174a0       0x48 CMakeFiles/rcar4-bl.dir/config_scmi.c.obj
  .rodata.config_rcar4_system_power
-                0xe21174f0        0xc CMakeFiles/rcar4-bl.dir/config_rcar4_system_power.c.obj
-                0xe21174f0                config_rcar4_system_power
+                0xe21174e8        0xc CMakeFiles/rcar4-bl.dir/config_rcar4_system_power.c.obj
+                0xe21174e8                config_rcar4_system_power
  .rodata.str1.4
-                0xe21174fc        0x8 CMakeFiles/rcar4-bl.dir/config_rcar4_system.c.obj
+                0xe21174f4        0x8 CMakeFiles/rcar4-bl.dir/config_rcar4_system.c.obj
  .rodata.str1.4
-                0xe21174fc       0x21 CMakeFiles/rcar4-bl.dir/config_sds.c.obj
+                0xe21174f4       0x21 CMakeFiles/rcar4-bl.dir/config_sds.c.obj
  .rodata.sds_element_table
-                0xe21174fc       0x24 CMakeFiles/rcar4-bl.dir/config_sds.c.obj
+                0xe21174f4       0x24 CMakeFiles/rcar4-bl.dir/config_sds.c.obj
  .rodata.sds_module_config
-                0xe2117520       0x14 CMakeFiles/rcar4-bl.dir/config_sds.c.obj
-                0xe2117520                sds_module_config
+                0xe2117518       0x14 CMakeFiles/rcar4-bl.dir/config_sds.c.obj
+                0xe2117518                sds_module_config
  .rodata.sds_module_regions
-                0xe2117534        0x8 CMakeFiles/rcar4-bl.dir/config_sds.c.obj
+                0xe211752c        0x8 CMakeFiles/rcar4-bl.dir/config_sds.c.obj
  .rodata.version_packed
-                0xe211753c        0x4 CMakeFiles/rcar4-bl.dir/config_sds.c.obj
+                0xe2117534        0x4 CMakeFiles/rcar4-bl.dir/config_sds.c.obj
  .rodata.feature_flags
-                0xe2117540        0x4 CMakeFiles/rcar4-bl.dir/config_sds.c.obj
+                0xe2117538        0x4 CMakeFiles/rcar4-bl.dir/config_sds.c.obj
  .rodata.rcar4_reset_config
-                0xe2117544        0x4 CMakeFiles/rcar4-bl.dir/config_rcar4_reset.c.obj
+                0xe211753c        0x4 CMakeFiles/rcar4-bl.dir/config_rcar4_reset.c.obj
  .rodata.str1.4
-                0xe2117548        0x6 CMakeFiles/rcar4-bl.dir/config_rcar4_reset.c.obj
+                0xe2117540        0x6 CMakeFiles/rcar4-bl.dir/config_rcar4_reset.c.obj
  .rodata.rcar4_reset_element_table
-                0xe2117548       0x18 CMakeFiles/rcar4-bl.dir/config_rcar4_reset.c.obj
-                0xe2117548                rcar4_reset_element_table
+                0xe2117540       0x18 CMakeFiles/rcar4-bl.dir/config_rcar4_reset.c.obj
+                0xe2117540                rcar4_reset_element_table
  .rodata.reset_domain_config
-                0xe2117560        0x4 CMakeFiles/rcar4-bl.dir/config_reset_domain.c.obj
+                0xe2117558        0x4 CMakeFiles/rcar4-bl.dir/config_reset_domain.c.obj
  .rodata.str1.4
-                0xe2117564        0x6 CMakeFiles/rcar4-bl.dir/config_reset_domain.c.obj
+                0xe211755c        0x6 CMakeFiles/rcar4-bl.dir/config_reset_domain.c.obj
  .rodata.reset_domain_element_table
-                0xe2117564       0x18 CMakeFiles/rcar4-bl.dir/config_reset_domain.c.obj
-                0xe2117564                reset_domain_element_table
+                0xe211755c       0x18 CMakeFiles/rcar4-bl.dir/config_reset_domain.c.obj
+                0xe211755c                reset_domain_element_table
  .rodata.config_scmi_reset_domain
-                0xe211757c        0xc CMakeFiles/rcar4-bl.dir/config_scmi_reset_domain.c.obj
-                0xe211757c                config_scmi_reset_domain
+                0xe2117574        0xc CMakeFiles/rcar4-bl.dir/config_scmi_reset_domain.c.obj
+                0xe2117574                config_scmi_reset_domain
  .rodata.agent_table
-                0xe2117588       0x30 CMakeFiles/rcar4-bl.dir/config_scmi_reset_domain.c.obj
+                0xe2117580       0x30 CMakeFiles/rcar4-bl.dir/config_scmi_reset_domain.c.obj
  .rodata.agent_device_table_ospm
-                0xe21175b8        0x8 CMakeFiles/rcar4-bl.dir/config_scmi_reset_domain.c.obj
+                0xe21175b0        0x8 CMakeFiles/rcar4-bl.dir/config_scmi_reset_domain.c.obj
  .rodata.arm_gic_driver
-                0xe21175c0       0x3c ..\..\..\arch\armv8-r\libarch-armv8r.a(arch_gic.c.obj)
+                0xe21175b8       0x3c ..\..\..\arch\armv8-r\libarch-armv8r.a(arch_gic.c.obj)
  .rodata.rcar4_system_process_notification.str1.4
-                0xe21175fc       0xb7 ..\..\..\module\modules\rcar4-system\libmodule-rcar4-system.a(mod_rcar4_system.c.obj)
+                0xe21175f4       0xb7 ..\..\..\module\modules\rcar4-system\libmodule-rcar4-system.a(mod_rcar4_system.c.obj)
  .rodata.__func__.2
-                0xe21175fc       0x22 ..\..\..\module\modules\rcar4-system\libmodule-rcar4-system.a(mod_rcar4_system.c.obj)
- *fill*         0xe211761e        0x2 
+                0xe21175f4       0x22 ..\..\..\module\modules\rcar4-system\libmodule-rcar4-system.a(mod_rcar4_system.c.obj)
+ *fill*         0xe2117616        0x2 
  .rodata.module_rcar4_system
-                0xe2117620       0x44 ..\..\..\module\modules\rcar4-system\libmodule-rcar4-system.a(mod_rcar4_system.c.obj)
-                0xe2117620                module_rcar4_system
+                0xe2117618       0x44 ..\..\..\module\modules\rcar4-system\libmodule-rcar4-system.a(mod_rcar4_system.c.obj)
+                0xe2117618                module_rcar4_system
  .rodata.rcar4_system_system_power_driver_api
-                0xe2117664        0x8 ..\..\..\module\modules\rcar4-system\libmodule-rcar4-system.a(mod_rcar4_system.c.obj)
+                0xe211765c        0x8 ..\..\..\module\modules\rcar4-system\libmodule-rcar4-system.a(mod_rcar4_system.c.obj)
  .rodata.scmi_notification_table
-                0xe211766c       0x14 ..\..\..\module\modules\rcar4-system\libmodule-rcar4-system.a(mod_rcar4_system.c.obj)
+                0xe2117664       0x14 ..\..\..\module\modules\rcar4-system\libmodule-rcar4-system.a(mod_rcar4_system.c.obj)
  .rodata.create_core_cluster_pd_element_table.str1.4
-                0xe2117680       0x17 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_utils.c.obj)
+                0xe2117678       0x17 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_utils.c.obj)
  .rodata.__assert_func.str1.4
-                0xe2117680       0x21 ..\..\..\framework\libframework.a(assert.c.obj)
+                0xe2117678       0x21 ..\..\..\framework\libframework.a(assert.c.obj)
  .rodata.fwk_arch_init.str1.4
-                0xe2117680       0x6b ..\..\..\framework\libframework.a(fwk_arch.c.obj)
+                0xe2117678       0x6b ..\..\..\framework\libframework.a(fwk_arch.c.obj)
  .rodata.__func__.1
-                0xe2117680        0xe ..\..\..\framework\libframework.a(fwk_arch.c.obj)
+                0xe2117678        0xe ..\..\..\framework\libframework.a(fwk_arch.c.obj)
  .rodata.fwk_id_format.str1.4
-                0xe211768e       0x8a ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe2117686       0x8a ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.fwk_id_is_type.str1.4
-                0xe211768e       0x4d ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe2117686       0x4d ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.fwk_id_is_equal.str1.4
-                0xe211768e       0x53 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe2117686       0x53 ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.fwk_id_get_element_idx.str1.4
-                0xe211768e       0x6b ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe2117686       0x6b ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.fwk_id_get_sub_element_idx.str1.4
-                0xe211768e       0x38 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe2117686       0x38 ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.fwk_id_get_api_idx.str1.4
-                0xe211768e       0x28 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe2117686       0x28 ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.fwk_id_get_event_idx.str1.4
-                0xe211768e       0x2c ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe2117686       0x2c ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.fwk_id_get_notification_idx.str1.4
-                0xe211768e       0x3a ..\..\..\framework\libframework.a(fwk_id.c.obj)
- *fill*         0xe211768e        0x2 
+                0xe2117686       0x3a ..\..\..\framework\libframework.a(fwk_id.c.obj)
+ *fill*         0xe2117686        0x2 
  .rodata.__func__.0
-                0xe2117690       0x1c ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe2117688       0x1c ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.__func__.1
-                0xe21176ac       0x15 ..\..\..\framework\libframework.a(fwk_id.c.obj)
- *fill*         0xe21176c1        0x3 
+                0xe21176a4       0x15 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+ *fill*         0xe21176b9        0x3 
  .rodata.__func__.2
-                0xe21176c4       0x13 ..\..\..\framework\libframework.a(fwk_id.c.obj)
- *fill*         0xe21176d7        0x1 
+                0xe21176bc       0x13 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+ *fill*         0xe21176cf        0x1 
  .rodata.__func__.3
-                0xe21176d8       0x1b ..\..\..\framework\libframework.a(fwk_id.c.obj)
- *fill*         0xe21176f3        0x1 
+                0xe21176d0       0x1b ..\..\..\framework\libframework.a(fwk_id.c.obj)
+ *fill*         0xe21176eb        0x1 
  .rodata.__func__.4
-                0xe21176f4       0x17 ..\..\..\framework\libframework.a(fwk_id.c.obj)
- *fill*         0xe211770b        0x1 
+                0xe21176ec       0x17 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+ *fill*         0xe2117703        0x1 
  .rodata.__func__.5
-                0xe211770c       0x16 ..\..\..\framework\libframework.a(fwk_id.c.obj)
- *fill*         0xe2117722        0x2 
+                0xe2117704       0x16 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+ *fill*         0xe211771a        0x2 
  .rodata.__func__.8
-                0xe2117724       0x18 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe211771c       0x18 ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.__func__.9
-                0xe211773c       0x17 ..\..\..\framework\libframework.a(fwk_id.c.obj)
- *fill*         0xe2117753        0x1 
+                0xe2117734       0x17 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+ *fill*         0xe211774b        0x1 
  .rodata.__func__.10
-                0xe2117754       0x1b ..\..\..\framework\libframework.a(fwk_id.c.obj)
- *fill*         0xe211776f        0x1 
+                0xe211774c       0x1b ..\..\..\framework\libframework.a(fwk_id.c.obj)
+ *fill*         0xe2117767        0x1 
  .rodata.__func__.11
-                0xe2117770       0x10 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe2117768       0x10 ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.__func__.12
-                0xe2117780       0x10 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe2117778       0x10 ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.__func__.13
-                0xe2117790        0xf ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe2117788        0xf ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.str1.4
-                0xe211779f       0x1c ..\..\..\framework\libframework.a(fwk_id.c.obj)
- *fill*         0xe211779f        0x1 
+                0xe2117797       0x1c ..\..\..\framework\libframework.a(fwk_id.c.obj)
+ *fill*         0xe2117797        0x1 
  .rodata.types.14
-                0xe21177a0       0x20 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe2117798       0x20 ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.__func__.15
-                0xe21177c0        0xe ..\..\..\framework\libframework.a(fwk_id.c.obj)
- *fill*         0xe21177ce        0x2 
- .rodata        0xe21177d0       0x14 ..\..\..\framework\libframework.a(fwk_id.c.obj)
+                0xe21177b8        0xe ..\..\..\framework\libframework.a(fwk_id.c.obj)
+ *fill*         0xe21177c6        0x2 
+ .rodata        0xe21177c8       0x14 ..\..\..\framework\libframework.a(fwk_id.c.obj)
  .rodata.fwk_io_init.str1.4
-                0xe21177e4       0x69 ..\..\..\framework\libframework.a(fwk_io.c.obj)
+                0xe21177dc       0x69 ..\..\..\framework\libframework.a(fwk_io.c.obj)
  .rodata.__func__.1
-                0xe21177e4        0xc ..\..\..\framework\libframework.a(fwk_io.c.obj)
+                0xe21177dc        0xc ..\..\..\framework\libframework.a(fwk_io.c.obj)
  .rodata.__compound_literal.0
-                0xe21177f0       0x10 ..\..\..\framework\libframework.a(fwk_io.c.obj)
+                0xe21177e8       0x10 ..\..\..\framework\libframework.a(fwk_io.c.obj)
  .rodata.fwk_log_vsnprintf.str1.4
-                0xe2117800       0x8b ..\..\..\framework\libframework.a(fwk_log.c.obj)
+                0xe21177f8       0x8b ..\..\..\framework\libframework.a(fwk_log.c.obj)
  .rodata.fwk_log_banner.str1.4
-                0xe2117800        0x3 ..\..\..\framework\libframework.a(fwk_log.c.obj)
+                0xe21177f8        0x3 ..\..\..\framework\libframework.a(fwk_log.c.obj)
  .rodata.fwk_log_init.str1.4
-                0xe2117800        0xc ..\..\..\framework\libframework.a(fwk_log.c.obj)
+                0xe21177f8        0xc ..\..\..\framework\libframework.a(fwk_log.c.obj)
  .rodata.__func__.0
-                0xe2117800       0x12 ..\..\..\framework\libframework.a(fwk_log.c.obj)
+                0xe21177f8       0x12 ..\..\..\framework\libframework.a(fwk_log.c.obj)
  .rodata.str1.4
-                0xe2117812       0xe0 ..\..\..\framework\libframework.a(fwk_log.c.obj)
- *fill*         0xe2117812        0x2 
+                0xe211780a       0xe0 ..\..\..\framework\libframework.a(fwk_log.c.obj)
+ *fill*         0xe211780a        0x2 
  .rodata.__func__.2
-                0xe2117814        0xd ..\..\..\framework\libframework.a(fwk_log.c.obj)
- *fill*         0xe2117821        0x3 
- .rodata        0xe2117824       0x1c ..\..\..\framework\libframework.a(fwk_log.c.obj)
+                0xe211780c        0xd ..\..\..\framework\libframework.a(fwk_log.c.obj)
+ *fill*         0xe2117819        0x3 
+ .rodata        0xe211781c       0x1c ..\..\..\framework\libframework.a(fwk_log.c.obj)
  .rodata.fwk_module_bind_elements.str1.4
-                0xe2117840       0x6d ..\..\..\framework\libframework.a(fwk_module.c.obj)
+                0xe2117838       0x6d ..\..\..\framework\libframework.a(fwk_module.c.obj)
  .rodata.fwk_module_init.str1.4
-                0xe2117840       0x37 ..\..\..\framework\libframework.a(fwk_module.c.obj)
+                0xe2117838       0x37 ..\..\..\framework\libframework.a(fwk_module.c.obj)
  .rodata.fwk_module_start.str1.4
-                0xe2117840       0x26 ..\..\..\framework\libframework.a(fwk_module.c.obj)
+                0xe2117838       0x26 ..\..\..\framework\libframework.a(fwk_module.c.obj)
  .rodata.fwk_module_get_element_name.str1.4
-                0xe2117840        0x9 ..\..\..\framework\libframework.a(fwk_module.c.obj)
+                0xe2117838        0x9 ..\..\..\framework\libframework.a(fwk_module.c.obj)
  .rodata.__func__.0
-                0xe2117840       0x10 ..\..\..\framework\libframework.a(fwk_module.c.obj)
+                0xe2117838       0x10 ..\..\..\framework\libframework.a(fwk_module.c.obj)
  .rodata.__func__.1
-                0xe2117850       0x14 ..\..\..\framework\libframework.a(fwk_module.c.obj)
+                0xe2117848       0x14 ..\..\..\framework\libframework.a(fwk_module.c.obj)
  .rodata.__func__.2
-                0xe2117864       0x1c ..\..\..\framework\libframework.a(fwk_module.c.obj)
+                0xe211785c       0x1c ..\..\..\framework\libframework.a(fwk_module.c.obj)
  .rodata.__func__.6
-                0xe2117880       0x1a ..\..\..\framework\libframework.a(fwk_module.c.obj)
- *fill*         0xe211789a        0x2 
+                0xe2117878       0x1a ..\..\..\framework\libframework.a(fwk_module.c.obj)
+ *fill*         0xe2117892        0x2 
  .rodata.__func__.7
-                0xe211789c       0x18 ..\..\..\framework\libframework.a(fwk_module.c.obj)
+                0xe2117894       0x18 ..\..\..\framework\libframework.a(fwk_module.c.obj)
  .rodata.__func__.8
-                0xe21178b4       0x19 ..\..\..\framework\libframework.a(fwk_module.c.obj)
- *fill*         0xe21178cd        0x3 
+                0xe21178ac       0x19 ..\..\..\framework\libframework.a(fwk_module.c.obj)
+ *fill*         0xe21178c5        0x3 
  .rodata.__func__.9
-                0xe21178d0       0x17 ..\..\..\framework\libframework.a(fwk_module.c.obj)
- *fill*         0xe21178e7        0x1 
+                0xe21178c8       0x17 ..\..\..\framework\libframework.a(fwk_module.c.obj)
+ *fill*         0xe21178df        0x1 
  .rodata.__func__.10
-                0xe21178e8       0x11 ..\..\..\framework\libframework.a(fwk_module.c.obj)
- *fill*         0xe21178f9        0x3 
+                0xe21178e0       0x11 ..\..\..\framework\libframework.a(fwk_module.c.obj)
+ *fill*         0xe21178f1        0x3 
  .rodata.__func__.11
-                0xe21178fc       0x10 ..\..\..\framework\libframework.a(fwk_module.c.obj)
+                0xe21178f4       0x10 ..\..\..\framework\libframework.a(fwk_module.c.obj)
  .rodata.fwk_module_err_msg_func
-                0xe211790c       0x15 ..\..\..\framework\libframework.a(fwk_module.c.obj)
+                0xe2117904       0x15 ..\..\..\framework\libframework.a(fwk_module.c.obj)
  .rodata.__fwk_slist_is_empty.str1.4
-                0xe2117921       0x7c ..\..\..\framework\libframework.a(fwk_slist.c.obj)
+                0xe2117919       0x7c ..\..\..\framework\libframework.a(fwk_slist.c.obj)
  .rodata.__fwk_slist_push_head.str1.4
-                0xe2117921       0x19 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
+                0xe2117919       0x19 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
  .rodata.__fwk_slist_remove.str1.4
-                0xe2117921       0x25 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
+                0xe2117919       0x25 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
  .rodata.__fwk_slist_next.str1.4
-                0xe2117921       0x21 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
- *fill*         0xe2117921        0x3 
+                0xe2117919       0x21 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
+ *fill*         0xe2117919        0x3 
  .rodata.__func__.0
-                0xe2117924       0x15 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
- *fill*         0xe2117939        0x3 
+                0xe211791c       0x15 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
+ *fill*         0xe2117931        0x3 
  .rodata.__func__.1
-                0xe211793c       0x13 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
- *fill*         0xe211794f        0x1 
+                0xe2117934       0x13 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
+ *fill*         0xe2117947        0x1 
  .rodata.__func__.2
-                0xe2117950       0x11 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
- *fill*         0xe2117961        0x3 
+                0xe2117948       0x11 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
+ *fill*         0xe2117959        0x3 
  .rodata.__func__.4
-                0xe2117964       0x16 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
- *fill*         0xe211797a        0x2 
+                0xe211795c       0x16 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
+ *fill*         0xe2117972        0x2 
  .rodata.__func__.6
-                0xe211797c       0x15 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
- *fill*         0xe2117991        0x3 
+                0xe2117974       0x15 ..\..\..\framework\libframework.a(fwk_slist.c.obj)
+ *fill*         0xe2117989        0x3 
  .rodata.unknown.0
-                0xe2117994        0x8 ..\..\..\framework\libframework.a(fwk_status.c.obj)
+                0xe211798c        0x8 ..\..\..\framework\libframework.a(fwk_status.c.obj)
  .rodata.str1.4
-                0xe211799c       0xc0 ..\..\..\framework\libframework.a(fwk_status.c.obj)
+                0xe2117994       0xc0 ..\..\..\framework\libframework.a(fwk_status.c.obj)
  .rodata.status_string
-                0xe211799c        0x8 ..\..\..\framework\libframework.a(fwk_status.c.obj)
+                0xe2117994        0x8 ..\..\..\framework\libframework.a(fwk_status.c.obj)
  .rodata.error_string
-                0xe21179a4       0x4c ..\..\..\framework\libframework.a(fwk_status.c.obj)
+                0xe211799c       0x4c ..\..\..\framework\libframework.a(fwk_status.c.obj)
  .rodata.duplicate_event.str1.4
-                0xe21179f0       0x81 ..\..\..\framework\libframework.a(fwk_core.c.obj)
+                0xe21179e8       0x81 ..\..\..\framework\libframework.a(fwk_core.c.obj)
  .rodata.process_next_event.str1.4
-                0xe21179f0       0x28 ..\..\..\framework\libframework.a(fwk_core.c.obj)
+                0xe21179e8       0x28 ..\..\..\framework\libframework.a(fwk_core.c.obj)
  .rodata.__func__.0
-                0xe21179f0       0x16 ..\..\..\framework\libframework.a(fwk_core.c.obj)
- *fill*         0xe2117a06        0x2 
+                0xe21179e8       0x16 ..\..\..\framework\libframework.a(fwk_core.c.obj)
+ *fill*         0xe21179fe        0x2 
  .rodata.__func__.1
-                0xe2117a08       0x10 ..\..\..\framework\libframework.a(fwk_core.c.obj)
+                0xe2117a00       0x10 ..\..\..\framework\libframework.a(fwk_core.c.obj)
  .rodata.__func__.2
-                0xe2117a18       0x10 ..\..\..\framework\libframework.a(fwk_core.c.obj)
+                0xe2117a10       0x10 ..\..\..\framework\libframework.a(fwk_core.c.obj)
  .rodata.__func__.3
-                0xe2117a28        0xa ..\..\..\framework\libframework.a(fwk_core.c.obj)
- *fill*         0xe2117a32        0x2 
+                0xe2117a20        0xa ..\..\..\framework\libframework.a(fwk_core.c.obj)
+ *fill*         0xe2117a2a        0x2 
  .rodata.__func__.4
-                0xe2117a34       0x13 ..\..\..\framework\libframework.a(fwk_core.c.obj)
- *fill*         0xe2117a47        0x1 
+                0xe2117a2c       0x13 ..\..\..\framework\libframework.a(fwk_core.c.obj)
+ *fill*         0xe2117a3f        0x1 
  .rodata.err_msg_func
-                0xe2117a48       0x15 ..\..\..\framework\libframework.a(fwk_core.c.obj)
- *fill*         0xe2117a5d        0x3 
+                0xe2117a40       0x15 ..\..\..\framework\libframework.a(fwk_core.c.obj)
+ *fill*         0xe2117a55        0x3 
  .rodata.err_msg_line
-                0xe2117a60       0x19 ..\..\..\framework\libframework.a(fwk_core.c.obj)
+                0xe2117a58       0x19 ..\..\..\framework\libframework.a(fwk_core.c.obj)
  .rodata.fwk_notification_subscribe.str1.4
-                0xe2117a79       0x73 ..\..\..\framework\libframework.a(fwk_notification.c.obj)
- *fill*         0xe2117a79        0x3 
+                0xe2117a71       0x73 ..\..\..\framework\libframework.a(fwk_notification.c.obj)
+ *fill*         0xe2117a71        0x3 
  .rodata.__func__.0
-                0xe2117a7c       0x18 ..\..\..\framework\libframework.a(fwk_notification.c.obj)
+                0xe2117a74       0x18 ..\..\..\framework\libframework.a(fwk_notification.c.obj)
  .rodata.__func__.1
-                0xe2117a94       0x1d ..\..\..\framework\libframework.a(fwk_notification.c.obj)
- *fill*         0xe2117ab1        0x3 
+                0xe2117a8c       0x1d ..\..\..\framework\libframework.a(fwk_notification.c.obj)
+ *fill*         0xe2117aa9        0x3 
  .rodata.__func__.2
-                0xe2117ab4       0x1b ..\..\..\framework\libframework.a(fwk_notification.c.obj)
- *fill*         0xe2117acf        0x1 
+                0xe2117aac       0x1b ..\..\..\framework\libframework.a(fwk_notification.c.obj)
+ *fill*         0xe2117ac7        0x1 
  .rodata.err_msg_func
-                0xe2117ad0       0x15 ..\..\..\framework\libframework.a(fwk_notification.c.obj)
+                0xe2117ac8       0x15 ..\..\..\framework\libframework.a(fwk_notification.c.obj)
  .rodata.__fwk_dlist_push_head.str1.4
-                0xe2117ae5       0x7c ..\..\..\framework\libframework.a(fwk_dlist.c.obj)
+                0xe2117add       0x7c ..\..\..\framework\libframework.a(fwk_dlist.c.obj)
  .rodata.__fwk_dlist_remove.str1.4
-                0xe2117ae5       0xaf ..\..\..\framework\libframework.a(fwk_dlist.c.obj)
- *fill*         0xe2117ae5        0x3 
+                0xe2117add       0xaf ..\..\..\framework\libframework.a(fwk_dlist.c.obj)
+ *fill*         0xe2117add        0x3 
  .rodata.__func__.1
-                0xe2117ae8       0x13 ..\..\..\framework\libframework.a(fwk_dlist.c.obj)
- *fill*         0xe2117afb        0x1 
+                0xe2117ae0       0x13 ..\..\..\framework\libframework.a(fwk_dlist.c.obj)
+ *fill*         0xe2117af3        0x1 
  .rodata.__func__.3
-                0xe2117afc       0x16 ..\..\..\framework\libframework.a(fwk_dlist.c.obj)
- *fill*         0xe2117b12        0x2 
+                0xe2117af4       0x16 ..\..\..\framework\libframework.a(fwk_dlist.c.obj)
+ *fill*         0xe2117b0a        0x2 
  .rodata.__func__.2
-                0xe2117b14       0x19 ..\..\..\framework\libframework.a(fwk_delayed_resp.c.obj)
- *fill*         0xe2117b2d        0x3 
+                0xe2117b0c       0x19 ..\..\..\framework\libframework.a(fwk_delayed_resp.c.obj)
+ *fill*         0xe2117b25        0x3 
  .rodata.err_msg_func
-                0xe2117b30       0x15 ..\..\..\framework\libframework.a(fwk_delayed_resp.c.obj)
+                0xe2117b28       0x15 ..\..\..\framework\libframework.a(fwk_delayed_resp.c.obj)
  .rodata.rcar4_sysc_process_bind_request.str1.4
-                0xe2117b45       0x89 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
+                0xe2117b3d       0x89 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
  .rodata.pd_set_state.str1.4
-                0xe2117b45       0x32 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
- *fill*         0xe2117b45        0x3 
+                0xe2117b3d       0x32 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
+ *fill*         0xe2117b3d        0x3 
  .rodata.__func__.0
-                0xe2117b48       0x10 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
+                0xe2117b40       0x10 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
  .rodata.__func__.1
-                0xe2117b58       0x20 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
+                0xe2117b50       0x20 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
  .rodata.module_rcar4_pd_sysc
-                0xe2117b78       0x44 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
-                0xe2117b78                module_rcar4_pd_sysc
+                0xe2117b70       0x44 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
+                0xe2117b70                module_rcar4_pd_sysc
  .rodata.api_system
-                0xe2117bbc        0x4 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
+                0xe2117bb4        0x4 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
  .rodata.pd_driver
-                0xe2117bc0       0x18 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
+                0xe2117bb8       0x18 ..\..\..\module\modules\rcar4-pd-sysc\libmodule-rcar4-pd-sysc.a(mod_rcar4_pd_sysc.c.obj)
  .rodata.extal_freq.0
-                0xe2117bd8       0x10 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
+                0xe2117bd0       0x10 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
  .rodata.module_rcar4_clock
-                0xe2117be8       0x44 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
-                0xe2117be8                module_rcar4_clock
+                0xe2117be0       0x44 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
+                0xe2117be0                module_rcar4_clock
  .rodata.api_clock
-                0xe2117c2c       0x24 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
+                0xe2117c24       0x24 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
  .rodata.rcar4_m3_a53_op_points
-                0xe2117c50       0x20 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
+                0xe2117c48       0x20 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
  .rodata.rcar4_m3_a57_op_points
-                0xe2117c70      0x180 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
+                0xe2117c68      0x180 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
  .rodata.rcar4_h3_a53_op_points
-                0xe2117df0       0x18 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
+                0xe2117de8       0x18 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
  .rodata.rcar4_h3_a57_op_points
-                0xe2117e08      0x140 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
+                0xe2117e00      0x140 ..\..\..\module\modules\rcar4-clock\libmodule-rcar4-clock.a(mod_rcar4_clock.c.obj)
  .rodata.rcar4_core_process_notification.str1.4
-                0xe2117f48       0xfa ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
+                0xe2117f40       0xfa ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
  .rodata.rcar4_core_process_bind_request.str1.4
-                0xe2117f48        0x6 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
+                0xe2117f40        0x6 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
  .rodata.rcar4_pd_set_state.str1.4
-                0xe2117f48       0x32 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
+                0xe2117f40       0x32 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
  .rodata.__func__.0
-                0xe2117f48        0xe ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
- *fill*         0xe2117f56        0x2 
+                0xe2117f40        0xe ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
+ *fill*         0xe2117f4e        0x2 
  .rodata.__func__.1
-                0xe2117f58       0x10 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
+                0xe2117f50       0x10 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
  .rodata.__func__.2
-                0xe2117f68       0x20 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
+                0xe2117f60       0x20 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
  .rodata.__func__.3
-                0xe2117f88       0x20 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
+                0xe2117f80       0x20 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
  .rodata.module_rcar4_pd_core
-                0xe2117fa8       0x44 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
-                0xe2117fa8                module_rcar4_pd_core
+                0xe2117fa0       0x44 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
+                0xe2117fa0                module_rcar4_pd_core
  .rodata.cluster_pd_driver
-                0xe2117fec       0x18 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
+                0xe2117fe4       0x18 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
  .rodata.core_pd_driver
-                0xe2118004       0x18 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
+                0xe2117ffc       0x18 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
  .rodata.pd_driver
-                0xe211801c       0x18 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
+                0xe2118014       0x18 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
  .rodata.system_power_report_power_state_transition.str1.4
-                0xe2118034       0xa3 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
+                0xe211802c       0xa3 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
  .rodata.system_power_mod_init.str1.4
-                0xe2118034        0xd ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
+                0xe211802c        0xd ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
  .rodata.__func__.0
-                0xe2118034       0x13 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
- *fill*         0xe2118047        0x1 
+                0xe211802c       0x13 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
+ *fill*         0xe211803f        0x1 
  .rodata.__func__.1
-                0xe2118048       0x16 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
- *fill*         0xe211805e        0x2 
+                0xe2118040       0x16 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
+ *fill*         0xe2118056        0x2 
  .rodata.__func__.2
-                0xe2118060       0x2b ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
- *fill*         0xe211808b        0x1 
+                0xe2118058       0x2b ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
+ *fill*         0xe2118083        0x1 
  .rodata.module_rcar4_system_power
-                0xe211808c       0x44 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
-                0xe211808c                module_rcar4_system_power
+                0xe2118084       0x44 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
+                0xe2118084                module_rcar4_system_power
  .rodata.system_power_power_domain_driver_input_api
-                0xe21180d0       0x10 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
+                0xe21180c8       0x10 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
  .rodata.system_power_power_domain_driver_api
-                0xe21180e0       0x18 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
+                0xe21180d8       0x18 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
  .rodata.module_rcar4_mfismh
-                0xe21180f8       0x44 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
-                0xe21180f8                module_rcar4_mfismh
+                0xe21180f0       0x44 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
+                0xe21180f0                module_rcar4_mfismh
  .rodata.mfismh_mod_transport_driver_api
-                0xe211813c        0x4 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
-                0xe211813c                mfismh_mod_transport_driver_api
+                0xe2118134        0x4 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
+                0xe2118134                mfismh_mod_transport_driver_api
  .rodata.module_rcar4_reset
-                0xe2118140       0x44 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
-                0xe2118140                module_rcar4_reset
+                0xe2118138       0x44 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
+                0xe2118138                module_rcar4_reset
  .rodata.api_reset
-                0xe2118184        0x4 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
+                0xe211817c        0x4 ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
  .rodata.clock_request_complete.str1.4
-                0xe2118188       0x98 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2118180       0x98 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .rodata.clock_process_notification_response.str1.4
-                0xe2118188       0x77 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2118180       0x77 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .rodata.clock_process_pd_transition_notification.str1.4
-                0xe2118188       0x32 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2118180       0x32 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .rodata.clock_process_pd_pre_transition_notification.str1.4
-                0xe2118188       0x3a ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2118180       0x3a ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .rodata.clock_get_ctx.str1.4
-                0xe2118188       0x29 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2118180       0x29 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .rodata.__func__.0
-                0xe2118188       0x2d ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
- *fill*         0xe21181b5        0x3 
+                0xe2118180       0x2d ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+ *fill*         0xe21181ad        0x3 
  .rodata.__func__.1
-                0xe21181b8       0x29 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
- *fill*         0xe21181e1        0x3 
+                0xe21181b0       0x29 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+ *fill*         0xe21181d9        0x3 
  .rodata.__func__.2
-                0xe21181e4       0x24 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe21181dc       0x24 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .rodata.__func__.3
-                0xe2118208       0x17 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
- *fill*         0xe211821f        0x1 
+                0xe2118200       0x17 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+ *fill*         0xe2118217        0x1 
  .rodata.__func__.4
-                0xe2118220        0xe ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
- *fill*         0xe211822e        0x2 
+                0xe2118218        0xe ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+ *fill*         0xe2118226        0x2 
  .rodata.module_clock
-                0xe2118230       0x44 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
-                0xe2118230                module_clock
+                0xe2118228       0x44 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2118228                module_clock
  .rodata.clock_api
-                0xe2118274       0x18 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe211826c       0x18 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .rodata.mod_clock_notification_id_rate_change_requested
-                0xe211828c        0x4 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2118284        0x4 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .rodata.mod_clock_notification_id_rate_changed
-                0xe2118290        0x4 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+                0xe2118288        0x4 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
  .rodata.pd_system_suspend.str1.4
-                0xe2118294       0x25 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe211828c       0x25 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .rodata.initiate_power_state_transition.str1.4
-                0xe2118294       0x33 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe211828c       0x33 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .rodata.perform_shutdown.str1.4
-                0xe2118294       0xa5 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe211828c       0xa5 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .rodata.pd_process_event.str1.4
-                0xe2118294       0x3a ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe211828c       0x3a ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .rodata.__func__.0
-                0xe2118294        0x9 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
- *fill*         0xe211829d        0x3 
+                0xe211828c        0x9 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+ *fill*         0xe2118295        0x3 
  .rodata.__func__.1
-                0xe21182a0       0x11 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
- *fill*         0xe21182b1        0x3 
+                0xe2118298       0x11 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+ *fill*         0xe21182a9        0x3 
  .rodata.__func__.2
-                0xe21182b4       0x11 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
- *fill*         0xe21182c5        0x3 
+                0xe21182ac       0x11 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+ *fill*         0xe21182bd        0x3 
  .rodata.module_power_domain
-                0xe21182c8       0x44 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
-                0xe21182c8                module_power_domain
+                0xe21182c0       0x44 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe21182c0                module_power_domain
  .rodata.pd_driver_input_api
-                0xe211830c       0x10 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2118304       0x10 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .rodata.pd_restricted_api
-                0xe211831c       0x1c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2118314       0x1c ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .rodata.pd_public_api
-                0xe2118338        0x8 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2118330        0x8 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .rodata.driver_error_msg
-                0xe2118340       0x24 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe2118338       0x24 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .rodata.core_composite_state_mask_table
-                0xe2118364       0x10 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+                0xe211835c       0x10 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
  .rodata.is_valid_composite_state.str1.4
-                0xe2118374       0xbb ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe211836c       0xbb ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
  .rodata.__func__.0
-                0xe2118374       0x19 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
- *fill*         0xe211838d        0x3 
+                0xe211836c       0x19 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+ *fill*         0xe2118385        0x3 
  .rodata.unknown_name.1
-                0xe2118390        0x8 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2118388        0x8 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
  .rodata.str1.4
-                0xe2118398       0x4f ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2118390       0x4f ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
  .rodata.default_state_name_table
-                0xe2118398       0x40 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+                0xe2118390       0x40 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
  .rodata.process_power_state_transition_notification_response.str1.4
-                0xe21183d8       0x87 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+                0xe21183d0       0x87 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
  .rodata.__func__.0
-                0xe21183d8       0x35 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
- *fill*         0xe211840d        0x3 
+                0xe21183d0       0x35 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+ *fill*         0xe2118405        0x3 
  .rodata.__func__.1
-                0xe2118410       0x39 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
- *fill*         0xe2118449        0x3 
+                0xe2118408       0x39 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+ *fill*         0xe2118441        0x3 
  .rodata.__func__.2
-                0xe211844c       0x18 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+                0xe2118444       0x18 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
  .rodata.module_reset_domain
-                0xe2118464       0x44 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
-                0xe2118464                module_reset_domain
+                0xe211845c       0x44 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
+                0xe211845c                module_reset_domain
  .rodata.reset_api
-                0xe21184a8        0x4 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
+                0xe21184a0        0x4 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
  .rodata.get_message_type_str.str1.4
-                0xe21184ac       0x34 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe21184a4       0x34 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .rodata.scmi_send_message.str1.4
-                0xe21184ac       0x38 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe21184a4       0x38 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .rodata.respond.str1.4
-                0xe21184ac       0x6b ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe21184a4       0x6b ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .rodata.scmi_message_validation.str1.4
-                0xe21184ac       0x79 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe21184a4       0x79 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .rodata.scmi_process_notification.str1.4
-                0xe21184ac       0x7b ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe21184a4       0x7b ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .rodata.scmi_process_event.str1.4
-                0xe21184ac      0x181 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe21184a4      0x181 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .rodata.__func__.0
-                0xe21184ac       0x18 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe21184a4       0x18 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .rodata.__func__.1
-                0xe21184c4       0x1a ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
- *fill*         0xe21184de        0x2 
+                0xe21184bc       0x1a ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+ *fill*         0xe21184d6        0x2 
  .rodata.module_scmi
-                0xe21184e0       0x44 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
-                0xe21184e0                module_scmi
+                0xe21184d8       0x44 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe21184d8                module_scmi
  .rodata.scmi_from_protocol_req_api
-                0xe2118524        0x8 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe211851c        0x8 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .rodata.scmi_from_protocol_api
-                0xe211852c       0x20 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2118524       0x20 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .rodata.scmi_from_transport_api
-                0xe211854c        0x8 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+                0xe2118544        0x8 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
  .rodata.scmi_base_discover_list_protocols_handler.str1.4
-                0xe2118554      0x138 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe211854c      0x138 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .rodata.scmi_base_message_handler.str1.4
-                0xe2118554       0x17 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe211854c       0x17 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .rodata.__func__.0
-                0xe2118554       0x26 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
- *fill*         0xe211857a        0x2 
+                0xe211854c       0x26 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+ *fill*         0xe2118572        0x2 
  .rodata.__func__.1
-                0xe211857c       0x2a ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
- *fill*         0xe21185a6        0x2 
+                0xe2118574       0x2a ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+ *fill*         0xe211859e        0x2 
  .rodata.name.2
-                0xe21185a8        0x9 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
- *fill*         0xe21185b1        0x3 
+                0xe21185a0        0x9 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+ *fill*         0xe21185a9        0x3 
  .rodata.__func__.3
-                0xe21185b4       0x1a ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
- *fill*         0xe21185ce        0x2 
+                0xe21185ac       0x1a ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+ *fill*         0xe21185c6        0x2 
  .rodata.base_handler_table
-                0xe21185d0       0x30 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe21185c8       0x30 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .rodata.base_payload_size_table
-                0xe2118600       0x30 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe21185f8       0x30 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .rodata.str1.4
-                0xe2118630       0x22 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe2118628       0x22 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .rodata.default_agent_names
-                0xe2118630       0x10 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+                0xe2118628       0x10 ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
  .rodata.get_reset_device.str1.4
-                0xe2118640       0xb3 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe2118638       0xb3 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
  .rodata.__func__.0
-                0xe2118640       0x11 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
- *fill*         0xe2118651        0x3 
+                0xe2118638       0x11 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+ *fill*         0xe2118649        0x3 
  .rodata.module_scmi_reset_domain
-                0xe2118654       0x44 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
-                0xe2118654                module_scmi_reset_domain
+                0xe211864c       0x44 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+                0xe211864c                module_scmi_reset_domain
  .rodata.create_memory_region.str1.4
-                0xe2118698       0x9b ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe2118690       0x9b ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .rodata.get_structure_info.str1.4
-                0xe2118698       0x16 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe2118690       0x16 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .rodata.struct_alloc.str1.4
-                0xe2118698       0x22 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe2118690       0x22 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .rodata.struct_write.str1.4
-                0xe2118698       0x1e ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe2118690       0x1e ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .rodata.mod_sds_clock_changed.str1.4
-                0xe2118698       0x2e ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe2118690       0x2e ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .rodata.sds_process_notification.str1.4
-                0xe2118698       0x89 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe2118690       0x89 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .rodata.sds_start.str1.4
-                0xe2118698       0x5b ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe2118690       0x5b ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .rodata.__func__.0
-                0xe2118698        0xd ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
- *fill*         0xe21186a5        0x3 
+                0xe2118690        0xd ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+ *fill*         0xe211869d        0x3 
  .rodata.__func__.1
-                0xe21186a8        0xd ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
- *fill*         0xe21186b5        0x3 
+                0xe21186a0        0xd ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+ *fill*         0xe21186ad        0x3 
  .rodata.__func__.2
-                0xe21186b8       0x13 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
- *fill*         0xe21186cb        0x1 
+                0xe21186b0       0x13 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+ *fill*         0xe21186c3        0x1 
  .rodata.__func__.3
-                0xe21186cc       0x15 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
- *fill*         0xe21186e1        0x3 
+                0xe21186c4       0x15 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+ *fill*         0xe21186d9        0x3 
  .rodata.__func__.4
-                0xe21186e4       0x19 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
- *fill*         0xe21186fd        0x3 
+                0xe21186dc       0x19 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+ *fill*         0xe21186f5        0x3 
  .rodata.module_sds
-                0xe2118700       0x44 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
-                0xe2118700                module_sds
+                0xe21186f8       0x44 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe21186f8                module_sds
  .rodata.module_api
-                0xe2118744        0xc ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+                0xe211873c        0xc ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
  .rodata.transport_trigger_interrupt.str1.4
-                0xe2118750       0xbf ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe2118748       0xbf ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .rodata.transport_get_payload.str1.4
-                0xe2118750       0x5d ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe2118748       0x5d ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .rodata.transport_process_notification.str1.4
-                0xe2118750       0xa0 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe2118748       0xa0 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .rodata.transport_transmit.str1.4
-                0xe2118750       0x88 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe2118748       0x88 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .rodata.transport_message_handler.str1.4
-                0xe2118750       0x67 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe2118748       0x67 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .rodata.transport_signal_message.str1.4
-                0xe2118750       0x1e ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe2118748       0x1e ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .rodata.transport_start.str1.4
-                0xe2118750       0x5b ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe2118748       0x5b ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .rodata.__func__.0
-                0xe2118750       0x17 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
- *fill*         0xe2118767        0x1 
+                0xe2118748       0x17 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+ *fill*         0xe211875f        0x1 
  .rodata.__func__.1
-                0xe2118768       0x15 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
- *fill*         0xe211877d        0x3 
+                0xe2118760       0x15 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+ *fill*         0xe2118775        0x3 
  .rodata.__func__.2
-                0xe2118780       0x1f ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
- *fill*         0xe211879f        0x1 
+                0xe2118778       0x1f ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+ *fill*         0xe2118797        0x1 
  .rodata.__func__.3
-                0xe21187a0       0x1d ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
- *fill*         0xe21187bd        0x3 
+                0xe2118798       0x1d ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+ *fill*         0xe21187b5        0x3 
  .rodata.__func__.4
-                0xe21187c0       0x16 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
- *fill*         0xe21187d6        0x2 
+                0xe21187b8       0x16 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+ *fill*         0xe21187ce        0x2 
  .rodata.__func__.5
-                0xe21187d8       0x18 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe21187d0       0x18 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .rodata.__func__.6
-                0xe21187f0       0x12 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
- *fill*         0xe2118802        0x2 
+                0xe21187e8       0x12 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+ *fill*         0xe21187fa        0x2 
  .rodata.__func__.7
-                0xe2118804       0x13 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
- *fill*         0xe2118817        0x1 
+                0xe21187fc       0x13 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+ *fill*         0xe211880f        0x1 
  .rodata.__func__.8
-                0xe2118818       0x1c ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe2118810       0x1c ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .rodata.__func__.9
-                0xe2118834       0x1f ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
- *fill*         0xe2118853        0x1 
+                0xe211882c       0x1f ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+ *fill*         0xe211884b        0x1 
  .rodata.__func__.10
-                0xe2118854       0x1f ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
- *fill*         0xe2118873        0x1 
+                0xe211884c       0x1f ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+ *fill*         0xe211886b        0x1 
  .rodata.module_transport
-                0xe2118874       0x44 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
-                0xe2118874                module_transport
+                0xe211886c       0x44 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe211886c                module_transport
  .rodata.driver_input_api
-                0xe21188b8        0x4 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe21188b0        0x4 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .rodata.transport_firmware_api
-                0xe21188bc       0x24 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe21188b4       0x24 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .rodata.transport_mod_scmi_to_transport_api
-                0xe21188e0       0x20 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+                0xe21188d8       0x20 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
  .rodata._svfprintf_r.str1.4
-                0xe2118900       0x42 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-svfprintf.o)
+                0xe21188f8       0x42 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-svfprintf.o)
  .rodata.zeroes.0
-                0xe2118900       0x10 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-svfprintf.o)
+                0xe21188f8       0x10 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-svfprintf.o)
  .rodata.blanks.1
-                0xe2118910       0x10 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-svfprintf.o)
+                0xe2118908       0x10 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-svfprintf.o)
  .rodata.str1.4
-                0xe2118920       0x4c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-locale.o)
+                0xe2118918       0x4c C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-locale.o)
  .rodata._dtoa_r.str1.4
-                0xe2118920       0x81 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-dtoa.o)
+                0xe2118918       0x81 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-dtoa.o)
  .rodata.__multadd.str1.4
-                0xe2118920       0x6e C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
- .rodata.p05.0  0xe2118920        0xc C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
- *fill*         0xe211892c        0x4 
+                0xe2118918       0x6e C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+ .rodata.p05.0  0xe2118918        0xc C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+ *fill*         0xe2118924        0x4 
  .rodata.__mprec_bigtens
-                0xe2118930       0x28 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe2118930                __mprec_bigtens
+                0xe2118928       0x28 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe2118928                __mprec_bigtens
  .rodata.__mprec_tens
-                0xe2118958       0xc8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
-                0xe2118958                __mprec_tens
+                0xe2118950       0xc8 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-mprec.o)
+                0xe2118950                __mprec_tens
  .rodata._ctype_
-                0xe2118a20      0x101 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-ctype_.o)
-                0xe2118a20                _ctype_
-                0xe2118b21                        __RO_END_UNALIGNED__ = .
+                0xe2118a18      0x101 C:/PROGRA~2/ARMGNU~1/133167~1.3RE/bin/../lib/gcc/arm-none-eabi/13.3.1\libg.a(libc_a-ctype_.o)
+                0xe2118a18                _ctype_
+                0xe2118b19                        __RO_END_UNALIGNED__ = .
                 0xe2119000                        . = NEXT (0x1000)
- *fill*         0xe2118b21      0x4df 
+ *fill*         0xe2118b19      0x4e7 
                 0xe211c000                        . = NEXT (0x4000)
  *fill*         0xe2119000     0x3000 
                 0xe211c000                        __RO_END__ = .
@@ -4766,7 +4765,7 @@ LOAD linker stubs
  .debug_rnglists
                 0x00000f01       0x99 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
 
-.debug_line     0x00000000    0x18f25
+.debug_line     0x00000000    0x18f23
  .debug_line    0x00000000      0x563 CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
  .debug_line    0x00000563      0x43b CMakeFiles/rcar4-bl.dir/config_rcar4_pd_sysc.c.obj
  .debug_line    0x0000099e      0x678 CMakeFiles/rcar4-bl.dir/config_rcar4_pd_core.c.obj
@@ -4812,18 +4811,18 @@ LOAD linker stubs
  .debug_line    0x0000e414      0xb28 ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(mod_rcar4_pd_core.c.obj)
  .debug_line    0x0000ef3c      0x4ae ..\..\..\module\modules\rcar4-pd-core\libmodule-rcar4-pd-core.a(rcar4_pd_core.c.obj)
  .debug_line    0x0000f3ea      0x730 ..\..\..\module\modules\rcar4-system-power\libmodule-rcar4-system-power.a(mod_rcar4_system_power.c.obj)
- .debug_line    0x0000fb1a      0x742 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
- .debug_line    0x0001025c      0x68a ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
- .debug_line    0x000108e6      0xed5 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
- .debug_line    0x000117bb     0x18dd ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
- .debug_line    0x00013098      0x906 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
- .debug_line    0x0001399e      0x805 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
- .debug_line    0x000141a3      0x5c7 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
- .debug_line    0x0001476a     0x120d ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
- .debug_line    0x00015977      0x9bc ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
- .debug_line    0x00016333      0xbf9 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
- .debug_line    0x00016f2c      0xea0 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
- .debug_line    0x00017dcc     0x1159 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
+ .debug_line    0x0000fb1a      0x740 ..\..\..\module\modules\rcar4-mfismh\libmodule-rcar4-mfismh.a(mod_rcar4_mfismh.c.obj)
+ .debug_line    0x0001025a      0x68a ..\..\..\module\modules\rcar4-reset\libmodule-rcar4-reset.a(mod_rcar4_reset.c.obj)
+ .debug_line    0x000108e4      0xed5 ..\..\..\module\modules\clock\libmodule-clock.a(mod_clock.c.obj)
+ .debug_line    0x000117b9     0x18dd ..\..\..\module\modules\power-domain\libmodule-power-domain.a(mod_power_domain.c.obj)
+ .debug_line    0x00013096      0x906 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_state_checks.c.obj)
+ .debug_line    0x0001399c      0x805 ..\..\..\module\modules\power-domain\libmodule-power-domain.a(power_domain_notifications.c.obj)
+ .debug_line    0x000141a1      0x5c7 ..\..\..\module\modules\reset-domain\libmodule-reset-domain.a(mod_reset_domain.c.obj)
+ .debug_line    0x00014768     0x120d ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi.c.obj)
+ .debug_line    0x00015975      0x9bc ..\..\..\module\modules\scmi\libmodule-scmi.a(mod_scmi_base.c.obj)
+ .debug_line    0x00016331      0xbf9 ..\..\..\module\modules\scmi-reset-domain\libmodule-scmi-reset-domain.a(mod_scmi_reset_domain.c.obj)
+ .debug_line    0x00016f2a      0xea0 ..\..\..\module\modules\sds\libmodule-sds.a(mod_sds.c.obj)
+ .debug_line    0x00017dca     0x1159 ..\..\..\module\modules\transport\libmodule-transport.a(mod_transport.c.obj)
 
 .debug_str      0x00000000     0xb60d
  .debug_str     0x00000000     0xb60d CMakeFiles/rcar4-bl.dir/config_power_domain.c.obj
