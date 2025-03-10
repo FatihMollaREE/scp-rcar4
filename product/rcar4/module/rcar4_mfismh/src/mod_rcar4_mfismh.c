@@ -89,6 +89,16 @@ static void mfismh_isr(void)
     if (device_idx >= mfismh_ctx.device_count)
         return;
 
+/* Logik um zu handeln dass das passende Registern zur gegebenen Intr Nr beschrieben wird |MFISARIICR| */
+    while(interrupt)
+    {
+        if(interrupt == (117 || 124))
+            while(true){}
+
+        else
+            break;
+    }
+
     reg = (struct mfismh_reg *)&mfis_regs[MFIS_IRQ2NO(interrupt)];
 
     /* Acknowledge the interrupt */

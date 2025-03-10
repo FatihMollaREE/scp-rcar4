@@ -15,10 +15,10 @@
 
 /* Fatih: temp testing*/
 /* Constants to categorise priorities */
-#define GIC_HIGHEST_SEC_PRIORITY 0x0
-#define GIC_LOWEST_SEC_PRIORITY 0x7f
-#define GIC_HIGHEST_NS_PRIORITY 0x80
-#define GIC_LOWEST_NS_PRIORITY 0xfe /* 0xff would disable all interrupts */
+#define GIC_HIGHEST_SEC_PRIORITY 0x0 // tbc
+#define GIC_LOWEST_SEC_PRIORITY 0x7f // tbc
+#define GIC_HIGHEST_NS_PRIORITY 0x80 // tbc
+#define GIC_LOWEST_NS_PRIORITY 0xfe /* 0xff would disable all interrupts */ // tbc
 
 /*******************************************************************************
  * GIC Distributor interface general definitions
@@ -48,7 +48,7 @@
 #define GICD_ICPENDR U(0x280)
 #define GICD_ISACTIVER U(0x300)
 #define GICD_ICACTIVER U(0x380)
-#define GICD_IPRIORITYR U(0x400)
+#define GICD_IPRIORITYR U(0x400) // tbc
 #define GICD_ITARGETSR U(0x800)
 #define GICD_ICFGR U(0xc00)
 #define GICD_NSACR U(0xe00)
@@ -122,8 +122,8 @@
 #define NSACR_SHIFT 4
 /* Fatih: temp testing*/
 
-/* GIC */
-#define RCAR4_GICD_BASE U(0xF1000000) // bin mir echt unsicher ob das oder doch 0xF0000000
+/* GIC */                 
+#define RCAR4_GICD_BASE U(0xF0000000) // oder doch 0xF1000000?
 #define RCAR4_GICR_BASE U(0xF1010000)
 #define RCAR4_GICC_BASE U(0xF1020000)
 #define RCAR4_GICH_BASE U(0xF1040000)

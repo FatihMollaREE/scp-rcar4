@@ -23,7 +23,7 @@
 #    define RCAR4_MFIS_MIN U(256)
 #    define RCAR4_MFIS_NO U(8)
 #    define RCAR4_MFIS_MAX (RCAR4_MFIS_MIN + RCAR4_MFIS_NO)
-#    define IS_SUPPORT_INT(n) ((n >= RCAR4_MFIS_MIN) && (n < RCAR4_MFIS_MAX))
+#    define IS_SUPPORT_INT(n) (n) // fatih tmp akzeptiere ich hier alle interrupts einfach
 #    define EFECTIVE_NO(n) (n - RCAR4_MFIS_MIN)
 #else
 #    define IS_SUPPORT_INT(n) ((n >= SMCMH_IRQ_START) && (n < SMCMH_IRQ_END))
@@ -36,10 +36,15 @@
 /* Prototypes: */
 void gic_cpuif_enable(void);
 
-// Fatih: cpsie und cpsid wieder an machen, aber iwas stimmt nicht mit arm und thumb mode
+// fatih : weiß nicht ob das so passt
 __STATIC_FORCEINLINE void __enable_fault_irq(void)
 {
- // __ASM volatile ("cpsie i" : : : "memory");
+    __asm__ volatile (
+        "MRS R0, CPSR\n"        // CPSR-Register in R0 speichern
+        "BIC R0, R0, #0xC0\n"   // IRQ (I-Bit) und FIQ (F-Bit) löschen (Interrupts aktivieren)
+        "MSR CPSR_c, R0\n"      // Zurückschreiben ins CPSR-Register
+        ::: "r0", "memory"
+    );
 }
 
 /**
@@ -48,8 +53,13 @@ __STATIC_FORCEINLINE void __enable_fault_irq(void)
            Can only be executed in Privileged modes.
  */
 __STATIC_FORCEINLINE void __disable_fault_irq(void)
-{
- // __ASM volatile ("cpsid i" : : : "memory");
+{// fatih : weiß nicht ob das so passt
+    __asm__ volatile (
+        "MRS R0, CPSR\n"        // CPSR-Register in R0 speichern
+        "ORR R0, R0, #0xC0\n"   // IRQ (I-Bit) und FIQ (F-Bit) setzen (Interrupts deaktivieren)
+        "MSR CPSR_c, R0\n"      // Zurückschreiben ins CPSR-Register
+        ::: "r0", "memory"
+    );
 }
 
 /*

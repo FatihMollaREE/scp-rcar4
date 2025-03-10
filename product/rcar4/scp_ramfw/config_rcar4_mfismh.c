@@ -17,36 +17,38 @@
 #include <fwk_module.h>
 
 static const struct fwk_element mfismh_element_table[] = {
+    
     [RCAR4_MFISMH_DEVICE_IDX_S] = { .name = "MFISMH_S",
-                                   .sub_element_count = 1,
-                                   .data =
-                                       &((struct mod_rcar4_mfismh_device_config){
-                                           .irq = MFIS_AREICR2_IRQ,
-                                       }) },
+                                    .sub_element_count = 1,
+                                    .data =
+                                        &((struct mod_rcar4_mfismh_device_config){
+                                            .irq = MFIS_RT0_RT1_IRQ,
+                                        }) },
     [RCAR4_MFISMH_DEVICE_IDX_NS_1] = { .name = "MSIFMH_NS_1",
                                       .sub_element_count = 1,
                                       .data = &((
                                           struct mod_rcar4_mfismh_device_config){
-                                          .irq = MFIS_AREICR1_IRQ,
+                                          .irq = MFIS_RT0_RT1_IRQ,
                                       }) },
     [RCAR4_MFISMH_DEVICE_IDX_NS_2] = { .name = "MSIFMH_NS_2",
                                       .sub_element_count = 1,
                                       .data = &((
                                           struct mod_rcar4_mfismh_device_config){
-                                          .irq = MFIS_AREICR3_IRQ,
+                                          .irq = MFIS_RT0_RT1_IRQ,
                                       }) },
     [RCAR4_MFISMH_DEVICE_IDX_NS_3] = { .name = "MSIFMH_NS_3",
                                       .sub_element_count = 1,
                                       .data = &((
                                           struct mod_rcar4_mfismh_device_config){
-                                          .irq = MFIS_AREICR4_IRQ,
+                                          .irq = MFIS_AP0_RT0_IRQ,
                                       }) },
     [RCAR4_MFISMH_DEVICE_IDX_NS_4] = { .name = "MSIFMH_NS_4",
                                       .sub_element_count = 1,
                                       .data = &((
                                           struct mod_rcar4_mfismh_device_config){
-                                          .irq = MFIS_AREICR5_IRQ,
+                                          .irq = MFIS_AP0_RT0_IRQ,
                                       }) },
+    
     [RCAR4_MFISMH_DEVICE_IDX_COUNT] = {},
 };
 
