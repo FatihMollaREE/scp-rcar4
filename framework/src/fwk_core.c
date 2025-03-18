@@ -307,16 +307,14 @@ int __fwk_init(size_t event_count)
     return FWK_SUCCESS;
 }
 
-// FWK_MODULE_IDX_RCAR4_RESET == 12
-int makeFatihsEvent(void){
-    struct fwk_event_light fEvent= {
-        .source_id = FWK_ID_MODULE(9),
-        .target_id = FWK_ID_MODULE(12),
-        .id = FWK_ID_EVENT(12, 0),
-        .response_requested = false 
-    };
 
-    return fwk_put_event(&fEvent);
+#define fINT (*(volatile uint32_t*) 0xE61C0008)
+#define fINTReq (*(volatile uint32_t*) 0xE61C0000)
+void makeFatihsEvent(void){
+
+    fINT = 0x3F;
+    fINTReq = 0x1;
+    return;
 }
 
 // fatih: hier noch mein event entfernen

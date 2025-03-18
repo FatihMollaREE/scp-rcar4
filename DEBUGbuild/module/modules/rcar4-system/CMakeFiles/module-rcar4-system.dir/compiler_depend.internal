@@ -39,6 +39,7 @@ module/modules/rcar4-system/CMakeFiles/module-rcar4-system.dir/src/FreeRTOS_tick
  C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/arm-none-eabi/include/strings.h
  C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/arm-none-eabi/include/sys/string.h
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/arch/arm/armv8-r/include/utils_def.h
+ C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/arch/arm/armv8-r/include/gic.h
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/product/rcar4/include/rcar4_irq.h
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/framework/include/fwk_interrupt.h
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/framework/include/fwk_macros.h
@@ -133,6 +134,7 @@ module/modules/rcar4-system/CMakeFiles/module-rcar4-system.dir/src/mod_rcar4_sys
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/framework/include/fwk_notification.h
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/arch/arm/armv8-r/include/arch_gic.h
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/arch/arm/armv8-r/include/utils_def.h
+ C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/arch/arm/armv8-r/include/gic.h
 
 module/modules/rcar4-system/CMakeFiles/module-rcar4-system.dir/src/rcar4_common.c.obj
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/product/rcar4/module/rcar4_system/src/rcar4_common.c

@@ -19,7 +19,6 @@
 extern unsigned int critical_section_nest_level;
 
 inline static void enable_irq(){
-    /* FATIH: hier muss ich interrupts enablen, muss noch nachschauen wie genau, cr-52 datasheet oder manual oder sonst wo nachschauen, vergleich mit ROTS dummy? aber da iwie nix gefunden*/
     
     __asm__ volatile (
         "MRS R0, CPSR\n"        // CPSR-Register in R0 speichern
@@ -37,7 +36,7 @@ inline static void arch_interrupts_enable(unsigned int not_used)
         critical_section_nest_level--;
     }
 
-    /* Enable interrupts globally if now outside critical section FATIH: critical_section_nest_level == 0*/
+    /* Enable interrupts globally if now outside critical section */
     if (critical_section_nest_level == 0) {
         enable_irq();
     }
@@ -45,7 +44,6 @@ inline static void arch_interrupts_enable(unsigned int not_used)
 
 
 inline static void disable_irq(){
-    /* FATIH: kp ob die intr so passen */
     
     __asm__ volatile (
         "MRS R0, CPSR\n"        // CPSR-Register in R0 speichern

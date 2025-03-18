@@ -3,7 +3,7 @@
 #
 
 # Setze die Assembler-Flags für ARMv8-R Architektur : Fatih: vielleicht sollte ich das woanders hintun
-set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -march=armv8-r")
+set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -march=armv8-r -mtune=cortex-r52")
 
 
 add_library(arch-armv8r)

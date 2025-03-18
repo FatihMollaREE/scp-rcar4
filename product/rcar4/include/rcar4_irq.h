@@ -17,8 +17,8 @@ enum rcar4_irq {
     VIRTUAL_TIMER_IRQ = 27,
     NS_PHYSICAL_TIMER_IRQ = 30,
     /**/
-    MFIS_RT0_RT1_IRQ = 117,
-    MFIS_AP0_RT0_IRQ = 124,
+    MFIS_RT0_RT1_IRQ = 117+32,
+    MFIS_AP0_RT0_IRQ = 124+32,
     /**/ /* The following numbers are virtual IID */
     SMCMH_IRQ_START = 1024, // tbc
     SMCMH_SECURE_IRQ = SMCMH_IRQ_START, /* SMC Secure */ // tbc

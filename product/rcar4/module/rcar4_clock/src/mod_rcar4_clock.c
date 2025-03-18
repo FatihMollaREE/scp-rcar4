@@ -1138,7 +1138,7 @@ static int rcar4_clock_element_init(
    
    #if 1
    return 0x0;
-   #endif // Fatih backdoor test 
+   #endif // Fatih: die funktion soll erstmal gar nicht aufgerufen werden da es sonst nicht geht aktuell, vllt brauche ich die auch gar nicht 
    
     return do_rcar4_clock_set_rate(
         element_id, dev_config->initial_rate, MOD_CLOCK_ROUND_MODE_NONE);
@@ -1165,7 +1165,7 @@ static int rcar4_clock_start(fwk_id_t id)
 
 const struct fwk_module module_rcar4_clock = {
     .type = FWK_MODULE_TYPE_DRIVER,
-    .api_count = MOD_RCAR4_CLOCK_API_COUNT, // fatih
+    .api_count = MOD_RCAR4_CLOCK_API_COUNT,
     .event_count = 0,
     .init = rcar4_clock_init,
     .element_init = rcar4_clock_element_init,

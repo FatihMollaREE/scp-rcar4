@@ -107,7 +107,8 @@ static void mfismh_isr(void)
     /* Loop over all the slots */ /* For prototyping, slot number is 0 only. */
     {
         slot = 0;
-
+        while(2);
+        //muss ich hier über alle slots loopen?
         /*
          * If the slot is bound to an TRANSPORT channel, signal the message to
          * the TRANSPORT channel.
@@ -252,7 +253,7 @@ static int mfismh_start(fwk_id_t id)
         status = fwk_interrupt_set_isr(device_ctx->config->irq, &mfismh_isr);
         if (status != FWK_SUCCESS)
             return status;
-        status = fwk_interrupt_enable(device_ctx->config->irq); // Fatih: check ob intr driver richtig übergeben werden im arch
+        status = fwk_interrupt_enable(device_ctx->config->irq);
         if (status != FWK_SUCCESS)
             return status;
     }

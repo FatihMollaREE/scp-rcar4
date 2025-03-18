@@ -60,7 +60,7 @@ target_include_directories(rcar4-bl
     PUBLIC $<TARGET_PROPERTY:cmsis::rtos2,INTERFACE_INCLUDE_DIRECTORIES>)
 
 target_include_directories(rcar4-bl
-    PUBLIC $<TARGET_PROPERTY:cmsis::core-m,INTERFACE_INCLUDE_DIRECTORIES>) # fatih: core m offensichtlich passt das nicht ganz
+    PUBLIC $<TARGET_PROPERTY:cmsis::core-m,INTERFACE_INCLUDE_DIRECTORIES>) # fatih: core m offensichtlich passt das nicht ganz, ich glaube ich benutzte aber nur die sachen die core unabhängig sind
 
 if(SCP_ENABLE_SCMI_RESET)
     list(APPEND SCP_MODULES "reset-domain")

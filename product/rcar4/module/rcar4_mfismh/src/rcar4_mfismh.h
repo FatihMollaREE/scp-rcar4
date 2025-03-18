@@ -17,8 +17,8 @@
 
 // nach excel sind interupts von mfis bei ca. 117 oder 916? anders als bei rcar 3 sowie unten
 
-#define MFIS_IRQ_MIN (256U)
-#define MFIS_IRQ_MAX (MFIS_IRQ_MIN + 8U)
+#define MFIS_IRQ_MIN (117U)
+#define MFIS_IRQ_MAX (MFIS_IRQ_MIN + 13U)
 #define MFIS_IRQ2NO(irn) (irn - MFIS_IRQ_MIN)
 #define IS_MFIS_IRQ(irn) \
     (((irn < MFIS_IRQ_MIN) || (irn > MFIS_IRQ_MAX)) ? 0 : 1)

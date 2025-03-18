@@ -152,9 +152,9 @@ void vClearTickInterrupt(void)
 void vApplicationIRQHandler(void)
 {
     uint32_t ulInterruptID;
-
-    c_interrupt = fwk_mmio_read_32(RCAR4_GICC_BASE + GICC_IAR);
-    fwk_mmio_write_32(RCAR4_GICC_BASE + GICC_EOIR, c_interrupt);
+    while(1);
+    //c_interrupt = fwk_mmio_read_32(RCAR4_GICC_BASE + GICC_IAR); // fatih: adr sollte noch falsch sein
+    //fwk_mmio_write_32(RCAR4_GICC_BASE + GICC_EOIR, c_interrupt);
     ulInterruptID = c_interrupt & 0x00000FFFUL;
 
     /* call handler function */

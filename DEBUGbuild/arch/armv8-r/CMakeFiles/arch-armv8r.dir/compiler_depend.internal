@@ -48,6 +48,8 @@ arch/armv8-r/CMakeFiles/arch-armv8r.dir/src/arch_gic.c.obj
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/framework/include/fwk_mmio.h
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/arch/arm/armv8-r/include/arch_gic.h
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/arch/arm/armv8-r/include/utils_def.h
+ C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/arch/arm/armv8-r/include/gic.h
+ C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/arch/arm/armv8-r/include/gic.h
 
 arch/armv8-r/CMakeFiles/arch-armv8r.dir/src/arch_main.c.obj
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/arch/arm/armv8-r/src/arch_main.c
@@ -83,6 +85,7 @@ arch/armv8-r/CMakeFiles/arch-armv8r.dir/src/arch_main.c.obj
  C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/arm-none-eabi/include/strings.h
  C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/arm-none-eabi/include/sys/string.h
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/arch/arm/armv8-r/include/utils_def.h
+ C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/arch/arm/armv8-r/include/gic.h
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/framework/include/fwk_assert.h
  C:/Users/a5137749/Documents/Abteilungen/shared/scp-rcar4/SCP-firmware/framework/include/assert.h
  C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/arm-none-eabi/include/assert.h

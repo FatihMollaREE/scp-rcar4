@@ -38,6 +38,7 @@ module/modules/rcar4-system/CMakeFiles/module-rcar4-system.dir/src/FreeRTOS_tick
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/strings.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/sys/string.h \
   ../arch/arm/armv8-r/include/utils_def.h \
+  ../arch/arm/armv8-r/include/gic.h \
   ../product/rcar4/include/rcar4_irq.h \
   ../framework/include/fwk_interrupt.h \
   ../framework/include/fwk_macros.h \
@@ -130,7 +131,8 @@ module/modules/rcar4-system/CMakeFiles/module-rcar4-system.dir/src/mod_rcar4_sys
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdarg.h \
   ../framework/include/fwk_notification.h \
   ../arch/arm/armv8-r/include/arch_gic.h \
-  ../arch/arm/armv8-r/include/utils_def.h
+  ../arch/arm/armv8-r/include/utils_def.h \
+  ../arch/arm/armv8-r/include/gic.h
 
 module/modules/rcar4-system/CMakeFiles/module-rcar4-system.dir/src/rcar4_common.c.obj: ../product/rcar4/module/rcar4_system/src/rcar4_common.c \
   ../product/rcar4/include/rcar4_common.h \
@@ -234,8 +236,6 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/machine/_default_types.h:
 
-../module/scmi/include/internal/scmi.h:
-
 ../framework/include/fwk_element.h:
 
 ../product/rcar4/src/CMSIS-FreeRTOS/Source/include/projdefs.h:
@@ -314,11 +314,15 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-
 
 ../arch/arm/armv8-r/include/utils_def.h:
 
+C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/syslimits.h:
+
+../product/rcar4/include/rcar4_common.h:
+
+../arch/arm/armv8-r/include/gic.h:
+
 ../product/rcar4/include/rcar4_irq.h:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/limits.h:
-
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/syslimits.h:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/limits.h:
 
@@ -341,6 +345,8 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-
 framework/include/fwk_module_idx.h:
 
 ../product/rcar4/module/rcar4_clock/include/mod_rcar4_clock.h:
+
+../module/scmi/include/internal/scmi.h:
 
 ../module/scmi/include/mod_scmi_std.h:
 
@@ -381,8 +387,6 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdarg.h:
 
 ../framework/include/fwk_notification.h:
-
-../product/rcar4/include/rcar4_common.h:
 
 ../product/rcar4/module/rcar4_system/src/rcar4_iic_dvfs.c:
 

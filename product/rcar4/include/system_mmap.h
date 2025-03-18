@@ -11,6 +11,5 @@
 
 #include <rcar4_mmap.h>
 
-#define FATIH 22
 
 #endif /* SYSTEM_MMAP_H */

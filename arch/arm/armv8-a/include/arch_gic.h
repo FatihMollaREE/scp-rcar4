@@ -42,7 +42,7 @@
 #define GICD_TYPER U(0x4)
 #define GICD_IIDR U(0x8)
 #define GICD_IGROUPR U(0x80)
-#define GICD_ISENABLER U(0x100) // Fatih: passen all diese Register?
+#define GICD_ISENABLER U(0x100)
 #define GICD_ICENABLER U(0x180)
 #define GICD_ISPENDR U(0x200)
 #define GICD_ICPENDR U(0x280)

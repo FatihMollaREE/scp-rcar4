@@ -9,7 +9,7 @@
 #ifndef ARMV8A_SYSTEM_H
 #define ARMV8A_SYSTEM_H
 
-// Fatih: einfach von armv8-a kopiert
+// Fatih: tmp? von armv8-a kopiert
 
 #define R_WARMBOOT (0xAA55AA55)
 #define R_SUSPEND (0x55AA55AA)

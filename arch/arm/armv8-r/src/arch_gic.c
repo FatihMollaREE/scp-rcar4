@@ -16,6 +16,7 @@
 #include <fwk_status.h>
 
 #include <arch_gic.h>
+#include <gic.h>
 
 /* FATIH: tmp defines? */
 #define C_INT_ID (INT_ID(c_interrupt))
@@ -156,6 +157,8 @@ void irq_global(uint32_t iid)
     c_interrupt = 0;
 }
 
+// gic.h ersetzt diese
+#if 0
 static void gicd_set_ipriorityr(
     uintptr_t base,
     unsigned int id,
@@ -165,52 +168,37 @@ static void gicd_set_ipriorityr(
 
     fwk_mmio_write_8(base + GICD_IPRIORITYR + id, val);
 }
-
 static void gicd_write_isenabler(
     uintptr_t base,
     unsigned int id,
     unsigned int val)
-{
-    unsigned int n = id >> ISENABLER_SHIFT;
+    {
+        unsigned int n = id >> ISENABLER_SHIFT;
+        
+        fwk_mmio_write_32(base + GICD_ISENABLER + (n << 2), val);
+    }
+    
+    static void gicd_set_isenabler(uintptr_t base, unsigned int id)
+    {
+        unsigned int bit_num = id & ((1U << ISENABLER_SHIFT) - 1U);
+        
+        gicd_write_isenabler(base, id, (1U << bit_num));
+        }
+        
+        static void gicd_ctlr_enable(){
+            
+        unsigned int val;
+        val = 0x53;
+        fwk_mmio_write_32(RCAR4_GICD_BASE, val);
+        }
+    
+    static void gicc_write_ctlr(uintptr_t base, unsigned int val)
+    {
+        // Fatih: check GICC_CTLR nach Korrektheit
+        fwk_mmio_write_32(base + GICC_CTLR, val);
+    }
 
-    fwk_mmio_write_32(base + GICD_ISENABLER + (n << 2), val);
-}
-
-static void gicd_set_isenabler(uintptr_t base, unsigned int id)
-{
-    unsigned int bit_num = id & ((1U << ISENABLER_SHIFT) - 1U);
-
-    gicd_write_isenabler(base, id, (1U << bit_num));
-}
-
-void gic_init(void)
-{
-    gicd_set_ipriorityr(
-        RCAR4_GICD_BASE,
-        (unsigned int)VIRTUAL_TIMER_IRQ,
-        GIC_HIGHEST_SEC_PRIORITY);
-    gicd_set_isenabler(RCAR4_GICD_BASE, (unsigned int)VIRTUAL_TIMER_IRQ);
-    gicd_set_ipriorityr(
-        RCAR4_GICD_BASE,
-        (unsigned int)NS_PHYSICAL_TIMER_IRQ,
-        GIC_HIGHEST_SEC_PRIORITY);
-    gicd_set_isenabler(RCAR4_GICD_BASE, (unsigned int)NS_PHYSICAL_TIMER_IRQ);
-    gic_cpuif_enable();
-}
-
-static void gicc_write_pmr(uintptr_t base, unsigned int val)
-{
-    // Fatih: check GICC_PMR nach Korrektheit
-    fwk_mmio_write_32(base + GICC_PMR, val); 
-}
-
-static void gicc_write_ctlr(uintptr_t base, unsigned int val)
-{
-    // Fatih: check GICC_CTLR nach Korrektheit
-    fwk_mmio_write_32(base + GICC_CTLR, val);
-}
-
-void gic_cpuif_enable(void)
+    void gic_cpuif_enable(void)
 {
     unsigned int val;
 
@@ -218,11 +206,12 @@ void gic_cpuif_enable(void)
      * Enable the Group 0 interrupts, FIQEn and disable Group 0/1
      * bypass.
      */
-    val = CTLR_ENABLE_G0_BIT | FIQ_EN_BIT | FIQ_BYP_DIS_GRP0;
-    val |= IRQ_BYP_DIS_GRP0 | FIQ_BYP_DIS_GRP1 | IRQ_BYP_DIS_GRP1;
+    //val = CTLR_ENABLE_G0_BIT | FIQ_EN_BIT | FIQ_BYP_DIS_GRP0;
+    //val |= IRQ_BYP_DIS_GRP0 | FIQ_BYP_DIS_GRP1 | IRQ_BYP_DIS_GRP1;
 
+    val = 0x53; // erscheint mir so erstmal als sinnvoll
     /* Program the idle priority in the PMR */
-    gicc_write_pmr(RCAR4_GICC_BASE, GIC_PRI_MASK); // Fatih: kontrolliere diese Register, finde iwie nix zu GICC
+    //gicc_write_pmr(RCAR4_GICC_BASE, GIC_PRI_MASK); // so wie ich das sehe, gibt es beim cr-52 kein gicc (*vllt ist der intc der ersatz?*) also muss man auch nicht die priority mask beschreiben
     gicc_write_ctlr(RCAR4_GICC_BASE, val);
 }
 
@@ -274,6 +263,47 @@ static void gicd_write_ispendr(
     fwk_mmio_write_32(base + GICD_ISPENDR + (n << 2), val);
 }
 
+static void gicd_write_icpendr(
+    uintptr_t base,
+    unsigned int id,
+    unsigned int val)
+{
+    //unsigned int n = id >> ICPENDR_SHIFT;
+// fatih dummy
+    //fwk_mmio_write_32(base + GICD_ICPENDR + (n << 2), val);
+}
+
+#endif
+
+void gic_init(void)
+{
+    Interrupt_Config();
+    /*
+    gicd_set_ipriorityr(
+        RCAR4_GICD_BASE,
+        (unsigned int)VIRTUAL_TIMER_IRQ,
+        GIC_HIGHEST_SEC_PRIORITY);
+        gicd_set_isenabler(RCAR4_GICD_BASE, (unsigned int)VIRTUAL_TIMER_IRQ);
+        gicd_set_ipriorityr(
+            RCAR4_GICD_BASE,
+            (unsigned int)NS_PHYSICAL_TIMER_IRQ,
+            GIC_HIGHEST_SEC_PRIORITY);
+            gicd_set_isenabler(RCAR4_GICD_BASE, (unsigned int)NS_PHYSICAL_TIMER_IRQ);
+            //gic_cpuif_enable();
+    gicd_ctlr_enable();
+    */
+}
+
+/*
+static void gicc_write_pmr(uintptr_t base, unsigned int val)
+{
+    // Fatih: check GICC_PMR nach Korrektheit
+    fwk_mmio_write_32(base + GICC_PMR, val); 
+}
+*/
+
+
+
 static int is_pending(unsigned int interrupt, bool *pending)
 {
     unsigned int bit;
@@ -282,10 +312,11 @@ static int is_pending(unsigned int interrupt, bool *pending)
         return FWK_E_PARAM;
 
     bit = interrupt % 32;
+   /* fatih tmp dummy
     *pending =
         ((gicd_read_ispendr(RCAR4_GICD_BASE, interrupt) & (1 << bit)) ? true :
                                                                        false);
-
+    */
     return FWK_SUCCESS;
 }
 
@@ -297,8 +328,9 @@ static int set_pending(unsigned int interrupt)
         return FWK_E_PARAM;
 
     bit = interrupt % 32;
+    /* fatih tmp dummy
     gicd_write_ispendr(RCAR4_GICD_BASE, interrupt, 1U << bit);
-
+*/
     return FWK_SUCCESS;
 }
 
@@ -358,8 +390,8 @@ static int is_enabled(unsigned int interrupt, bool *enabled)
 {
     if (!IS_SUPPORT_INT(interrupt))
         return FWK_E_PARAM;
-
-    *enabled = (bool)gicd_get_isenabler(RCAR4_GICD_BASE, interrupt); 
+    //fatih dummy
+    //*enabled = (bool)gicd_get_isenabler(RCAR4_GICD_BASE, interrupt); 
 
     return FWK_SUCCESS;
 }
@@ -368,8 +400,11 @@ static int enable(unsigned int interrupt)
 {
     if (!IS_SUPPORT_INT(interrupt))
         return FWK_E_PARAM;
-
+    /*
     gicd_set_isenabler(RCAR4_GICD_BASE, interrupt);
+    */
+
+    Interrupt_Enable(interrupt);
 
     return FWK_SUCCESS;
 }
@@ -379,20 +414,13 @@ static int disable(unsigned int interrupt)
     if (!IS_SUPPORT_INT(interrupt))
         return FWK_E_PARAM;
 
-    gicd_set_icenabler(RCAR4_GICD_BASE, interrupt);
+    //gicd_set_icenabler(RCAR4_GICD_BASE, interrupt);
 
+    GIC_DisableInterface(interrupt);
     return FWK_SUCCESS;
 }
 
-static void gicd_write_icpendr(
-    uintptr_t base,
-    unsigned int id,
-    unsigned int val)
-{
-    unsigned int n = id >> ICPENDR_SHIFT;
 
-    fwk_mmio_write_32(base + GICD_ICPENDR + (n << 2), val);
-}
 
 static int clear_pending(unsigned int interrupt)
 {
@@ -402,8 +430,9 @@ static int clear_pending(unsigned int interrupt)
         return FWK_E_PARAM;
 
     bit = interrupt % 32;
+    /*fatih dummy
     gicd_write_icpendr(RCAR4_GICD_BASE, interrupt, 1U << bit);
-
+*/
     return FWK_SUCCESS;
 }
 

@@ -166,7 +166,7 @@ static  void fwk_notification_init(void)
         fwk_list_push_tail(
             &ctx.free_subscription_dlist, &subscriptions[i].dlist_node);
     }
-    return; // fatih: aktuell returned er nicht alleine
+    return;
 }
 
 void __fwk_notification_reset(void)
@@ -200,7 +200,7 @@ int fwk_notification_subscribe(fwk_id_t notification_id, fwk_id_t source_id,
         goto error;
     }
 
-    subscription_dlist = get_subscription_dlist(notification_id, source_id); // Fatih: ist die Logik hier nicht falsch?
+    subscription_dlist = get_subscription_dlist(notification_id, source_id);
     if (search_subscription(subscription_dlist, source_id, target_id) != NULL) {
         status = FWK_E_STATE;
         goto error;
@@ -220,7 +220,7 @@ int fwk_notification_subscribe(fwk_id_t notification_id, fwk_id_t source_id,
     subscription->target_id = target_id;
 
     flags = fwk_interrupt_global_disable();
-    fwk_list_push_tail(subscription_dlist, &subscription->dlist_node); // fatih: ist subscription_dlist nicht eig null? müsste das hier nicht nicht asserten?
+    fwk_list_push_tail(subscription_dlist, &subscription->dlist_node);
     (void)fwk_interrupt_global_enable(flags);
 
     return FWK_SUCCESS;
