@@ -358,7 +358,7 @@ static inline void GIC_WakeupRedistributor(void)
 /* Enable the CPU's interrupt interface */
 static inline void GIC_EnableInterface(void)
 {
-    uint64_t reg = 0U;
+    //uint64_t reg = 0U;
     //uint64_t icc_sre_el3 = 0U;
 
     /* Disable the legacy interrupt bypass */

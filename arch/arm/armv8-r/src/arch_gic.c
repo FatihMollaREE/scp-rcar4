@@ -306,12 +306,12 @@ static void gicc_write_pmr(uintptr_t base, unsigned int val)
 
 static int is_pending(unsigned int interrupt, bool *pending)
 {
-    unsigned int bit;
+    //unsigned int bit;
 
     if (!IS_SUPPORT_INT(interrupt))
         return FWK_E_PARAM;
 
-    bit = interrupt % 32;
+    //bit = interrupt % 32;
    /* fatih tmp dummy
     *pending =
         ((gicd_read_ispendr(RCAR4_GICD_BASE, interrupt) & (1 << bit)) ? true :
@@ -322,12 +322,12 @@ static int is_pending(unsigned int interrupt, bool *pending)
 
 static int set_pending(unsigned int interrupt)
 {
-    unsigned int bit;
+    //unsigned int bit;
 
     if (!IS_SUPPORT_INT(interrupt))
         return FWK_E_PARAM;
 
-    bit = interrupt % 32;
+    //bit = interrupt % 32;
     /* fatih tmp dummy
     gicd_write_ispendr(RCAR4_GICD_BASE, interrupt, 1U << bit);
 */
@@ -424,12 +424,12 @@ static int disable(unsigned int interrupt)
 
 static int clear_pending(unsigned int interrupt)
 {
-    unsigned int bit;
+    //unsigned int bit;
 
     if (!IS_SUPPORT_INT(interrupt))
         return FWK_E_PARAM;
 
-    bit = interrupt % 32;
+    //bit = interrupt % 32;
     /*fatih dummy
     gicd_write_icpendr(RCAR4_GICD_BASE, interrupt, 1U << bit);
 */

@@ -308,24 +308,26 @@ int __fwk_init(size_t event_count)
 }
 
 
-#define fINT (*(volatile uint32_t*) 0xE61C0008)
-#define fINTReq (*(volatile uint32_t*) 0xE61C0000)
 void makeFatihsEvent(void){
 
-    fINT = 0x3F;
-    fINTReq = 0x1;
-    return;
+    struct fwk_event_light fEvent = {
+        .id = FWK_ID_EVENT(9,0),
+        .source_id = FWK_ID_MODULE(9), // FWK_MODULE_IDX_RCAR4_MFISMH
+        .target_id = FWK_ID_MODULE(12), // FWK_MODULE_IDX_RCAR4_RESET
+        .response_requested = false
+    };
+    put_event(&fEvent, UNKNOWN_STATE, FWK_EVENT_TYPE_LIGHT);
 }
 
 // fatih: hier noch mein event entfernen
 void fwk_process_event_queue(void)
 {
-    static volatile int fatihEVENT = 0;
     for (;;) {
         while (!fwk_list_is_empty(&ctx.event_queue)) {
             process_next_event();
         }
-        if(fatihEVENT > 100) {makeFatihsEvent();}
+        static volatile int a = 0;
+        if (a != 0) makeFatihsEvent();
         if (!process_isr()) {
             break;
         }

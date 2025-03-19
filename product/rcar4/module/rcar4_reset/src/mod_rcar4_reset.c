@@ -150,8 +150,15 @@ static int reet_process_bind_request(fwk_id_t source_id,
 }
 
 static int process_event(const struct fwk_event *event, struct fwk_event *resp_event){
-    //volatile uint32_t *addr = (volatile uint32_t*) 0xE6306010;
-    //*(addr) = 0xBEEFDEAD;
+    
+    /* Hole die Module ID */
+    unsigned int module_idx = fwk_id_get_module_idx(event->target_id);
+
+    /* Hole die Element ID */
+    unsigned int element_idx = event->target_id.element.element_idx; 
+    
+    //fwk_id_get_element_idx(event->target_id);
+    rcar4_assert_domain(FWK_ID_ELEMENT(module_idx,element_idx));
     return FWK_SUCCESS;
 }
 
